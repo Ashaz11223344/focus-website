@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-black: #1B1B1B;
+  --color-charcoal-gray: #323232;
+  --color-cream-beige: #FFE7D0;
+  --color-vibrant-orange: #FC6E20;
+  --font-serif: "Playfair", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+  --font-quote: "Playwrite GB S", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-dark-black);
+    color: var(--color-cream-beige);
+  }
+
+  /* Custom Premium Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-dark-black);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-charcoal-gray);
+    border-radius: 4px;
+    border: 2px solid var(--color-dark-black);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-vibrant-orange);
+  }
+
+  /* Hide default autofill background in forms if any */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-cream-beige);
+    -webkit-box-shadow: 0 0 0px 1000px var(--color-dark-black) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+/* Glassmorphism custom classes */
+.glass-panel {
+  background: rgba(50, 50, 50, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 231, 208, 0.08);
+}
+
+.glass-panel-heavy {
+  background: rgba(27, 27, 27, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 231, 208, 0.1);
+}
+
+/* Premium text glow utility */
+.glow-orange {
+  text-shadow: 0 0 15px rgba(252, 110, 32, 0.4);
+}
+
+.glow-orange-lg {
+  text-shadow: 0 0 30px rgba(252, 110, 32, 0.6);
+}
+
+.glow-cream {
+  text-shadow: 0 0 15px rgba(255, 231, 208, 0.25);
+}
+
+/* Animated gradient background */
+.animated-bg {
+  background: linear-gradient(-45deg, #1B1B1B, #323232, #1B1B1B, #20130a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
