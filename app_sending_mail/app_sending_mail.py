@@ -90,170 +90,314 @@ def validate_inputs(recipient, download_url, version):
 
     return recipient, download_url, version
 
-def get_html_body(download_url, app_version, user_name="Explorer", date_str=None):
-    """Returns an ultra-premium, dark black and charcoal themed HTML email template with cream and orange accents."""
-    if not date_str:
-        import datetime
-        date_str = datetime.date.today().strftime("%B %d, %Y")
-        
-    html_template = """<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+def get_html_body(download_url, app_version):
+    """Returns a highly aesthetic, premium dark-themed HTML email template using the Focus color system."""
+    return f"""<!DOCTYPE html>
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Focus Journey Starts Here</title>
-  <style type="text/css">
-    body {
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Focus App is Ready ✦</title>
+  <style>
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #1B1B1B;
+      color: #FFE7D0;
       margin: 0;
       padding: 0;
-      width: 100% !important;
-      background-color: #FFE7D0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #FFE7D0;
       -webkit-font-smoothing: antialiased;
-    }
-    table {
-      border-collapse: collapse;
-    }
-    img {
-      border: 0;
-      height: auto;
-      line-height: 100%;
-      outline: none;
+    }}
+    .wrapper {{
+      background-color: #1B1B1B;
+      padding: 40px 20px;
+    }}
+    .container {{
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #323232;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(252, 110, 32, 0.4);
+    }}
+    .header {{
+      background: linear-gradient(135deg, #FC6E20 0%, #1B1B1B 100%);
+      padding: 50px 40px;
+      text-align: center;
+      position: relative;
+    }}
+    .badge-container {{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }}
+    .badge {{
+      background-color: rgba(252, 110, 32, 0.2);
+      color: #FC6E20;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border: 1px solid #FC6E20;
+    }}
+    .logo-container {{
+      margin-bottom: 8px;
+    }}
+    .logo-star {{
+      font-size: 28px;
+      color: #FFE7D0;
+      vertical-align: middle;
+      margin-left: 4px;
+    }}
+    .header h1 {{
+      color: #FFE7D0;
+      font-size: 28px;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -0.025em;
+    }}
+    .header p {{
+      color: #FFE7D0;
+      font-size: 14px;
+      margin: 8px 0 0 0;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }}
+    .content {{
+      padding: 40px;
+    }}
+    .welcome-title {{
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFE7D0;
+      margin-top: 0;
+      margin-bottom: 16px;
+      letter-spacing: -0.025em;
+    }}
+    .welcome-text {{
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(255, 231, 208, 0.85);
+      margin-bottom: 35px;
+    }}
+    .btn-container {{
+      text-align: center;
+      margin-bottom: 40px;
+    }}
+    .download-btn {{
+      display: inline-block;
+      background: linear-gradient(135deg, #FC6E20 0%, #d84b06 100%);
+      color: #1B1B1B !important;
+      font-size: 16px;
+      font-weight: 800;
       text-decoration: none;
-    }
-    a {
+      padding: 16px 36px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px -5px rgba(252, 110, 32, 0.4);
+      border: 1px solid #FFE7D0;
+      transition: all 0.2s ease-in-out;
+    }}
+    .version-tag {{
+      display: block;
+      font-size: 12px;
+      color: rgba(255, 231, 208, 0.6);
+      margin-top: 10px;
+      font-weight: 500;
+    }}
+    .steps-container {{
+      background-color: #1B1B1B;
+      border-radius: 16px;
+      padding: 30px;
+      border: 1px solid rgba(255, 231, 208, 0.1);
+      margin-bottom: 35px;
+    }}
+    .steps-title {{
+      font-size: 14px;
+      font-weight: 700;
+      color: #FFE7D0;
+      margin-top: 0;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }}
+    .step-item {{
+      display: table;
+      margin-bottom: 20px;
+      width: 100%;
+    }}
+    .step-item:last-child {{
+      margin-bottom: 0;
+    }}
+    .step-number-cell {{
+      display: table-cell;
+      width: 32px;
+      vertical-align: top;
+    }}
+    .step-number {{
+      background-color: #FC6E20;
+      color: #1B1B1B;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 24px;
+    }}
+    .step-content-cell {{
+      display: table-cell;
+      vertical-align: top;
+      padding-left: 14px;
+    }}
+    .step-text {{
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(255, 231, 208, 0.85);
+      margin: 0;
+    }}
+    .step-text strong {{
+      color: #FC6E20;
+    }}
+    .info-box {{
+      border-left: 4px solid #FC6E20;
+      background-color: rgba(252, 110, 32, 0.08);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 30px;
+    }}
+    .info-text {{
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #FFE7D0;
+      margin: 0;
+      font-weight: 500;
+    }}
+    .footer {{
+      background-color: #1B1B1B;
+      padding: 35px 40px;
+      text-align: center;
+      border-top: 1px solid #323232;
+    }}
+    .branding-name {{
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFE7D0;
+      margin: 0 0 4px 0;
+      letter-spacing: -0.025em;
+    }}
+    .branding-tagline {{
+      font-size: 13px;
+      color: rgba(255, 231, 208, 0.6);
+      margin: 0 0 20px 0;
+      font-style: italic;
+    }}
+    .divider {{
+      height: 1px;
+      background-color: #323232;
+      margin: 20px 0;
+    }}
+    .support-text {{
+      font-size: 12px;
+      color: rgba(255, 231, 208, 0.5);
+      margin: 0;
+    }}
+    .support-link {{
+      color: #FC6E20;
       text-decoration: none;
-    }
+      font-weight: 600;
+    }}
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #FFE7D0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #FFE7D0;">
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFE7D0; width: 100% !important; margin: 0; padding: 40px 10px;">
-    <tr>
-      <td align="center" valign="top">
-        <!-- Main Card Container -->
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; width: 100%; background-color: #1B1B1B; border-radius: 24px; box-shadow: 0 10px 40px rgba(27,27,27,0.15); overflow: hidden; border-collapse: separate;">
-          <tr>
-            <td align="left" valign="top" style="padding: 56px;">
-              
-              <!-- Header Block (Centered Logo & Title together) -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 40px; text-align: center;">
-                <tr>
-                  <td align="center">
-                    
-                    <!-- Logo Center Aligned -->
-                    <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
-                      <tr>
-                        <td align="center" style="background-color: #FC6E20; width: 72px; height: 72px; border-radius: 18px; text-align: center; vertical-align: middle;">
-                          <img src="https://getfocus.online/favicon.png" width="36" height="36" alt="Focus App Logo" style="display: block; width: 36px; height: 36px; border: 0; margin: 0 auto;" />
-                        </td>
-                      </tr>
-                    </table>
-                    
-                    <!-- App Title -->
-                    <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 44px; font-weight: 800; color: #FFE7D0; margin: 0 0 8px 0; line-height: 1.1; letter-spacing: -1px; text-align: center;">Focus</h1>
-                    
-                    <!-- Subtitle -->
-                    <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 800; color: #FC6E20; margin: 0; text-transform: uppercase; letter-spacing: 4px; text-align: center; line-height: 1.2;">YOUR FOCUS JOURNEY STARTS HERE</p>
-                    
-                  </td>
-                </tr>
-              </table>
-              
-              <!-- Divider -->
-              <hr style="border: 0; border-top: 1px solid #323232; margin: 0 0 35px 0;" />
-              
-              <!-- Welcome greeting -->
-              <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.6; color: #FFE7D0; margin: 0 0 24px 0;">
-                Hello {{USER_NAME}},
-              </p>
-              
-              <!-- Section Card 1: Request Received -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #323232; border-radius: 16px; margin-bottom: 24px; border-collapse: separate;">
-                <tr>
-                  <td style="padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                    <h2 style="font-size: 17px; font-weight: 800; color: #FC6E20; margin: 0 0 10px 0; line-height: 1.3;">✓ Your request has been received.</h2>
-                    <p style="font-size: 14.5px; line-height: 1.6; color: #FFE7D0; margin: 0;">
-                      We have successfully logged your application for the Focus early stage sandbox intake on <strong>{{DATE}}</strong>. Our team has reviewed your request, and your private mobile builder slot has been approved.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              
-              <!-- Section Card 2: APK Download -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #323232; border-radius: 16px; margin-bottom: 32px; border-collapse: separate;">
-                <tr>
-                  <td style="padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                    <h2 style="font-size: 17px; font-weight: 800; color: #FC6E20; margin: 0 0 10px 0; line-height: 1.3;">📦 APK Download</h2>
-                    <p style="font-size: 14.5px; line-height: 1.6; color: #FFE7D0; margin: 0;">
-                      To bypass the standard 25MB email attachment limit and keep your setup secure, your private build package is hosted on Google Drive. Tap the download button below to load the release package directly onto your Android device:
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              
-              <!-- CTA Button Area -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 0 0 35px 0;">
-                <tr>
-                  <td align="center">
-                    <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
-                      <tr>
-                        <td align="center" bgcolor="#FC6E20" style="border-radius: 14px; -webkit-border-radius: 14px; -moz-border-radius: 14px;">
-                          <a href="{{APK_LINK}}" target="_blank" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; color: #FFFFFF; text-decoration: none; border-radius: 14px; -webkit-border-radius: 14px; -moz-border-radius: 14px; padding: 16px 44px; border: 1px solid #FC6E20; display: inline-block; line-height: 20px; text-align: center;">Download APK</a>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-              
-              <!-- Pro tip instructions inside Section Card -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #323232; border-radius: 16px; margin-bottom: 40px; border-collapse: separate;">
-                <tr>
-                  <td style="padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                    <p style="font-size: 13.5px; line-height: 1.5; color: #FFE7D0; margin: 0; font-weight: 500;">
-                      <strong style="color: #FC6E20;">Quick Install Tip:</strong> If your browser prompts you with a security warning regarding "Unknown Sources", rest assured this is completely normal for private developer release builds. Simply toggle permission for your browser and continue the installation.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              
-              <!-- Divider -->
-              <hr style="border: 0; border-top: 1px solid #323232; margin: 0 0 35px 0;" />
-              
-              <!-- Footer block -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                <tr>
-                  <td align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; color: #FFE7D0; line-height: 1.6; text-align: center;">
-                    <p style="margin: 0 0 6px 0; font-weight: 800; color: #FC6E20; font-size: 14px; letter-spacing: -0.2px;">Focus</p>
-                    <p style="margin: 0 0 16px 0; font-style: italic; color: #FFE7D0; opacity: 0.8;">Small steps. Big change.</p>
-                    <p style="margin: 0 0 8px 0; color: #FFE7D0;">
-                      Need help setting up or have questions?<br />
-                      Reach us directly at <a href="mailto:support@getfocus.online" style="color: #FC6E20; text-decoration: none; font-weight: 600;">support@getfocus.online</a>
-                    </p>
-                    <p style="margin: 20px 0 0 0; font-size: 11px; color: #FFE7D0; opacity: 0.6;">
-                      © Focus App &bull; All Rights Reserved.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-              
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header">
+        <div class="badge-container">
+          <span class="badge">Early Access</span>
+        </div>
+        <div class="logo-container">
+          <span style="color: #FFE7D0; font-size: 34px; font-weight: 800; letter-spacing: -0.05em; font-family: sans-serif;">Focus</span><span class="logo-star">✦</span>
+        </div>
+        <p>Small steps. Big change.</p>
+      </div>
+      <div class="content">
+        <h2 class="welcome-title">Your Focus App is Ready!</h2>
+        <p class="welcome-text">
+          Thank you for joining the Focus early access program. We are excited to help you take control of your time, build better habits, and unlock high performance. 
+          <br><br>
+          We've bypassed standard attachment limits and hosted your private pre-release build securely on Google Drive. Tap the button below to download the application package directly to your Android device.
+        </p>
+        
+        <div class="btn-container">
+          <a href="{download_url}" class="download-btn">Download Focus App</a>
+          <span class="version-tag">Release Build: <strong>{app_version}</strong></span>
+        </div>
+        
+        <div class="steps-container">
+          <h3 class="steps-title">Installation Guide</h3>
+          
+          <div class="step-item">
+            <div class="step-number-cell">
+              <div class="step-number">1</div>
+            </div>
+            <div class="step-content-cell">
+              <p class="step-text"><strong>Tap Download:</strong> Click the "Download Focus App" button above to open the file link in Google Drive.</p>
+            </div>
+          </div>
+          
+          <div class="step-item">
+            <div class="step-number-cell">
+              <div class="step-number">2</div>
+            </div>
+            <div class="step-content-cell">
+              <p class="step-text"><strong>Open APK:</strong> Once the download completes, tap the file in your notification bar or "Downloads" folder.</p>
+            </div>
+          </div>
+          
+          <div class="step-item">
+            <div class="step-number-cell">
+              <div class="step-number">3</div>
+            </div>
+            <div class="step-content-cell">
+              <p class="step-text"><strong>Enable Permissions:</strong> If prompted by Android, grant permission to "Install from Unknown Sources" or authorize your browser to install apps.</p>
+            </div>
+          </div>
+          
+          <div class="step-item">
+            <div class="step-number-cell">
+              <div class="step-number">4</div>
+            </div>
+            <div class="step-content-cell">
+              <p class="step-text"><strong>Launch & Focus:</strong> Open the Focus app from your home screen and start your productivity journey!</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="info-box">
+          <p class="info-text">
+            ✦ <strong>Note:</strong> Since this is a private early access pre-release, Google Play Protect might show a warning. Rest assured, this package is clean and compiled securely directly by the Focus team.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <h4 class="branding-name">Focus</h4>
+        <p class="branding-tagline">Small steps. Big change.</p>
+        <div class="divider"></div>
+        <p class="support-text">
+          Need support? Reach us at <a href="mailto:support@getfocus.online" class="support-link">support@getfocus.online</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </body>
-</html>"""
+</html>
+"""
 
-    # Populate placeholders
-    html = html_template.replace("{{USER_NAME}}", user_name)
-    html = html.replace("{{APK_LINK}}", download_url)
-    html = html.replace("{{DATE}}", date_str)
-    return html
-
-def send_email(config, recipient, download_url, version, user_name="Explorer"):
+def send_email(config, recipient, download_url, version):
     """Establishes connection to SMTP and sends the early access link email."""
     mail_user = config['MAIL_USER']
     mail_pass = config['MAIL_PASS']
@@ -270,7 +414,7 @@ def send_email(config, recipient, download_url, version, user_name="Explorer"):
     msg['Subject'] = "Your Focus App is Ready ✦"
     
     # Attach body HTML
-    html_body = get_html_body(download_url, version, user_name=user_name)
+    html_body = get_html_body(download_url, version)
     msg.attach(MIMEText(html_body, 'html'))
     
     # 2. Establish connection and send
@@ -325,9 +469,6 @@ def main():
     # Prompt sequential inputs
     try:
         recipient = input("Enter recipient email address:\n> ").strip()
-        user_name = input("\nEnter recipient name (optional, press Enter to auto-extract):\n> ").strip()
-        if not user_name:
-            user_name = recipient.split('@')[0].capitalize()
         raw_version = input("\nEnter app version (e.g. 1 or v1.0.0):\n> ").strip()
     except (KeyboardInterrupt, EOFError):
         print("\nOperation cancelled by user.")
@@ -345,7 +486,6 @@ def main():
     print("\n--------------------------------------")
     print("📦 Ready to send:")
     print(f"   To      : {recipient}")
-    print(f"   Name    : {user_name}")
     print(f"   Version : {version}")
     
     # Truncate link in summary for visual presentation if long
@@ -366,7 +506,7 @@ def main():
         sys.exit(0)
         
     print("\nSending email...")
-    send_email(config, recipient, download_url, version, user_name=user_name)
+    send_email(config, recipient, download_url, version)
 
 if __name__ == "__main__":
     import socket # Ensure socket is imported for connection exception handling

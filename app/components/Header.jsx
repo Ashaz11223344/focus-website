@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react'
+import Link from 'next/link'
 import { Sparkles } from 'lucide-react'
 
 export default function Header({ onOpenModal }) {
@@ -9,21 +10,22 @@ export default function Header({ onOpenModal }) {
       <div className="max-w-7xl mx-auto w-full px-6 flex justify-between items-center">
 
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg overflow-hidden border border-[#FFE7D0]/10 shadow-[0_4px_12px_rgba(0,0,0,0.5)] group-hover:scale-105 group-hover:border-[#FC6E20]/30 transition-all duration-300">
             <img src="/favicon.png" alt="Focus Logo" className="w-full h-full object-cover" />
           </div>
           <span className="text-xl font-serif font-bold text-[#FFE7D0] tracking-wide group-hover:text-[#FC6E20] transition-colors duration-300">
             Focus
           </span>
-        </a>
+        </Link>
 
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-8 text-[13px] tracking-widest font-semibold text-[#FFE7D0]/60 uppercase">
-          <a href="#features" className="hover:text-[#FC6E20] transition-colors duration-300">Features</a>
-          <a href="#why-focus" className="hover:text-[#FC6E20] transition-colors duration-300">Why Focus</a>
-          <a href="#showcase" className="hover:text-[#FC6E20] transition-colors duration-300">Showcase</a>
-          <a href="#testimonials" className="hover:text-[#FC6E20] transition-colors duration-300">Reviews</a>
+          <Link href="/features" className="hover:text-[#FC6E20] transition-colors duration-300">Features</Link>
+          <Link href="/download" className="hover:text-[#FC6E20] transition-colors duration-300">Download</Link>
+          <Link href="/blog" className="hover:text-[#FC6E20] transition-colors duration-300">Blog</Link>
+          <Link href="/#why-focus" className="hover:text-[#FC6E20] transition-colors duration-300">Why Focus</Link>
+          <Link href="/#testimonials" className="hover:text-[#FC6E20] transition-colors duration-300">Reviews</Link>
         </nav>
 
         {/* Request Access CTA Button */}
@@ -39,3 +41,4 @@ export default function Header({ onOpenModal }) {
     </header>
   )
 }
+
