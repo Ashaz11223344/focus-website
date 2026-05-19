@@ -91,7 +91,7 @@ def validate_inputs(recipient, download_url, version):
     return recipient, download_url, version
 
 def get_html_body(download_url, app_version, user_name="Explorer", date_str=None):
-    """Returns a highly aesthetic, premium, modern white/dark themed HTML email template with placeholders."""
+    """Returns a highly aesthetic, premium, modern cream/white HTML email template with placeholders."""
     if not date_str:
         import datetime
         date_str = datetime.date.today().strftime("%B %d, %Y")
@@ -107,9 +107,9 @@ def get_html_body(download_url, app_version, user_name="Explorer", date_str=None
       margin: 0;
       padding: 0;
       width: 100% !important;
-      background-color: #F8F8F8;
+      background-color: #FFE7D0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      color: #222222;
+      color: #323232;
       -webkit-font-smoothing: antialiased;
     }
     table {
@@ -127,63 +127,79 @@ def get_html_body(download_url, app_version, user_name="Explorer", date_str=None
     }
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #F8F8F8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #222222;">
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #F8F8F8; padding: 40px 10px;">
+<body style="margin: 0; padding: 0; background-color: #FFE7D0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #323232;">
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFE7D0; width: 100% !important; margin: 0; padding: 40px 10px;">
     <tr>
       <td align="center" valign="top">
         <!-- Main Card Container -->
-        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; background-color: #FFFFFF; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.04); border: 1px solid #EAEAEA; overflow: hidden;">
-          
-          <!-- Top Branding Header -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; width: 100%; background-color: #FFFFFF; border-radius: 24px; box-shadow: 0 10px 40px rgba(27,27,27,0.08); overflow: hidden; border-collapse: separate;">
           <tr>
-            <td align="center" style="padding: 45px 40px 25px 40px;">
-              <!-- Logo Container -->
-              <table border="0" cellpadding="0" cellspacing="0">
+            <td align="left" valign="top" style="padding: 56px;">
+              
+              <!-- Header Block (Centered Logo & Title together) -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 40px; text-align: center;">
                 <tr>
-                  <td align="center" style="background-color: #FC6E20; width: 56px; height: 56px; border-radius: 14px; text-align: center; vertical-align: middle;">
-                    <img src="https://getfocus.online/favicon.png" width="32" height="32" alt="Focus App Logo" style="display: block; width: 32px; height: 32px; border: 0;" />
+                  <td align="center">
+                    
+                    <!-- Logo Center Aligned -->
+                    <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom: 20px;">
+                      <tr>
+                        <td align="center" style="background-color: #FC6E20; width: 72px; height: 72px; border-radius: 18px; text-align: center; vertical-align: middle;">
+                          <img src="https://getfocus.online/favicon.png" width="36" height="36" alt="Focus App Logo" style="display: block; width: 36px; height: 36px; border: 0; margin: 0 auto;" />
+                        </td>
+                      </tr>
+                    </table>
+                    
+                    <!-- App Title -->
+                    <h1 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 44px; font-weight: 800; color: #1B1B1B; margin: 0 0 8px 0; line-height: 1.1; letter-spacing: -1px; text-align: center;">Focus</h1>
+                    
+                    <!-- Subtitle -->
+                    <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; font-weight: 800; color: #FC6E20; margin: 0; text-transform: uppercase; letter-spacing: 4px; text-align: center; line-height: 1.2;">YOUR FOCUS JOURNEY STARTS HERE</p>
+                    
                   </td>
                 </tr>
               </table>
               
-              <!-- Large App Title -->
-              <h1 style="font-size: 32px; font-weight: 800; color: #1B1B1B; margin: 18px 0 6px 0; letter-spacing: -0.5px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Focus</h1>
-              <!-- Subtitle -->
-              <p style="font-size: 13px; color: #FC6E20; font-weight: 700; margin: 0; text-transform: uppercase; letter-spacing: 1.5px;">Your focus journey starts here</p>
-            </td>
-          </tr>
-          
-          <!-- Content Body -->
-          <tr>
-            <td style="padding: 20px 40px 40px 40px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
               <!-- Divider -->
               <hr style="border: 0; border-top: 1px solid #F0F0F0; margin: 0 0 35px 0;" />
               
               <!-- Welcome greeting -->
-              <p style="font-size: 16px; line-height: 1.6; color: #222222; margin: 0 0 24px 0;">
+              <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 16px; line-height: 1.6; color: #323232; margin: 0 0 24px 0;">
                 Hello {{USER_NAME}},
               </p>
               
-              <!-- Section: Your request has been received -->
-              <h2 style="font-size: 18px; font-weight: 700; color: #1B1B1B; margin: 0 0 10px 0;">✓ Your request has been received.</h2>
-              <p style="font-size: 15px; line-height: 1.6; color: #555555; margin: 0 0 35px 0;">
-                We have successfully logged your application for the Focus early stage sandbox intake on <strong>{{DATE}}</strong>. Our team has reviewed your request, and your private mobile builder slot has been approved.
-              </p>
+              <!-- Section Card 1: Request Received -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFE7D0; border-radius: 16px; margin-bottom: 24px; border-collapse: separate;">
+                <tr>
+                  <td style="padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                    <h2 style="font-size: 17px; font-weight: 800; color: #1B1B1B; margin: 0 0 10px 0; line-height: 1.3;">✓ Your request has been received.</h2>
+                    <p style="font-size: 14.5px; line-height: 1.6; color: #323232; margin: 0;">
+                      We have successfully logged your application for the Focus early stage sandbox intake on <strong>{{DATE}}</strong>. Our team has reviewed your request, and your private mobile builder slot has been approved.
+                    </p>
+                  </td>
+                </tr>
+              </table>
               
-              <!-- Section: APK Download -->
-              <h2 style="font-size: 18px; font-weight: 700; color: #1B1B1B; margin: 0 0 10px 0;">📦 APK Download</h2>
-              <p style="font-size: 15px; line-height: 1.6; color: #555555; margin: 0 0 28px 0;">
-                To bypass the standard 25MB email attachment limit and keep your setup secure, your private build package is hosted on Google Drive. Tap the download button below to load the release package directly onto your Android device:
-              </p>
+              <!-- Section Card 2: APK Download -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFE7D0; border-radius: 16px; margin-bottom: 32px; border-collapse: separate;">
+                <tr>
+                  <td style="padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                    <h2 style="font-size: 17px; font-weight: 800; color: #1B1B1B; margin: 0 0 10px 0; line-height: 1.3;">📦 APK Download</h2>
+                    <p style="font-size: 14.5px; line-height: 1.6; color: #323232; margin: 0;">
+                      To bypass the standard 25MB email attachment limit and keep your setup secure, your private build package is hosted on Google Drive. Tap the download button below to load the release package directly onto your Android device:
+                    </p>
+                  </td>
+                </tr>
+              </table>
               
-              <!-- CTA Button: Download APK -->
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 25px 0 35px 0;">
+              <!-- CTA Button Area -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin: 0 0 35px 0;">
                 <tr>
                   <td align="center">
-                    <table border="0" cellpadding="0" cellspacing="0">
+                    <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;">
                       <tr>
-                        <td align="center" style="border-radius: 12px; background-color: #FC6E20;">
-                          <a href="{{APK_LINK}}" target="_blank" style="display: inline-block; padding: 16px 40px; font-size: 15px; font-weight: 700; color: #FFFFFF; text-decoration: none; border-radius: 12px; background-color: #FC6E20; border: 1px solid #FC6E20; transition: all 0.2s ease-in-out;">Download APK</a>
+                        <td align="center" bgcolor="#FC6E20" style="border-radius: 14px; -webkit-border-radius: 14px; -moz-border-radius: 14px;">
+                          <a href="{{APK_LINK}}" target="_blank" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; font-weight: 700; color: #FFFFFF; text-decoration: none; border-radius: 14px; -webkit-border-radius: 14px; -moz-border-radius: 14px; padding: 16px 44px; border: 1px solid #FC6E20; display: inline-block; line-height: 20px; text-align: center;">Download APK</a>
                         </td>
                       </tr>
                     </table>
@@ -191,33 +207,37 @@ def get_html_body(download_url, app_version, user_name="Explorer", date_str=None
                 </tr>
               </table>
               
-              <!-- Pro tip instructions -->
-              <div style="background-color: #FDF4F0; border-left: 4px solid #FC6E20; padding: 18px; border-radius: 0 12px 12px 0; margin-bottom: 20px;">
-                <p style="font-size: 13.5px; line-height: 1.5; color: #5C2D16; margin: 0; font-weight: 500;">
-                  <strong>Quick Install Tip:</strong> If your browser prompts you with a security warning regarding "Unknown Sources", rest assured this is completely normal for private developer release builds. Simply toggle permission for your browser and continue the installation.
-                </p>
-              </div>
-            </td>
-          </tr>
-          
-          <!-- Modern Footer Block -->
-          <tr>
-            <td align="center" style="background-color: #1B1B1B; padding: 45px 40px; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-              <h3 style="color: #FFFFFF; font-size: 18px; font-weight: 800; margin: 0 0 4px 0; letter-spacing: -0.2px;">Focus</h3>
-              <p style="color: #A0A0A0; font-size: 12px; margin: 0 0 20px 0; font-style: italic;">Small steps. Big change.</p>
+              <!-- Pro tip instructions inside Section Card -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #FFE7D0; border-radius: 16px; margin-bottom: 40px; border-collapse: separate;">
+                <tr>
+                  <td style="padding: 24px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                    <p style="font-size: 13.5px; line-height: 1.5; color: #323232; margin: 0; font-weight: 500;">
+                      <strong>Quick Install Tip:</strong> If your browser prompts you with a security warning regarding "Unknown Sources", rest assured this is completely normal for private developer release builds. Simply toggle permission for your browser and continue the installation.
+                    </p>
+                  </td>
+                </tr>
+              </table>
               
-              <div style="height: 1px; background-color: #333333; margin: 25px 0;"></div>
+              <!-- Divider -->
+              <hr style="border: 0; border-top: 1px solid #F0F0F0; margin: 0 0 35px 0;" />
               
-              <!-- Support Footer Link -->
-              <p style="color: #888888; font-size: 12px; margin: 0 0 8px 0; line-height: 1.5;">
-                Need help setting up or have questions?<br />
-                Reach us directly at <a href="mailto:support@getfocus.online" style="color: #FC6E20; text-decoration: none; font-weight: 600;">support@getfocus.online</a>
-              </p>
+              <!-- Footer block -->
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; color: #323232; line-height: 1.6; text-align: center;">
+                    <p style="margin: 0 0 6px 0; font-weight: 800; color: #1B1B1B; font-size: 14px; letter-spacing: -0.2px;">Focus</p>
+                    <p style="margin: 0 0 16px 0; font-style: italic; color: #666666;">Small steps. Big change.</p>
+                    <p style="margin: 0 0 8px 0; color: #323232;">
+                      Need help setting up or have questions?<br />
+                      Reach us directly at <a href="mailto:support@getfocus.online" style="color: #FC6E20; text-decoration: none; font-weight: 600;">support@getfocus.online</a>
+                    </p>
+                    <p style="margin: 20px 0 0 0; font-size: 11px; color: #888888;">
+                      © Focus App &bull; All Rights Reserved.
+                    </p>
+                  </td>
+                </tr>
+              </table>
               
-              <!-- Brand copyright -->
-              <p style="color: #555555; font-size: 11px; margin: 15px 0 0 0;">
-                © Focus App &bull; All Rights Reserved.
-              </p>
             </td>
           </tr>
         </table>
