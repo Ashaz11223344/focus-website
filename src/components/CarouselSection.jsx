@@ -7,7 +7,7 @@ const CAROUSEL_SCREENS = [
   { image: '/screenshots/home-sceen.jpeg', label: 'Daily New Quotes', desc: 'Daily wisdom quotes' },
   { image: '/screenshots/favorites.jpeg', label: 'Favorites Vault', desc: 'Permanent offline bookmarks' },
   { image: '/screenshots/search.jpeg', label: 'Smart Search', desc: 'Instant quote and author filter' },
-  { image: '/screenshots/mood-tracker.png', label: 'Mood Log', desc: 'Secure emotional tracking' },
+  { image: '/screenshots/mood-tracker.jpeg', label: 'Mood Log', desc: 'Secure emotional tracking' },
   { image: '/screenshots/journal.jpeg', label: 'Personal Journal', desc: 'Reflective serif diary' },
   { image: '/screenshots/history.jpeg', label: 'Wisdom History', desc: 'Past quotes archives' },
   { image: '/screenshots/notification.png', label: 'Quiet Control', desc: 'Sleep suppression & settings' },
