@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Focus App",
+  "operatingSystem": "Android, iOS",
+  "applicationCategory": "ProductivityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "description": "Focus helps users stay productive, reduce distractions, and build mindful offline habits.",
+  "url": "https://getfocus.online",
+  "applicationSubCategory": "Mindful Offline Growth & Productivity"
+}
