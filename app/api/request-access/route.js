@@ -300,14 +300,9 @@ export async function POST(request) {
       html: htmlContent
     };
 
-    // Trigger SMTP Email delivery in the background (asynchronous, non-blocking)
-    transporter.sendMail(mailOptions)
-      .then(() => {
-        console.log(`[SMTP Success] Access request email successfully sent in background for candidate: ${fullName} (${email})`);
-      })
-      .catch((err) => {
-        console.error(`[SMTP Error] Failed to send email in background for candidate ${fullName}:`, err);
-      });
+    // Trigger SMTP Email delivery (must be awaited in serverless environments like Vercel)
+    await transporter.sendMail(mailOptions);
+    console.log(`[SMTP Success] Access request email successfully sent for candidate: ${fullName} (${email})`);
 
     return NextResponse.json({
       success: true,
