@@ -11,7 +11,7 @@
     "Private Journaling",
     "Offline Tracker"
   ],
-  "canonicalUrl": "https://getfocus.online",
+  "canonicalUrl": "https://www.getfocus.online",
   "openGraph": {
     "title": "Focus App – Mindful Offline Growth & Productivity",
     "description": "Focus helps users stay productive, reduce distractions, and build mindful offline habits.",
@@ -19,7 +19,7 @@
     "siteName": "Focus App",
     "images": [
       {
-        "url": "https://getfocus.online/logo.png",
+        "url": "https://www.getfocus.online/logo.png",
         "width": 1200,
         "height": 630,
         "alt": "Focus App logo"
@@ -33,7 +33,7 @@
     "title": "Focus App – Mindful Offline Growth & Productivity",
     "description": "Focus helps users stay productive, reduce distractions, and build mindful offline habits.",
     "images": [
-      "https://getfocus.online/logo.png"
+      "https://www.getfocus.online/logo.png"
     ]
   }
 }
