@@ -250,6 +250,29 @@ export default function FeaturesClient() {
         </div>
       </section>
 
+      {/* Dynamic Comparison Callout Section */}
+      <section className="max-w-4xl mx-auto px-6 py-12 relative z-10 select-none">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="glass-panel rounded-2xl p-8 md:p-12 border border-[#FFE7D0]/10 bg-[#FFE7D0]/2 text-center relative overflow-hidden group hover:border-[#FC6E20]/20 transition-all duration-300"
+        >
+          {/* Subtle accent glow */}
+          <div className="absolute -top-12 -left-12 w-24 h-24 rounded-full bg-[#FC6E20]/5 blur-xl group-hover:bg-[#FC6E20]/10 transition-all duration-300" />
+          
+          <h3 className="text-xl md:text-3xl font-serif text-[#FFE7D0] leading-snug tracking-wide max-w-2xl mx-auto font-medium">
+            Looking for a <span className="text-[#FC6E20]">Daylio alternative</span> with no account?<br />
+            A <span className="text-[#FC6E20]">Reflectly alternative</span> with no cloud sync?
+          </h3>
+          <div className="w-12 h-[1px] bg-[#FFE7D0]/10 my-6 mx-auto group-hover:w-24 group-hover:bg-[#FC6E20]/30 transition-all duration-300" />
+          <p className="text-sm md:text-base text-[#FFE7D0]/70 font-sans max-w-xl mx-auto leading-relaxed">
+            Focus is the only offline-first mood tracker that requires zero registration. Your self-reflection belongs entirely on your device.
+          </p>
+        </motion.div>
+      </section>
+
       {/* Bottom Request Access CTA */}
       <section className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-t border-[#FFE7D0]/5 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] h-[55vw] rounded-full bg-[#FC6E20]/4 blur-[130px] pointer-events-none z-0"></div>
