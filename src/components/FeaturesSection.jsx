@@ -69,7 +69,7 @@ const FEATURES = [
     title: 'Quiet Control & Privacy',
     subtitle: '100% Secure offline sandboxing',
     description: 'We respect your tranquility. Customize Quiet Hours to silence status bar badges during sleep. Because all records stay in a sandboxed SQLite database, your data is yours alone.',
-    image: '/screenshots/notification.jpeg',
+    image: '/screenshots/notification.png',
     icon: Shield,
     color: '#FFE7D0',
   },
@@ -349,8 +349,8 @@ export default function FeaturesSection() {
                         <div className="absolute right-8 flex items-center justify-end pointer-events-none">
                           <span
                             className={`whitespace-nowrap font-sans text-[11px] tracking-wider transition-all duration-300 px-3 py-1.5 rounded-lg border bg-[#1B1B1B]/95 shadow-xl backdrop-blur-md ${isActive
-                                ? 'text-[#FC6E20] border-[#FC6E20]/20 font-semibold opacity-100 translate-x-0'
-                                : 'text-[#FFE7D0]/40 border-transparent group-hover:text-[#FFE7D0] group-hover:border-[#FFE7D0]/10 opacity-0 group-hover:opacity-100 translate-x-2'
+                              ? 'text-[#FC6E20] border-[#FC6E20]/20 font-semibold opacity-100 translate-x-0'
+                              : 'text-[#FFE7D0]/40 border-transparent group-hover:text-[#FFE7D0] group-hover:border-[#FFE7D0]/10 opacity-0 group-hover:opacity-100 translate-x-2'
                               }`}
                           >
                             {feature.title}

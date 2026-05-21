@@ -377,10 +377,26 @@ def main():
     # Load env
     config = load_config()
     
+    # Auto-detect latest APK in release_apks folder
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    releases_dir = os.path.join(script_dir, "release_apks")
+    if not os.path.exists(releases_dir):
+        print(f"❌ Error: '{releases_dir}' folder not found.")
+        sys.exit(1)
+        
+    apk_files = [f for f in os.listdir(releases_dir) if f.lower().endswith('.apk')]
+    if not apk_files:
+        print(f"❌ Error: No .apk files found in '{releases_dir}'.")
+        sys.exit(1)
+        
+    # Sort to get the latest modified APK
+    apk_files.sort(key=lambda x: os.path.getmtime(os.path.join(releases_dir, x)), reverse=True)
+    apk_path_input = os.path.join(releases_dir, apk_files[0])
+    print(f"✅ Auto-selected latest APK: {apk_files[0]}")
+    
     # Prompt sequential inputs
     try:
-        apk_path_input = input("Step 1 → Enter APK file path:\n> ").strip()
-        recipient_input = input("\nStep 2 → Enter recipient email address:\n> ").strip()
+        recipient_input = input("\nStep 1 → Enter recipient email address:\n> ").strip()
     except (KeyboardInterrupt, EOFError):
         print("\nOperation cancelled by user.")
         sys.exit(0)
