@@ -11,12 +11,12 @@ const CAROUSEL_SCREENS = [
   { image: '/screenshots/journal.jpeg', label: 'Personal Journal', desc: 'Reflective serif diary' },
   { image: '/screenshots/history.jpeg', label: 'Wisdom History', desc: 'Past quotes archives' },
   { image: '/screenshots/notification.png', label: 'Quiet Control', desc: 'Sleep suppression & settings' },
+  { image: '/screenshots/specific_time.png', label: 'Quote Schedule', desc: 'Set custom specific timing slots' },
   { image: '/screenshots/quote_widget.png', label: 'Quote Widget', desc: 'Add quotes to your home screen' },
   { image: '/screenshots/journal_widget.png', label: 'Journal Widget', desc: 'Add your thoughts on home screen' },
   { image: '/screenshots/mood_journey.png', label: 'Mood Journey', desc: 'Track your mood and emotions' },
   { image: '/screenshots/mood_card.png', label: 'Mood Card', desc: 'Share your mood with friends' },
   { image: '/screenshots/pin_code.png', label: 'Pin Code', desc: 'Secure your journal with pin code' },
-  { image: '/screenshots/specific_time.png', label: 'Quote Schedule', desc: 'Set custom specific timing slots' },
 ]
 
 export default function CarouselSection() {

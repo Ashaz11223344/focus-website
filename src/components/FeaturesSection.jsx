@@ -69,7 +69,7 @@ const FEATURES = [
     title: 'Quiet Control & Privacy',
     subtitle: '100% Secure offline sandboxing',
     description: 'We respect your tranquility. Customize Quiet Hours to silence status bar badges during sleep. Because all records stay in a sandboxed SQLite database, your data is yours alone.',
-    image: '/screenshots/notification.jpeg',
+    image: '/screenshots/notification.png',
     icon: Shield,
     color: '#FFE7D0',
   },
