@@ -48,7 +48,7 @@ export default function HeroSection({ onOpenModal }) {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-[#FFE7D0]/70 font-sans text-base md:text-xl leading-relaxed mt-6 max-w-xl"
             >
-              A high-fidelity growth and motivation companion. Reflect through beautiful calligraphy quotes, journal in complete privacy, and log daily emotions completely offline.
+              A high-fidelity no account self improvement app and growth companion. Reflect through beautiful calligraphy quotes, journal in complete privacy, and log daily emotions completely offline.
             </motion.p>
 
             {/* Action Buttons */}

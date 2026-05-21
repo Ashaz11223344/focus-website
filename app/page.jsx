@@ -1,84 +1,85 @@
-"use client";
+import React from 'react'
+import HomeClient from './HomeClient'
 
-import React, { useState } from 'react'
-import { Sparkles } from 'lucide-react'
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import FeaturesSection from './components/FeaturesSection'
-import WhyFocus from './components/WhyFocus'
-import CarouselSection from './components/CarouselSection'
-import Testimonials from './components/Testimonials'
-import Footer from './components/Footer'
-import RequestAccessModal from './components/RequestAccessModal'
+export const metadata = {
+  title: 'Focus App — Offline Mood Tracker & Daily Quotes | Android',
+  description: 'Focus: 100% offline Android app for daily mood tracking, calligraphy quotes & private journaling. No account. No tracking. No cloud.',
+  alternates: {
+    canonical: 'https://getfocus.online/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  other: {
+    author: 'Focus App',
+    language: 'English',
+  },
+  openGraph: {
+    type: 'website',
+    siteName: 'Focus App',
+    title: 'Focus App — Offline Mood Tracker & Daily Quotes | Android',
+    description: 'Focus: 100% offline Android app for daily mood tracking, calligraphy quotes & private journaling. No account. No tracking. No cloud.',
+    url: 'https://getfocus.online/',
+    images: [
+      {
+        url: 'https://getfocus.online/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Focus App — Offline Mood Tracker & Daily Quotes',
+      }
+    ],
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Focus App — Offline Mood Tracker & Daily Quotes | Android',
+    description: 'Focus: 100% offline Android app for daily mood tracking, calligraphy quotes & private journaling. No account. No tracking. No cloud.',
+    images: ['https://getfocus.online/og-image.png'],
+  }
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Focus App",
+  "operatingSystem": "Android, iOS",
+  "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "Mindful Offline Growth & Productivity",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "description": "Focus helps users stay productive, reduce distractions, and build mindful offline habits.",
+  "url": "https://getfocus.online",
+  "screenshot": "https://getfocus.online/logo.png",
+  "creator": {
+    "@type": "Organization",
+    "name": "Focus App",
+    "url": "https://getfocus.online",
+    "email": "support@getfocus.online"
+  },
+  "featureList": [
+    "Offline Daily Quotes",
+    "Mood Tracker",
+    "Reflective Journal",
+    "Habit Streak Tracker",
+    "Gamified Badges",
+    "Quiet Hours Notifications",
+    "Zero Cloud Tracking",
+    "No Account Required"
+  ]
+}
 
 export default function Page() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
   return (
-    <div className="relative w-full min-h-screen bg-[#1B1B1B] text-[#FFE7D0] overflow-x-hidden antialiased">
-      
-      {/* Premium Glassmorphic Header */}
-      <Header onOpenModal={() => setIsModalOpen(true)} />
-
-      {/* Hero Section */}
-      <HeroSection onOpenModal={() => setIsModalOpen(true)} />
-
-      {/* Features GSAP Scroll Pinning Showcase */}
-      <FeaturesSection />
-
-      {/* Why Focus Offline Advantage Cards */}
-      <WhyFocus />
-
-      {/* Centered Cyclic Carousel Showcase */}
-      <CarouselSection />
-
-      {/* User Reviews */}
-      <Testimonials />
-
-      {/* Bottom Request Access Call-to-Action */}
-      <section className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-b border-[#FFE7D0]/5 overflow-hidden">
-        
-        {/* Soft background lighting */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] h-[55vw] rounded-full bg-[#FC6E20]/4 blur-[130px] pointer-events-none z-0"></div>
-
-        <div className="max-w-4xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
-          
-          <span className="text-[12px] font-sans tracking-[0.25em] font-semibold text-[#FC6E20] uppercase block mb-4 select-none">
-            Get Focus
-          </span>
-
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[#FFE7D0] leading-tight select-none">
-            Cultivate your inner oasis
-          </h2>
-
-          <p className="text-[#FFE7D0]/60 font-sans mt-6 text-sm md:text-base leading-relaxed max-w-xl">
-            Request early sandbox access to our private build and take the first step towards a peaceful, consistent daily routine.
-          </p>
-
-          <div className="mt-10 flex flex-col items-center select-none">
-            {/* Primary Request Access Button */}
-            <button
-              onClick={() => setIsModalOpen(true)}
-              className="flex items-center gap-3 px-10 py-5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-base font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_35px_rgba(252,110,32,0.55)] transition-all duration-300 shadow-xl cursor-pointer"
-            >
-              <Sparkles className="w-5.5 h-5.5 text-[#1B1B1B]" />
-              <span>Request Early Access</span>
-            </button>
-
-            <span className="text-xs text-[#FFE7D0]/40 font-sans mt-4 block">
-              ✦ Secure sandbox invitation &bull; 100% private sandbox SQL Client
-            </span>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Footer Block */}
-      <Footer />
-
-      {/* Request Access Form Dialog Modal */}
-      <RequestAccessModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <HomeClient />
+    </>
   )
 }

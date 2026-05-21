@@ -76,7 +76,7 @@ export default function CarouselSection() {
             A serene interface designed from scratch
           </h2>
           <p className="text-[#FFE7D0]/60 font-sans mt-4 text-base leading-relaxed">
-            Take a complete look at Focus. Clean layout, book-grade Literata text hierarchy, and a quiet dark HSL palette.
+            Take a complete look at Focus. Clean layout, book style aesthetic journal pages with book-grade Literata text hierarchy, and a quiet dark HSL palette.
           </p>
         </div>
 

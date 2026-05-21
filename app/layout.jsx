@@ -52,22 +52,6 @@ export const viewport = {
   userScalable: false,
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Focus App',
-  operatingSystem: 'Android, iOS',
-  applicationCategory: 'ProductivityApplication',
-  offers: {
-    '@type': 'Offer',
-    price: '0.00',
-    priceCurrency: 'USD',
-  },
-  description: 'Focus helps users stay productive, reduce distractions, and build mindful offline habits.',
-  url: 'https://getfocus.online',
-  applicationSubCategory: 'Mindful Offline Growth & Productivity',
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -80,12 +64,6 @@ export default function RootLayout({ children }) {
         <link 
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Outfit:wght@400;500;600;700;800&display=swap" 
           rel="stylesheet" 
-        />
-
-        {/* Structured Data (JSON-LD) */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>

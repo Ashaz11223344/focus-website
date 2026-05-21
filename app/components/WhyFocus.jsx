@@ -8,7 +8,7 @@ const ADVANTAGES = [
   {
     icon: ShieldCheck,
     title: '100% Offline Sanctuary',
-    description: 'Every thought, journal entry, and logged emotional state remains securely inside your sandboxed local Room database. Your personal growth is strictly yours.',
+    description: 'Every thought, journal entry, and logged emotional state remains securely inside your sandboxed local database, acting as a private single log mood tracker.',
     color: '#FC6E20',
   },
   {
@@ -26,7 +26,7 @@ const ADVANTAGES = [
   {
     icon: Moon,
     title: 'Silent Quiet Scheduler',
-    description: 'Protect your peace. Set customizable sleep intervals to restrict daily notification popups, letting you work, rest, and think completely undisturbed.',
+    description: 'Protect your peace. Set customizable quiet hours quotes reminder and sleep intervals to restrict daily notification popups, letting you work and think completely undisturbed.',
     color: '#FFE7D0',
   }
 ]

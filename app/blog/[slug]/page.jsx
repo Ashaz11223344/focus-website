@@ -8,12 +8,45 @@ export async function generateMetadata({ params }) {
   const article = getArticleBySlug(slug)
   
   if (!article) return {}
+
+  const title = `${article.title} | Focus Blog`
+  const description = article.excerpt || "Read articles on offline productivity, daily journaling, mood tracking and building mindful habits."
   
   return {
-    title: `${article.title} – Focus Motivation App Sanctuary`,
-    description: article.excerpt,
+    title,
+    description,
     alternates: {
       canonical: `https://getfocus.online/blog/${slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    other: {
+      author: 'Focus App',
+      language: 'English',
+    },
+    openGraph: {
+      type: 'article',
+      siteName: 'Focus App',
+      title,
+      description,
+      url: `https://getfocus.online/blog/${slug}`,
+      images: [
+        {
+          url: 'https://getfocus.online/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: title,
+        }
+      ],
+      locale: 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['https://getfocus.online/og-image.png'],
     }
   }
 }
@@ -47,20 +80,44 @@ export default async function Page({ params }) {
       author: art.author,
       readTime: art.readTime
     }))
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.excerpt,
+    "author": {
+      "@type": "Organization",
+      "name": "Focus App"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Focus App",
+      "url": "https://getfocus.online"
+    },
+    "datePublished": article.date,
+    "url": `https://getfocus.online/blog/${slug}`
+  }
     
   return (
-    <BlogArticleClient 
-      article={{
-        slug: article.slug,
-        title: article.title,
-        category: article.category,
-        date: article.date,
-        excerpt: article.excerpt,
-        author: article.author,
-        readTime: article.readTime,
-        content: article.content
-      }}
-      relatedArticles={related}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <BlogArticleClient 
+        article={{
+          slug: article.slug,
+          title: article.title,
+          category: article.category,
+          date: article.date,
+          excerpt: article.excerpt,
+          author: article.author,
+          readTime: article.readTime,
+          content: article.content
+        }}
+        relatedArticles={related}
+      />
+    </>
   )
 }
