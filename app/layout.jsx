@@ -41,7 +41,9 @@ export const metadata = {
     images: ['https://getfocus.online/logo.png'],
   },
   icons: {
-    icon: '/favicon.png',
+    icon: '/icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/apple-icon.png',
   }
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import FeaturesClient from './FeaturesClient'
 
 export const metadata = {
-  title: 'Focus App Features — Quotes, Mood, Journal & More',
+  title: 'Focus App Features — Offline Mood, Quotes & Streaks',
   description: 'Explore all 9 features of Focus: offline quotes, mood tracker, gamified streaks, reflective journal and more. No account needed.',
   alternates: {
     canonical: 'https://getfocus.online/features',
@@ -18,7 +18,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Focus App',
-    title: 'Focus App Features — Quotes, Mood, Journal & More',
+    title: 'Focus App Features — Offline Mood, Quotes & Streaks',
     description: 'Explore all 9 features of Focus: offline quotes, mood tracker, gamified streaks, reflective journal and more. No account needed.',
     url: 'https://getfocus.online/features',
     images: [
@@ -26,14 +26,14 @@ export const metadata = {
         url: 'https://getfocus.online/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Focus App Features — Quotes, Mood, Journal & More',
+        alt: 'Focus App Features — Offline Mood, Quotes & Streaks',
       }
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Focus App Features — Quotes, Mood, Journal & More',
+    title: 'Focus App Features — Offline Mood, Quotes & Streaks',
     description: 'Explore all 9 features of Focus: offline quotes, mood tracker, gamified streaks, reflective journal and more. No account needed.',
     images: ['https://getfocus.online/og-image.png'],
   }
