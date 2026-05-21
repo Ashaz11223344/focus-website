@@ -10,7 +10,7 @@ const CAROUSEL_SCREENS = [
   { image: '/screenshots/mood-tracker.jpeg', label: 'Mood Log', desc: 'Secure emotional tracking' },
   { image: '/screenshots/journal.jpeg', label: 'Personal Journal', desc: 'Reflective serif diary' },
   { image: '/screenshots/history.jpeg', label: 'Wisdom History', desc: 'Past quotes archives' },
-  { image: '/screenshots/notification.png', label: 'Quiet Control', desc: 'Sleep suppression & settings' },
+  { image: '/screenshots/notification.jpeg', label: 'Quiet Control', desc: 'Sleep suppression & settings' },
   { image: '/screenshots/specific_time.png', label: 'Quote Schedule', desc: 'Set custom specific timing slots' },
   { image: '/screenshots/quote_widget.png', label: 'Quote Widget', desc: 'Add quotes to your home screen' },
   { image: '/screenshots/journal_widget.png', label: 'Journal Widget', desc: 'Add your thoughts on home screen' },
