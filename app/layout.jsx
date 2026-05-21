@@ -7,12 +7,13 @@ export const metadata = {
   keywords: [
     'Focus App',
     'Mindful Offline Growth',
-    'Productivity',
-    'Offline Focus',
-    'Reduce Distractions',
-    'Mindful Habits',
-    'Private Journaling',
-    'Offline Tracker'
+    'No Account Self Improvement',
+    'Zero Telemetry Mood Tracker',
+    'Calligraphy Daily Quotes',
+    'Book Style Aesthetic Journal',
+    'Single Log Mood Tracker',
+    'Offline Habit Badges',
+    'Quiet Hours Quotes Reminder'
   ],
   alternates: {
     canonical: 'https://getfocus.online',
