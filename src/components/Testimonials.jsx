@@ -22,7 +22,7 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-b border-[#FFE7D0]/5">
+    <section id="review" className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-b border-[#FFE7D0]/5">
 
       {/* Visual styling background blur */}
       <div className="absolute top-10 right-10 w-[30vw] h-[30vw] rounded-full bg-[#FFE7D0]/2 blur-[100px] pointer-events-none z-0"></div>

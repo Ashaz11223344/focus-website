@@ -6,9 +6,9 @@ import { Quote } from 'lucide-react'
 
 const REVIEWS = [
   {
-    quote: 'I love that Focus does not try to sell me a subscription. It is just beautiful daily quotes and a private journal. Truly a peaceful place to spend my mornings.',
-    author: 'Zain Khan',
-    role: 'Creative Designer',
+    quote: 'I\'ve been using GetFocus for a while now, and it\'s honestly been a great experience. The app is clean, easy to use, and helps me stay focused and productive without feeling overwhelming. I really like how simple everything is to navigate, and the features actually help me manage my time better. Since I started using it, I\'ve noticed fewer distractions and better consistency in my daily routine. Definitely worth trying if you\'re looking for a tool to improve focus and productivity. Highly recommended! ⭐⭐⭐⭐⭐',
+    author: 'Zaeem Ansari',
+    role: 'Full stack developer',
   },
   {
     quote: 'I really like this Focus app. It has a nice collection of quotes for different moods, so I don’t have to go searching every time I need motivation or a little push. The quotes feel random but still meaningful, and somehow they always fit what I’m going through. The mood tracker is also really helpful. It lets me keep track of how I’m feeling over time, and it kind of doubles as a journal too, which I really like because I often forget my thoughts or even poetry ideas before writing them down. I also like the notifications—it sends quotes at the right time, especially on bad days, and they actually help me feel a bit better or calmer. Overall, it just feels like a simple but really thoughtful app that quietly supports you in the background.',
@@ -24,7 +24,7 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-b border-[#FFE7D0]/5">
+    <section id="review" className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-b border-[#FFE7D0]/5">
 
       {/* Visual styling background blur */}
       <div className="absolute top-10 right-10 w-[35vw] h-[35vw] rounded-full bg-[#FFE7D0]/2 blur-[100px] pointer-events-none z-0"></div>

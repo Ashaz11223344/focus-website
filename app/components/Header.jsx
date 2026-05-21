@@ -25,7 +25,7 @@ export default function Header({ onOpenModal }) {
           <Link href="/download" className="hover:text-[#FC6E20] transition-colors duration-300">Download</Link>
           <Link href="/blog" className="hover:text-[#FC6E20] transition-colors duration-300">Blog</Link>
           <Link href="/#why-focus" className="hover:text-[#FC6E20] transition-colors duration-300">Why Focus</Link>
-          <Link href="/#testimonials" className="hover:text-[#FC6E20] transition-colors duration-300">Reviews</Link>
+          <Link href="/#review" className="hover:text-[#FC6E20] transition-colors duration-300">Reviews</Link>
         </nav>
 
         {/* Request Access CTA Button */}

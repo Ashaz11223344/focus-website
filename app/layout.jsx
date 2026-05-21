@@ -1,5 +1,6 @@
 import React from 'react'
 import './globals.css'
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: 'Focus App – Mindful Offline Growth & Productivity',
@@ -81,6 +82,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Analytics />
       </body>
     </html>
   )
