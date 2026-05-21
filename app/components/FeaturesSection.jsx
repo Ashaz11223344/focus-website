@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Sparkles, Heart, Search, Smile, BookOpen, Shield, Lock } from 'lucide-react'
+import { Sparkles, Heart, Search, Smile, BookOpen, Shield, Lock, Clock } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import PhoneMockup from './PhoneMockup'
@@ -71,9 +71,17 @@ const FEATURES = [
     title: 'Quiet Control & Privacy',
     subtitle: '100% Secure offline sandboxing',
     description: 'We respect your tranquility. Customize Quiet Hours to silence status bar badges during sleep. Because all records stay in a sandboxed SQLite database, your data is yours alone.',
-    image: '/screenshots/notification.png',
+    image: '/screenshots/notification.jpeg',
     icon: Shield,
     color: '#FFE7D0',
+  },
+  {
+    title: 'Custom Quote Timings',
+    subtitle: 'Quotes exactly when you need them',
+    description: 'Set custom, specific times throughout your day to receive your daily quotes. Whether it\'s with your morning coffee, during your lunch break, or right before bed, your wisdom arrives exactly on your schedule.',
+    image: '/screenshots/specific_time.png',
+    icon: Clock,
+    color: '#FC6E20',
   }
 ]
 

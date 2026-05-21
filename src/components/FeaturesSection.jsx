@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Sparkles, Heart, Search, Smile, BookOpen, Shield, Lock } from 'lucide-react'
+import { Sparkles, Heart, Search, Smile, BookOpen, Shield, Lock, Clock } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import PhoneMockup from './PhoneMockup'
@@ -72,6 +72,14 @@ const FEATURES = [
     image: '/screenshots/notification.jpeg',
     icon: Shield,
     color: '#FFE7D0',
+  },
+  {
+    title: 'Custom Quote Timings',
+    subtitle: 'Quotes exactly when you need them',
+    description: 'Set custom, specific times throughout your day to receive your daily quotes. Whether it\'s with your morning coffee, during your lunch break, or right before bed, your wisdom arrives exactly on your schedule.',
+    image: '/screenshots/specific_time.png',
+    icon: Clock,
+    color: '#FC6E20',
   }
 ]
 
@@ -308,23 +316,23 @@ export default function FeaturesSection() {
 
           {/* LEFT SIDE: Interactive Stepper + Typewriter text details */}
           <div className="w-full md:w-[58%] flex items-center h-[40%] md:h-full gap-8 lg:gap-12">
-            
+
             {/* INTERACTIVE PROGRESS SIDEBAR */}
             <div className="hidden md:flex flex-col items-center h-[320px] lg:h-[400px] w-6 relative py-4 select-none mr-2 shrink-0">
               <div className="relative w-full h-full">
                 {/* Background Line (Track) */}
                 <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] bg-[#FFE7D0]/10 rounded-full" />
-                
+
                 {/* Active Progress Line */}
-                <div 
+                <div
                   className="absolute top-0 left-1/2 -translate-x-1/2 w-[2px] bg-gradient-to-b from-[#FC6E20] to-[#FC6E20]/40 rounded-full transition-all duration-150 ease-out origin-top"
                   style={{ height: `${scrollProgress * 100}%` }}
                 />
-                
+
                 {/* Stepper Dots */}
                 {FEATURES.map((feature, idx) => {
                   const isActive = activeIndex === idx
-                  
+
                   return (
                     <div
                       key={idx}
@@ -340,11 +348,10 @@ export default function FeaturesSection() {
                         {/* Tooltip Label (Fades in/out on hover or when active) */}
                         <div className="absolute right-8 flex items-center justify-end pointer-events-none">
                           <span
-                            className={`whitespace-nowrap font-sans text-[11px] tracking-wider transition-all duration-300 px-3 py-1.5 rounded-lg border bg-[#1B1B1B]/95 shadow-xl backdrop-blur-md ${
-                              isActive
+                            className={`whitespace-nowrap font-sans text-[11px] tracking-wider transition-all duration-300 px-3 py-1.5 rounded-lg border bg-[#1B1B1B]/95 shadow-xl backdrop-blur-md ${isActive
                                 ? 'text-[#FC6E20] border-[#FC6E20]/20 font-semibold opacity-100 translate-x-0'
                                 : 'text-[#FFE7D0]/40 border-transparent group-hover:text-[#FFE7D0] group-hover:border-[#FFE7D0]/10 opacity-0 group-hover:opacity-100 translate-x-2'
-                            }`}
+                              }`}
                           >
                             {feature.title}
                           </span>

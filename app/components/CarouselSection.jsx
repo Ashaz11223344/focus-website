@@ -17,7 +17,8 @@ const CAROUSEL_SCREENS = [
   { image: '/screenshots/journal_widget.png', label: 'Journal Widget', desc: 'Add your thoughts on home screen' },
   { image: '/screenshots/mood_journey.png', label: 'Mood Journey', desc: 'Track your mood and emotions' },
   { image: '/screenshots/mood_card.png', label: 'Mood Card', desc: 'Share your mood with friends' },
-  { image: '/screenshots/pin_code.png', label: 'Pin Code', desc: 'Secure your journal with pin code' }
+  { image: '/screenshots/pin_code.png', label: 'Pin Code', desc: 'Secure your journal with pin code' },
+  { image: '/screenshots/specific_time.png', label: 'Quote Schedule', desc: 'Set custom specific timing slots' }
 ]
 
 export default function CarouselSection() {
