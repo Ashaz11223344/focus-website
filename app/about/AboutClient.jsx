@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Sparkles, ArrowRight, Heart, HeartHandshake, EyeOff, ShieldAlert } from 'lucide-react'
 import Header from '../components/Header'
@@ -12,16 +13,16 @@ export default function AboutClient() {
 
   return (
     <div className="relative w-full min-h-screen bg-[#1B1B1B] text-[#FFE7D0] overflow-x-hidden antialiased">
-      
+
       {/* Header component */}
       <Header onOpenModal={() => setIsModalOpen(true)} />
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-6 pt-32 pb-24 relative z-10">
-        
+
         {/* Intro Hero Section */}
         <section className="text-center max-w-3xl mx-auto mb-20 md:mb-32 select-none">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -29,7 +30,7 @@ export default function AboutClient() {
           >
             The Focus Philosophy
           </motion.span>
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -37,7 +38,7 @@ export default function AboutClient() {
           >
             Built for Peace,<br className="hidden sm:inline" /> Not for Profit.
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -110,17 +111,17 @@ export default function AboutClient() {
               </p>
             </div>
           </div>
-          
+
           {/* Founder Bio Card */}
           <div className="lg:col-span-5">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="glass-panel-heavy border border-[#FFE7D0]/10 rounded-2xl p-8 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 rounded-full bg-[#FC6E20]/5 blur-2xl pointer-events-none" />
-              
+
               <div className="flex items-center gap-4 mb-6 select-none">
                 <div className="w-14 h-14 rounded-full bg-[#FC6E20]/20 border border-[#FC6E20]/40 flex items-center justify-center font-serif text-[#FC6E20] text-xl font-bold">
                   AP
@@ -134,10 +135,20 @@ export default function AboutClient() {
               <blockquote className="text-xs md:text-sm text-[#FFE7D0]/80 italic leading-relaxed font-serif relative">
                 "Our software choices represent our values. In an era where human attention is packaged and auctioned off, maintaining a 100% offline private space on our personal screens is a deliberate act of sanity."
               </blockquote>
-              
+
+              <div className="mt-5 select-none">
+                <Link
+                  href="/aboutme"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#FC6E20]/10 border border-[#FC6E20]/20 text-[#FC6E20] text-xs font-sans font-bold tracking-wider uppercase hover:bg-[#FC6E20] hover:text-[#1B1B1B] transition-all duration-300 cursor-pointer"
+                >
+                  <span>Explore Developer Codex</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+
               <div className="mt-6 pt-6 border-t border-[#FFE7D0]/5 flex items-center justify-between text-xs text-[#FFE7D0]/40 font-sans select-none">
-                <span>📍 Pune, India</span>
-                <span>✉️ ashaz@getfocus.online</span>
+                <span>📍 Nashik, India</span>
+                <span>✉️ ashazpathan8@gmail.com</span>
               </div>
             </motion.div>
           </div>
@@ -146,7 +157,7 @@ export default function AboutClient() {
         {/* CTA Banner */}
         <section className="relative glass-panel rounded-3xl border border-[#FFE7D0]/10 p-8 md:p-12 overflow-hidden text-center max-w-4xl mx-auto select-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-[#FC6E20]/5 blur-3xl pointer-events-none" />
-          
+
           <span className="text-[10px] tracking-[0.25em] font-semibold text-[#FC6E20] uppercase block mb-3 font-sans">
             Ready to Begin?
           </span>
@@ -156,7 +167,7 @@ export default function AboutClient() {
           <p className="text-xs md:text-sm text-[#FFE7D0]/60 max-w-lg mx-auto mb-8 font-sans leading-relaxed">
             Ready to experience a genuinely private daily routine? Fill out our Sandbox application and try out the verified offline build.
           </p>
-          
+
           <button
             onClick={() => setIsModalOpen(true)}
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-xs font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] transition-colors duration-300 shadow-md cursor-pointer"

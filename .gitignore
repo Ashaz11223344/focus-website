@@ -30,3 +30,12 @@ dist-ssr
 # Next.js build output
 .next/
 out/
+
+# Python files
+__pycache__/
+*.pyc
+
+# Local releases & screenshots
+release_apks/
+screenshots/
+

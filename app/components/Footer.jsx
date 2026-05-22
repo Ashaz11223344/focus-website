@@ -14,6 +14,8 @@ export default function Footer() {
         <div className="flex flex-wrap justify-center items-center gap-6 font-semibold uppercase text-[10px] tracking-widest text-[#FFE7D0]/50">
           <Link href="/about" className="hover:text-[#FC6E20] transition-colors duration-300">About Our Mission</Link>
           <span className="text-[#FFE7D0]/10">•</span>
+          <Link href="/aboutme" className="hover:text-[#FC6E20] transition-colors duration-300">Developer Profile</Link>
+          <span className="text-[#FFE7D0]/10">•</span>
           <Link href="/privacy" className="hover:text-[#FC6E20] transition-colors duration-300">Privacy Policy</Link>
           <span className="text-[#FFE7D0]/10">•</span>
           <a href="mailto:support@getfocus.online" className="hover:text-[#FC6E20] transition-colors duration-300">support@getfocus.online</a>
