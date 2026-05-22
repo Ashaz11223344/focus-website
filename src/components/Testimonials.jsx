@@ -14,9 +14,9 @@ const REVIEWS = [
     role: 'Computer Engineer',
   },
   {
-    quote: 'Focus loads instantly and operates entirely offline. No tracking trackers, no cloud accounts, no notification spam. Just beautiful calligraphy wisdom in a clean dark UI.',
-    author: 'Ankit Patel',
-    role: 'Software Engineer',
+    quote: 'Focus has genuinely helped me stay motivated and maintain clarity in my daily routine. The daily motivation notifications are one of my favorite features, they consistently catch my eye at the right time and give me a quick boost of positivity whenever I need it.The way it presents meaningful quotes and thoughtful insights every day has made a noticeable difference in how I approach my work and mindset. What I really appreciate is the simplicity and consistency of the content—It has gradually become a part of my daily habit, helping me stay positive and aligned with my goals.',
+    author: 'Affan Khan',
+    role: 'Technical Evaluator & Analyst',
   }
 ]
 
