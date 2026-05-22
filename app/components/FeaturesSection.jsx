@@ -14,7 +14,7 @@ const FEATURES = [
   {
     title: 'Daily Inspiration',
     subtitle: 'Stunning Calligraphy presentation',
-    description: 'Delivers high-fidelity quotes in a beautifully presented calligraphy layout. Tap to copy or share, and refresh instantly to draw new wisdom from your offline database.',
+    description: 'Beautiful calligraphy-style daily quotes combined with book-style typography layout. Tap to copy or share, and refresh instantly to draw new wisdom from your offline database.',
     image: '/screenshots/home-sceen.jpeg',
     icon: Sparkles,
     color: '#FC6E20',
@@ -38,7 +38,7 @@ const FEATURES = [
   {
     title: 'Precise Mood Logging',
     subtitle: 'Overwriting single-log analytics',
-    description: 'Keep a clean record of your feelings. Enforces a smart single-log daily rule: new logs update the previous choice, guaranteeing your emotional history and charts remain 100% accurate.',
+    description: 'Keep a clean record of your feelings. Our single-log daily mood tracker ensures your progress analytics are never skewed, guaranteeing your emotional history and charts remain 100% accurate.',
     image: '/screenshots/mood-tracker.jpeg',
     icon: Smile,
     color: '#FFE7D0',

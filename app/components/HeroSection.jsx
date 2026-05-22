@@ -27,7 +27,7 @@ export default function HeroSection({ onOpenModal }) {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rgba(50, 50, 50, 0.4) glass-panel border border-[#FFE7D0]/10 text-xs font-sans tracking-wide text-[#FFE7D0]/80 mb-6 select-none"
             >
               <Shield className="w-3.5 h-3.5 text-[#FC6E20]" />
-              <span>100% Private & Fully Offline</span>
+              <span>100% Private & Offline Self Improvement — No Account Required</span>
             </motion.div>
 
             {/* Title */}

@@ -4,6 +4,28 @@ import HomeClient from './HomeClient'
 export const metadata = {
   title: 'Focus App — Offline Mood Tracker & Daily Quotes | Android',
   description: 'Focus: 100% offline Android app for daily mood tracking, calligraphy quotes & private journaling. No account. No tracking. No cloud.',
+  keywords: [
+    "Focus App",
+    "Mindful Offline Growth",
+    "No Account Self Improvement",
+    "Zero Telemetry Mood Tracker",
+    "Calligraphy Daily Quotes",
+    "Book Style Aesthetic Journal",
+    "Single Log Mood Tracker",
+    "Offline Habit Badges",
+    "Quiet Hours Quotes Reminder",
+    "No Subscription Mood Tracker",
+    "Offline Diary App Android",
+    "Habit Streak Tracker Android",
+    "Daylio Alternative Offline",
+    "Ad Free Journaling App",
+    "No Login Required Journal App",
+    "Lightweight Productivity App Android",
+    "Dark Mode Journaling App",
+    "Gamified Self Improvement App",
+    "Daily Reflection Journal App",
+    "Private Mental Wellness App"
+  ],
   alternates: {
     canonical: 'https://getfocus.online/',
   },

@@ -14,7 +14,7 @@ const ADVANTAGES = [
   {
     icon: EyeOff,
     title: 'Zero Tracking & Profiling',
-    description: 'No accounts to create, no social sign-ins, and zero cookies. We do not transmit a single byte of your writing or routines to third-party servers.',
+    description: 'No accounts to create, no social sign-ins, and zero cookies. A zero-telemetry mood tracker and diary saved locally to your device’s SQLite sandbox.',
     color: '#FFE7D0',
   },
   {
