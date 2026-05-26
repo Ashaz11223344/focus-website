@@ -1,0 +1,73 @@
+name: Weekly Automated Blog Generator
+
+on:
+  schedule:
+    # Runs at 00:00 every Monday
+    - cron: '0 0 * * 1'
+  workflow_dispatch: # Allows manual trigger from GitHub UI for testing
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Crucial: Allows Action to push commits back to the repo
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install --no-audit --no-fund
+          fi
+
+      - name: Install Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+
+      - name: Start Ollama Server
+        run: |
+          ollama serve &
+          # Wait for Ollama server to boot up
+          until curl -s http://localhost:11434 > /dev/null; do
+            echo "Waiting for Ollama to start..."
+            sleep 3
+          done
+          echo "✅ Ollama server is up and running!"
+
+      - name: Pull Mistral 7B Model
+        run: |
+          echo "📥 Pulling Mistral 7B model (this will take a minute or two)..."
+          ollama pull mistral
+          echo "✅ Mistral model pulled successfully!"
+
+      - name: Run Blog Generator Script
+        env:
+          OLLAMA_HOST: 'http://localhost:11434'
+          OLLAMA_MODEL: 'mistral'
+        run: node scripts/generate-blog.js
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are any new MDX files or changes to topics
+          if [ -n "$(git status --porcelain)" ]; then
+            git add content/blog/*.mdx content/blog-topics.json
+            git commit -m "chore(blog): auto-publish weekly article [skip ci]"
+            git push origin main
+            echo "🚀 New article pushed to repository!"
+          else
+            echo "ℹ️ No changes detected. Skipping commit."
+          fi
