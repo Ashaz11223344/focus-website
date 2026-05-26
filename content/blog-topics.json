@@ -1,25 +1,46 @@
 [
   {
     "title": "The Art of Slowing Down: Why Hurrying Destroys Focus",
-    "keywords": ["focus", "mindfulness", "slowness", "deep work", "productivity"],
+    "keywords": [
+      "focus",
+      "mindfulness",
+      "slowness",
+      "deep work",
+      "productivity"
+    ],
     "category": "Focus Tips",
-    "published": false
+    "published": true
   },
   {
     "title": "Designing a Dopamine Detox: A Practical Guide",
-    "keywords": ["dopamine detox", "digital minimalism", "focus", "mindset"],
+    "keywords": [
+      "dopamine detox",
+      "digital minimalism",
+      "focus",
+      "mindset"
+    ],
     "category": "Mindset",
     "published": false
   },
   {
     "title": "The Power of Single-Tasking in a Hyper-Connected World",
-    "keywords": ["single-tasking", "cognitive load", "distraction free", "focus tips"],
+    "keywords": [
+      "single-tasking",
+      "cognitive load",
+      "distraction free",
+      "focus tips"
+    ],
     "category": "Focus Tips",
     "published": false
   },
   {
     "title": "Developing an Offline Morning Ritual for Mental Clarity",
-    "keywords": ["morning routine", "offline first", "mental health", "journaling"],
+    "keywords": [
+      "morning routine",
+      "offline first",
+      "mental health",
+      "journaling"
+    ],
     "category": "Focus Tips",
     "published": false
   }
