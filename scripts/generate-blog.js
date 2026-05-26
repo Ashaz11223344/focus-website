@@ -34,15 +34,21 @@ Title: "${topic.title}"
 Keywords: ${topic.keywords.join(', ')}
 Category: "${topic.category}"
 
+CRITICAL LENGTH AND STRUCTURE CONSTRAINTS:
+The generated article inside the "content" field MUST meet these strict metrics:
+- WORD COUNT: Must be between 900 and 1,200 words. (Do not write less than 860 words; do not write more than 1,230 words).
+- CHARACTER COUNT: Must be between 5,500 and 7,800 characters (including spaces).
+- DEPTH: Provide a thorough introduction, 4 to 5 well-developed main sections with ## headings, precise sub-sections with ### headings where appropriate, detailed blockquotes or bulleted tips, and a thoughtful, grounded conclusion. Write complete, detailed paragraphs rather than short, summarized sentences to meet the length requirement naturally.
+
 Generate a valid JSON object matching this schema exactly:
 {
   "title": "Title of the blog post",
   "category": "Focus Tips or Mindset",
   "excerpt": "A compelling 1-2 sentence description of the article",
   "author": "Ashaz Pathan",
-  "readTime": "X min read",
+  "readTime": "9 min read",
   "slug": "url-friendly-slug-here",
-  "content": "The full blog body in standard Markdown. Use clean headings (## and ###), lists, blockquotes, and bold text. Avoid using custom JSX tags, as they could break the build."
+  "content": "The full blog body in standard Markdown conforming exactly to the length and structure constraints. Use clean headings (## and ###), lists, blockquotes, and bold text. Avoid using custom JSX tags, as they could break the build."
 }`;
 
 // 3. Request Local Ollama API
