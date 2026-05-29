@@ -71,6 +71,19 @@ function MarkdownContent({ rawContent }) {
   )
 }
 
+const isNewArticle = (dateStr) => {
+  if (!dateStr) return false;
+  try {
+    const articleDate = new Date(dateStr);
+    const currentDate = new Date();
+    const diffTime = currentDate.getTime() - articleDate.getTime();
+    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+    return diffDays <= 3 && diffDays >= -1;
+  } catch (e) {
+    return false;
+  }
+};
+
 export default function BlogArticleClient({ article, relatedArticles = [] }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -183,9 +196,16 @@ export default function BlogArticleClient({ article, relatedArticles = [] }) {
                 >
                   <div className="space-y-4">
                     <div className="flex justify-between items-center select-none text-[10px] text-[#FFE7D0]/40 font-sans">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#FFE7D0]/5 border border-[#FFE7D0]/10 font-bold uppercase tracking-wider text-[#FC6E20]/80">
-                        {art.category}
-                      </span>
+                      <div className="flex items-center gap-2">
+                        <span className="px-2.5 py-0.5 rounded-full bg-[#FFE7D0]/5 border border-[#FFE7D0]/10 font-bold uppercase tracking-wider text-[#FC6E20]/80">
+                          {art.category}
+                        </span>
+                        {isNewArticle(art.date) && (
+                          <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-[8px] font-sans font-bold text-emerald-400 uppercase tracking-wider animate-pulse select-none">
+                            New
+                          </span>
+                        )}
+                      </div>
                       <span>{art.readTime}</span>
                     </div>
                     <Link href={`/blog/${art.slug}`}>

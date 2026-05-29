@@ -10,6 +10,20 @@ import RequestAccessModal from '../components/RequestAccessModal'
 
 const CATEGORIES = ['All', 'Productivity', 'Mindfulness', 'Focus Tips', 'App Updates']
 
+const isNewArticle = (dateStr) => {
+  if (!dateStr) return false;
+  try {
+    const articleDate = new Date(dateStr);
+    const currentDate = new Date();
+    const diffTime = currentDate.getTime() - articleDate.getTime();
+    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+    // Returns true if posted within the last 3 days (timezone-safe)
+    return diffDays <= 3 && diffDays >= -1;
+  } catch (e) {
+    return false;
+  }
+};
+
 export default function BlogIndexClient({ initialArticles = [] }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('All')
@@ -126,9 +140,16 @@ export default function BlogIndexClient({ initialArticles = [] }) {
                     <User className="w-3.5 h-3.5 text-[#FC6E20]/60" />
                     <span>{art.author}</span>
                   </div>
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5" />
-                    <span>{art.date}</span>
+                  <div className="flex items-center gap-1.5">
+                    {isNewArticle(art.date) && (
+                      <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-[8px] font-sans font-bold text-emerald-400 uppercase tracking-wider animate-pulse select-none">
+                        New
+                      </span>
+                    )}
+                    <div className="flex items-center gap-1">
+                      <Calendar className="w-3.5 h-3.5" />
+                      <span>{art.date}</span>
+                    </div>
                   </div>
                 </div>
 
