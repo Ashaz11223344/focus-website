@@ -25,6 +25,7 @@ const topic = topics[nextTopicIndex];
 console.log(`📝 Selected Topic: "${topic.title}"`);
 
 // 2. Build the System Prompt
+const generatedSlug = topic.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 const systemPrompt = `You are a premium copywriter for Focus Website, an offline-first writing, journaling, and mindfulness application. 
 Your writing style is thoughtful, deep, stoic, grounded, and scientific—similar to articles on Medium's Better Humans or the writings of Marcus Aurelius. 
 Avoid clunky AI marketing jargon (e.g., "delve", "tapestry", "in today's fast-paced world", "testament").
@@ -35,23 +36,24 @@ Keywords: ${topic.keywords.join(', ')}
 Category: "${topic.category}"
 
 CRITICAL LENGTH AND STRUCTURE CONSTRAINTS:
-The generated article inside the "content" field MUST meet these strict metrics:
+The generated article body MUST meet these strict metrics:
 - WORD COUNT: Must be between 900 and 1,200 words. (Do not write less than 860 words; do not write more than 1,230 words).
 - CHARACTER COUNT: Must be between 5,500 and 7,800 characters (including spaces).
 - DEPTH: Provide a thorough introduction, 4 to 5 well-developed main sections with ## headings, precise sub-sections with ### headings where appropriate, detailed blockquotes or bulleted tips, and a thoughtful, grounded conclusion. Write complete, detailed paragraphs rather than short, summarized sentences to meet the length requirement naturally.
 
-Generate a valid JSON object matching this schema exactly:
-{
-  "title": "Title of the blog post",
-  "category": "Focus Tips or Mindset",
-  "excerpt": "A compelling 1-2 sentence description of the article",
-  "author": "Ashaz Pathan",
-  "readTime": "9 min read",
-  "slug": "url-friendly-slug-here",
-  "content": "The full blog body in standard Markdown conforming exactly to the length and structure constraints. Use clean headings (## and ###), lists, blockquotes, and bold text. Avoid using custom JSX tags, as they could break the build."
-}`;
+YOUR OUTPUT MUST START WITH A FRONTMATTER BLOCK EXACTLY LIKE THIS:
+---
+title: "${topic.title}"
+category: "${topic.category}"
+excerpt: "A compelling 1-2 sentence description of the article"
+author: "Ashaz Pathan"
+readTime: "9 min read"
+slug: "${generatedSlug}"
+---
 
-// 3. Request Local Ollama API
+Followed immediately by your article markdown content starting with a ## heading. Do NOT include a # H1 title in the body (the H1 is rendered automatically by Next.js from the frontmatter).`;
+
+// 3. Request Local Ollama API (Without JSON format restriction to allow raw Markdown)
 async function generateArticle() {
   console.log(`🤖 Contacting local Ollama instance at ${OLLAMA_HOST} using model "${OLLAMA_MODEL}"...`);
   
@@ -63,7 +65,6 @@ async function generateArticle() {
     body: JSON.stringify({
       model: OLLAMA_MODEL,
       prompt: systemPrompt,
-      format: 'json',
       stream: false
     })
   });
@@ -74,11 +75,60 @@ async function generateArticle() {
   }
 
   const data = await response.json();
-  const rawJsonText = data.response;
-  return JSON.parse(rawJsonText);
+  return data.response;
 }
 
-// 4. Validate and Clean MDX
+// 4. Parse and Extract Frontmatter and Markdown Content
+function parseResponse(rawText) {
+  const text = rawText.replace(/\r\n/g, '\n').trim();
+
+  // Find start and end of frontmatter
+  const firstIndex = text.indexOf('---');
+  if (firstIndex === -1) {
+    throw new Error("Could not find start of frontmatter (---) in response.");
+  }
+  const secondIndex = text.indexOf('---', firstIndex + 3);
+  if (secondIndex === -1) {
+    throw new Error("Could not find end of frontmatter (---) in response.");
+  }
+
+  const frontmatterText = text.slice(firstIndex + 3, secondIndex).trim();
+  const content = text.slice(secondIndex + 3).trim();
+
+  // Parse frontmatter keys and values
+  const metadata = {
+    title: topic.title,
+    category: topic.category,
+    excerpt: "",
+    author: "Ashaz Pathan",
+    readTime: "9 min read",
+    slug: generatedSlug
+  };
+
+  frontmatterText.split('\n').forEach(line => {
+    const colonIndex = line.indexOf(':');
+    if (colonIndex !== -1) {
+      const key = line.slice(0, colonIndex).trim().toLowerCase();
+      let value = line.slice(colonIndex + 1).trim();
+      
+      // Strip outer double or single quotes if present
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+        value = value.slice(1, -1);
+      }
+      
+      if (key === 'title') metadata.title = value;
+      else if (key === 'category') metadata.category = value;
+      else if (key === 'excerpt') metadata.excerpt = value;
+      else if (key === 'author') metadata.author = value;
+      else if (key === 'readtime') metadata.readTime = value;
+      else if (key === 'slug') metadata.slug = value;
+    }
+  });
+
+  return { metadata, content };
+}
+
+// 5. Validate and Clean MDX
 function sanitizeContentForMDX(content) {
   // MDX is highly sensitive to isolated curly braces { and } or unclosed XML tags like <.
   // We must escape or replace unescaped braces and brackets that aren't valid JSX.
@@ -88,7 +138,6 @@ function sanitizeContentForMDX(content) {
   clean = clean.replace(/\{/g, '\\{').replace(/\}/g, '\\}');
   
   // Escape loose angle brackets that could be mistaken for unclosed JSX tags
-  // Replace < with &lt; unless it looks like a markdown image/link, or is a code block
   clean = clean.replace(/<([a-zA-Z])/g, '&lt;$1');
 
   return clean;
@@ -96,32 +145,33 @@ function sanitizeContentForMDX(content) {
 
 async function main() {
   try {
-    const articleData = await generateArticle();
-    const cleanContent = sanitizeContentForMDX(articleData.content);
+    const rawText = await generateArticle();
+    const { metadata, content } = parseResponse(rawText);
+    const cleanContent = sanitizeContentForMDX(content);
     
     // Assemble Frontmatter + MDX content
     const mdxFileContent = `---
-title: "${articleData.title.replace(/"/g, '\\"')}"
-category: "${articleData.category}"
+title: "${metadata.title.replace(/"/g, '\\"')}"
+category: "${metadata.category}"
 date: "${new Date().toISOString().split('T')[0]}"
-excerpt: "${articleData.excerpt.replace(/"/g, '\\"')}"
-author: "${articleData.author}"
-readTime: "${articleData.readTime}"
+excerpt: "${metadata.excerpt.replace(/"/g, '\\"')}"
+author: "${metadata.author}"
+readTime: "${metadata.readTime}"
 ---
 
 ${cleanContent}
 `;
 
     // Validate the generated slug and set default filename
-    const slug = articleData.slug.toLowerCase().replace(/[^a-z0-9-]/g, '');
-    const filename = `${slug}.mdx`;
+    const finalSlug = metadata.slug.toLowerCase().replace(/[^a-z0-9-]/g, '');
+    const filename = `${finalSlug}.mdx`;
     const filePath = path.join(BLOG_DIR, filename);
 
-    // 5. Write MDX File
+    // 6. Write MDX File
     fs.writeFileSync(filePath, mdxFileContent, 'utf8');
     console.log(`✅ Successfully generated new blog post: ${filePath}`);
 
-    // 6. Update Topics JSON to set Published to true
+    // 7. Update Topics JSON to set Published to true
     topic.published = true;
     fs.writeFileSync(TOPICS_FILE, JSON.stringify(topics, null, 2), 'utf8');
     console.log("✅ Updated blog-topics.json status.");
