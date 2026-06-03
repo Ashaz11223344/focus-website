@@ -65,7 +65,11 @@ async function generateArticle() {
     body: JSON.stringify({
       model: OLLAMA_MODEL,
       prompt: systemPrompt,
-      stream: false
+      stream: false,
+      options: {
+        num_predict: 3000,
+        temperature: 0.7
+      }
     })
   });
 
@@ -82,20 +86,7 @@ async function generateArticle() {
 function parseResponse(rawText) {
   const text = rawText.replace(/\r\n/g, '\n').trim();
 
-  // Find start and end of frontmatter
-  const firstIndex = text.indexOf('---');
-  if (firstIndex === -1) {
-    throw new Error("Could not find start of frontmatter (---) in response.");
-  }
-  const secondIndex = text.indexOf('---', firstIndex + 3);
-  if (secondIndex === -1) {
-    throw new Error("Could not find end of frontmatter (---) in response.");
-  }
-
-  const frontmatterText = text.slice(firstIndex + 3, secondIndex).trim();
-  const content = text.slice(secondIndex + 3).trim();
-
-  // Parse frontmatter keys and values
+  // Initialize metadata with default values
   const metadata = {
     title: topic.title,
     category: topic.category,
@@ -105,25 +96,79 @@ function parseResponse(rawText) {
     slug: generatedSlug
   };
 
-  frontmatterText.split('\n').forEach(line => {
-    const colonIndex = line.indexOf(':');
-    if (colonIndex !== -1) {
-      const key = line.slice(0, colonIndex).trim().toLowerCase();
-      let value = line.slice(colonIndex + 1).trim();
-      
-      // Strip outer double or single quotes if present
-      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
-        value = value.slice(1, -1);
+  let content = text;
+  let frontmatterText = "";
+
+  // Split by lines to find headings or tags
+  const lines = text.split('\n');
+  const headingIndex = lines.findIndex(line => line.trim().startsWith('## '));
+
+  if (headingIndex !== -1) {
+    // If a ## heading is found, we split by that heading.
+    // Everything before the first ## heading is metadata/frontmatter.
+    frontmatterText = lines.slice(0, headingIndex).join('\n');
+    content = lines.slice(headingIndex).join('\n');
+  } else {
+    // Fallback: If no ## heading is found, search for frontmatter boundaries (---)
+    const firstIndex = text.indexOf('---');
+    if (firstIndex !== -1) {
+      const secondIndex = text.indexOf('---', firstIndex + 3);
+      if (secondIndex !== -1) {
+        frontmatterText = text.slice(firstIndex + 3, secondIndex);
+        content = text.slice(secondIndex + 3);
+      } else {
+        // Only one --- exists, maybe it was at the start. Let's try to treat everything after it as content.
+        frontmatterText = text.slice(0, firstIndex);
+        content = text.slice(firstIndex + 3);
       }
-      
-      if (key === 'title') metadata.title = value;
-      else if (key === 'category') metadata.category = value;
-      else if (key === 'excerpt') metadata.excerpt = value;
-      else if (key === 'author') metadata.author = value;
-      else if (key === 'readtime') metadata.readTime = value;
-      else if (key === 'slug') metadata.slug = value;
+    } else {
+      console.warn("⚠️ Warning: Could not find standard frontmatter delimiters (---) or ## headings in the response. Using defaults.");
     }
-  });
+  }
+
+  // Parse keys and values from frontmatter text if we managed to isolate any
+  if (frontmatterText) {
+    // Clean up code blocks (```yaml or ```) and delimiter markers
+    const cleanFrontmatter = frontmatterText
+      .replace(/```[a-z]*/gi, '')
+      .replace(/---/g, '')
+      .trim();
+
+    cleanFrontmatter.split('\n').forEach(line => {
+      const colonIndex = line.indexOf(':');
+      if (colonIndex !== -1) {
+        const key = line.slice(0, colonIndex).trim().toLowerCase();
+        let value = line.slice(colonIndex + 1).trim();
+        
+        // Strip outer double or single quotes if present
+        if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+          value = value.slice(1, -1);
+        }
+        
+        if (key === 'title') metadata.title = value;
+        else if (key === 'category') metadata.category = value;
+        else if (key === 'excerpt') metadata.excerpt = value;
+        else if (key === 'author') metadata.author = value;
+        else if (key === 'readtime') metadata.readTime = value;
+        else if (key === 'slug') metadata.slug = value;
+      }
+    });
+  }
+
+  // If content is empty or only whitespace after parsing, default to the whole raw text
+  if (!content.trim()) {
+    content = text;
+  }
+
+  // If excerpt is still empty, let's generate a quick one from the body
+  if (!metadata.excerpt) {
+    // Take the first few words of the content as an excerpt, stripping Markdown headings/formatting
+    const plainText = content
+      .replace(/[#*`>_\-]/g, '') // remove markdown symbols
+      .replace(/\s+/g, ' ')      // collapse spaces
+      .trim();
+    metadata.excerpt = plainText.slice(0, 150) + (plainText.length > 150 ? '...' : '');
+  }
 
   return { metadata, content };
 }
