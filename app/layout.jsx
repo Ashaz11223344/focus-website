@@ -37,7 +37,7 @@ export const metadata = {
     siteName: 'Focus App',
     images: [
       {
-        url: 'https://getfocus.online/logo.png',
+        url: 'https://getfocus.online/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Focus App - Mindful Offline Growth & Productivity Logo',
@@ -50,7 +50,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Focus App – Mindful Offline Growth & Productivity',
     description: 'Focus helps users stay productive, reduce distractions, and build mindful offline habits.',
-    images: ['https://getfocus.online/logo.png'],
+    images: ['https://getfocus.online/og-image.png'],
   },
   icons: {
     icon: [
