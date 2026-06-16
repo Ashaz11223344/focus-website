@@ -92,7 +92,7 @@ export async function POST(request) {
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Focus Early Access Request</title>
+        <title>Focus Waiting List Signup</title>
         <style>
           body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -220,12 +220,12 @@ export async function POST(request) {
       <body>
         <div class="container">
           <div class="header">
-            <h1>✦ FOCUS ACCESS REQUEST ✦</h1>
-            <p>Early Stage Applicant Intake</p>
+            <h1>✦ FOCUS WAITING LIST ✦</h1>
+            <p>Waiting List Applicant Intake</p>
           </div>
           <div class="content">
             <div class="intro">
-              A new candidate has requested early access to the <strong>Focus Motivation App</strong>. Below are the intake parameters for your review.
+              A new candidate has signed up for the <strong>Focus Motivation App waiting list</strong>. Below are the intake parameters for your review.
             </div>
             <table class="field-table">
               <tr>
@@ -256,7 +256,7 @@ export async function POST(request) {
               </tr>
               ${reason ? `
               <tr>
-                <td class="field-label" style="padding-top: 20px;">Why Request Access?</td>
+                <td class="field-label" style="padding-top: 20px;">Why join the waiting list?</td>
                 <td style="padding-top: 20px;">
                   <div class="reason-box">"${reason}"</div>
                 </td>
@@ -293,10 +293,10 @@ export async function POST(request) {
 
     // Define Email Message Structure
     const mailOptions = {
-      from: `"Focus Early Access" <${process.env.MAIL_USER || 'support@getfocus.online'}>`,
+      from: `"Focus Waiting List" <${process.env.MAIL_USER || 'support@getfocus.online'}>`,
       to: process.env.RECIPIENT_EMAIL || 'ashazpathan8@gmail.com',
-      subject: `✦ Early Access Request: ${fullName} (${city}, ${country})`,
-      text: `Focus Early Access Request Received!\n\nName: ${fullName}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nOccupation: ${occupation || 'N/A'}\nUser Location: ${city}, ${country}\nSource: ${source || 'N/A'}\nReason: ${reason || 'N/A'}\n\nSystem Metadata:\nIP: ${clientIp}\nResolved Location: ${systemLocation}\nTimestamp: ${timestamp}`,
+      subject: `✦ Waiting List Signup: ${fullName} (${city}, ${country})`,
+      text: `Focus Waiting List Signup Received!\n\nName: ${fullName}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\nOccupation: ${occupation || 'N/A'}\nUser Location: ${city}, ${country}\nSource: ${source || 'N/A'}\nReason: ${reason || 'N/A'}\n\nSystem Metadata:\nIP: ${clientIp}\nResolved Location: ${systemLocation}\nTimestamp: ${timestamp}`,
       html: htmlContent
     };
 

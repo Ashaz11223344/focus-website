@@ -42,7 +42,7 @@ export default function App() {
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-xs font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_20px_rgba(252,110,32,0.4)] transition-all duration-300 cursor-pointer select-none"
           >
             <Sparkles className="w-4 h-4 text-[#1B1B1B]" />
-            <span>Request Access</span>
+            <span>Join the Waiting List</span>
           </button>
 
         </div>
@@ -106,7 +106,7 @@ export default function App() {
                   className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#FC6E20] text-[#1B1B1B] font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_25px_rgba(252,110,32,0.45)] transition-all duration-300 text-sm cursor-pointer select-none"
                 >
                   <Sparkles className="w-5 h-5 text-[#1B1B1B]" />
-                  <span>Request Early Access</span>
+                  <span>Join the Waiting List</span>
                 </button>
 
                 {/* Explore Button */}
@@ -130,8 +130,8 @@ export default function App() {
                   <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Trackers</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">Early access</span>
-                  <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Get Early access</span>
+                  <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">Waiting List</span>
+                  <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Join Now</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">100%</span>
@@ -197,7 +197,7 @@ export default function App() {
           </h2>
 
           <p className="text-base md:text-lg text-[#FFE7D0]/65 font-sans mt-4 max-w-xl leading-relaxed">
-            Request early sandbox access to our private build and take the first step towards a peaceful, consistent daily routine.
+            Join the waiting list for our private sandbox build and take the first step towards a peaceful, consistent daily routine.
           </p>
 
           <div className="mt-10 flex flex-col items-center">
@@ -207,7 +207,7 @@ export default function App() {
               className="flex items-center gap-3 px-10 py-5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-base font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_35px_rgba(252,110,32,0.55)] transition-all duration-300 shadow-xl cursor-pointer select-none"
             >
               <Sparkles className="w-5.5 h-5.5 text-[#1B1B1B]" />
-              <span>Request Early Access</span>
+              <span>Join the Waiting List</span>
             </button>
 
             <span className="text-xs text-[#FFE7D0]/40 font-sans mt-4 block">

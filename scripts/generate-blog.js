@@ -5,7 +5,7 @@ import path from 'path';
 const TOPICS_FILE = path.join(process.cwd(), 'content', 'blog-topics.json');
 const BLOG_DIR = path.join(process.cwd(), 'content', 'blog');
 const OLLAMA_HOST = process.env.OLLAMA_HOST || 'http://localhost:11434';
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'mistral';
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'llama3.2';
 
 // Ensure the blog directory exists
 if (!fs.existsSync(BLOG_DIR)) {

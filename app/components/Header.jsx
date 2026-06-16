@@ -34,7 +34,7 @@ export default function Header({ onOpenModal }) {
           className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-xs font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_20px_rgba(252,110,32,0.4)] transition-all duration-300 cursor-pointer select-none"
         >
           <Sparkles className="w-4 h-4 text-[#1B1B1B]" />
-          <span>Request Early Access</span>
+          <span>Join the Waiting List</span>
         </button>
 
       </div>

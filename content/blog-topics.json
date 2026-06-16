@@ -43,5 +43,62 @@
     ],
     "category": "Focus Tips",
     "published": true
+  },
+  {
+    "title": "Stoicism and Focus: Modern Applications of Ancient Wisdom",
+    "keywords": [
+      "stoicism",
+      "focus",
+      "marcus aurelius",
+      "mindset",
+      "digital minimalism"
+    ],
+    "category": "Mindset",
+    "published": false
+  },
+  {
+    "title": "The Privacy Tax: Why Free Apps Sell Your Mental Health Profiles",
+    "keywords": [
+      "privacy",
+      "mental health",
+      "data privacy",
+      "no tracking",
+      "offline first"
+    ],
+    "category": "Mindset",
+    "published": false
+  },
+  {
+    "title": "Offline by Design: Reclaiming Your Attention Span in 2026",
+    "keywords": [
+      "offline productivity",
+      "attention span",
+      "screen time",
+      "focus tips"
+    ],
+    "category": "Focus Tips",
+    "published": false
+  },
+  {
+    "title": "Writing to Heal: How a Private Journal Resets Your Nervous System",
+    "keywords": [
+      "journaling",
+      "mental wellness",
+      "private journal",
+      "mindfulness"
+    ],
+    "category": "Mindset",
+    "published": false
+  },
+  {
+    "title": "The Power of Quiet Hours: Setting Boundaries with Your Smartphone",
+    "keywords": [
+      "quiet hours",
+      "screen boundaries",
+      "digital detox",
+      "focus tips"
+    ],
+    "category": "Focus Tips",
+    "published": false
   }
 ]

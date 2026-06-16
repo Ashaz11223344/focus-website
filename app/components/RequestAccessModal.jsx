@@ -237,7 +237,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-serif font-bold text-[#FFE7D0] tracking-wide">
-                    Request Early Access
+                    Join the Waiting List
                   </h3>
                   <p className="text-[9px] sm:text-[10px] text-[#FFE7D0]/40 font-sans tracking-widest uppercase mt-0.5">
                     Focus Motivation App Sanctuary
@@ -276,11 +276,11 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                     </motion.div>
                     
                     <h4 className="text-xl sm:text-2xl font-serif text-[#FFE7D0] font-bold">
-                      Request Received!
+                      Joined the Waiting List!
                     </h4>
                     
                     <p className="text-xs sm:text-sm text-[#FFE7D0]/65 mt-3 max-w-xs leading-relaxed font-sans">
-                      We have received your request for early access. We will review it shortly and get in touch with you!
+                      We have received your details for the waiting list. We will review it shortly and get in touch with you!
                     </p>
                     
                     <motion.div
@@ -290,7 +290,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                       className="mt-6 sm:mt-8 px-6 sm:px-8 py-3 rounded-full bg-[#10B981]/10 border border-[#10B981]/30 text-[#10B981] text-[10px] sm:text-xs font-semibold tracking-wider uppercase font-sans flex items-center gap-2 shadow-[0_0_15px_rgba(16,185,129,0.1)]"
                     >
                       <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>✓ Request Received</span>
+                      <span>✓ Joined Waiting List</span>
                     </motion.div>
                     
                     <span className="text-[9px] sm:text-[10px] text-[#FFE7D0]/30 font-sans mt-5">
@@ -372,7 +372,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                   >
                     {/* Intro block */}
                     <p className="text-[11px] sm:text-xs text-[#FFE7D0]/50 leading-relaxed font-sans -mt-1">
-                      Fill out this form to request early access to Focus. All fields marked with <span className="text-[#FC6E20] font-bold">*</span> are required.
+                      Fill out this form to join the waiting list for Focus. All fields marked with <span className="text-[#FC6E20] font-bold">*</span> are required.
                     </p>
 
                     {/* Error display */}
@@ -527,7 +527,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                     {/* Why do you want access textarea */}
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="reason" className="text-[10px] sm:text-[11px] font-semibold text-[#FFE7D0]/40 tracking-wider uppercase font-sans flex justify-between">
-                        <span>Why do you want access? <span className="text-[#FFE7D0]/25 text-[9px] font-normal lowercase">(Optional)</span></span>
+                        <span>Why join the waiting list? <span className="text-[#FFE7D0]/25 text-[9px] font-normal lowercase">(Optional)</span></span>
                         <span className={`text-[9px] ${formData.reason.length > 300 ? 'text-red-400 font-bold' : 'text-[#FFE7D0]/25'}`}>
                           {formData.reason.length}/300
                         </span>
@@ -550,7 +550,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                       className="w-full flex items-center justify-center gap-2 mt-2 px-6 py-3 sm:py-3.5 rounded-full bg-[#FC6E20] text-[#1B1B1B] font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_20px_rgba(252,110,32,0.4)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#FC6E20] transition-all duration-300 text-xs select-none cursor-pointer"
                     >
                       <Send className="w-3.5 h-3.5" />
-                      <span>Request Early Access</span>
+                      <span>Join the Waiting List</span>
                     </button>
                   </motion.form>
                 )}

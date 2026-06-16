@@ -3,8 +3,8 @@ import './globals.css'
 import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
-  title: 'Focus App – Mindful Offline Growth & Productivity',
-  description: 'Focus helps users stay productive, reduce distractions, and build mindful offline habits.',
+  title: 'Focus App — Privacy-First Offline Mood Tracker & Stoic Journal',
+  description: 'Cultivate mindfulness in complete privacy with Focus. The premium offline mood tracker, stoic calligraphic daily quotes, and secure personal journal app for Android.',
   keywords: [
     "Focus App",
     "Mindful Offline Growth",
@@ -25,14 +25,32 @@ export const metadata = {
     "Dark Mode Journaling App",
     "Gamified Self Improvement App",
     "Daily Reflection Journal App",
-    "Private Mental Wellness App"
+    "Private Mental Wellness App",
+    // Localized and expanded geo keywords
+    "privacy-first mood tracker USA",
+    "Stoic journal app United Kingdom",
+    "offline diary companion Canada",
+    "mental health tracker Australia",
+    "local-first mood journal India",
+    "secure offline reflection Germany",
+    "private self improvement app Europe",
+    "Daylio alternative no account",
+    "best offline Stoicism diary 2026"
   ],
   alternates: {
     canonical: 'https://getfocus.online',
   },
+  other: {
+    "geo.region": "US;GB;CA;AU;IN;DE",
+    "geo.position": "37.0902;-95.7129",
+    "ICBM": "37.0902, -95.7129",
+    "DC.title": "Focus App — Privacy-First Offline Mood Tracker & Stoic Journal",
+    "DC.creator": "Focus App",
+    "DC.language": "en-US"
+  },
   openGraph: {
-    title: 'Focus App – Mindful Offline Growth & Productivity',
-    description: 'Focus helps users stay productive, reduce distractions, and build mindful offline habits.',
+    title: 'Focus App — Privacy-First Offline Mood Tracker & Stoic Journal',
+    description: 'Cultivate mindfulness in complete privacy with Focus. The premium offline mood tracker, stoic calligraphic daily quotes, and secure personal journal app for Android.',
     url: 'https://getfocus.online',
     siteName: 'Focus App',
     images: [
@@ -40,7 +58,7 @@ export const metadata = {
         url: 'https://getfocus.online/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Focus App - Mindful Offline Growth & Productivity Logo',
+        alt: 'Focus App - Privacy-First Offline Mood Tracker & Stoic Journal Logo',
       },
     ],
     locale: 'en_US',
@@ -48,8 +66,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Focus App – Mindful Offline Growth & Productivity',
-    description: 'Focus helps users stay productive, reduce distractions, and build mindful offline habits.',
+    title: 'Focus App — Privacy-First Offline Mood Tracker & Stoic Journal',
+    description: 'Cultivate mindfulness in complete privacy with Focus. The premium offline mood tracker, stoic calligraphic daily quotes, and secure personal journal app for Android.',
     images: ['https://getfocus.online/og-image.png'],
   },
   icons: {

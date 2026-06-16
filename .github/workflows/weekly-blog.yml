@@ -28,27 +28,32 @@ jobs:
         run: |
           curl -fsSL https://ollama.com/install.sh | sh
 
-      - name: Start Ollama Server
-        run: |
-          ollama serve &
-          # Wait for Ollama server to boot up
-          until curl -s http://localhost:11434 > /dev/null; do
-            echo "Waiting for Ollama to start..."
-            sleep 3
-          done
-          echo "✅ Ollama server is up and running!"
-
-      - name: Pull Mistral 7B Model
-        run: |
-          echo "📥 Pulling Mistral 7B model (this will take a minute or two)..."
-          ollama pull mistral
-          echo "✅ Mistral model pulled successfully!"
-
-      - name: Run Blog Generator Script
+      - name: Start Ollama, Pull Model, and Run Generator
         env:
           OLLAMA_HOST: 'http://localhost:11434'
-          OLLAMA_MODEL: 'mistral'
-        run: node scripts/generate-blog.js
+          OLLAMA_MODEL: 'llama3.2'
+        run: |
+          # Start Ollama server in background
+          ollama serve > ollama.log 2>&1 &
+          
+          # Wait for Ollama server to start
+          echo "⏳ Waiting for Ollama to start..."
+          for i in {1..30}; do
+            if curl -s http://localhost:11434 > /dev/null; do
+              echo "✅ Ollama server is up and running!"
+              break
+            fi
+            sleep 2
+          done
+          
+          # Pull the model (Llama 3.2 is ~2.0GB, much lighter and faster than Mistral 7B)
+          echo "📥 Pulling model $OLLAMA_MODEL..."
+          ollama pull $OLLAMA_MODEL
+          echo "✅ Model $OLLAMA_MODEL pulled successfully!"
+          
+          # Run the script
+          echo "🚀 Running blog generator script..."
+          node scripts/generate-blog.js
 
       - name: Commit and Push Changes
         run: |

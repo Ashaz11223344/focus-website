@@ -284,7 +284,7 @@ export default function FeaturesClient() {
             Experience complete focus today
           </h2>
           <p className="text-[#FFE7D0]/60 font-sans mt-6 text-sm md:text-base leading-relaxed max-w-xl">
-            Join a small, mindful group of early adopters testing our sandbox offline build. No servers, no tracking, just progress.
+            Join the waiting list to test our sandbox offline build. No servers, no tracking, just progress.
           </p>
           <div className="mt-10 flex flex-col items-center select-none">
             <button
@@ -292,7 +292,7 @@ export default function FeaturesClient() {
               className="flex items-center gap-3 px-10 py-5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-base font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_35px_rgba(252,110,32,0.55)] transition-all duration-300 shadow-xl cursor-pointer"
             >
               <Sparkles className="w-5.5 h-5.5 text-[#1B1B1B]" />
-              <span>Request Early Access</span>
+              <span>Join the Waiting List</span>
             </button>
             <span className="text-xs text-[#FFE7D0]/40 font-sans mt-4 block">
               ✦ Secure invitation &bull; 100% private sandbox client

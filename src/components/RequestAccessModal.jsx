@@ -167,7 +167,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                 </div>
                 <div>
                   <h3 className="text-lg font-serif font-bold text-[#FFE7D0] tracking-wide">
-                    Request Early Access
+                    Join the Waiting List
                   </h3>
                   <p className="text-[10px] text-[#FFE7D0]/40 font-sans tracking-widest uppercase mt-0.5">
                     Focus Motivation App Sanctuary
@@ -205,11 +205,11 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                     </motion.div>
                     
                     <h4 className="text-2xl font-serif text-[#FFE7D0] font-bold">
-                      Application Submitted
+                      Joined the Waiting List
                     </h4>
                     
                     <p className="text-sm text-[#FFE7D0]/65 mt-3 max-w-xs leading-relaxed font-sans">
-                      Your request has been successfully recorded. We are manually reviewing candidates to maintain sanctuary tranquility.
+                      Your request to join the waiting list has been successfully recorded. We are manually reviewing candidates to maintain sanctuary tranquility.
                     </p>
                     
                     <motion.div
@@ -218,7 +218,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                       transition={{ delay: 0.3 }}
                       className="mt-8 px-6 py-2.5 rounded-full bg-[#FC6E20]/10 border border-[#FC6E20]/20 text-[#FC6E20] text-xs font-semibold tracking-wider uppercase font-sans animate-pulse"
                     >
-                      We'll reach out soon ✦
+                      Joined Waiting List ✦
                     </motion.div>
                     
                     <button
@@ -239,7 +239,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                   >
                     {/* Intro block */}
                     <p className="text-xs text-[#FFE7D0]/50 leading-relaxed font-sans -mt-1">
-                      Fill out this quick assessment profile to request a sandbox invite keys to our private build client. All fields marked with <span className="text-[#FC6E20] font-bold">*</span> are required.
+                      Fill out this quick assessment profile to join the waiting list for our private build client. All fields marked with <span className="text-[#FC6E20] font-bold">*</span> are required.
                     </p>
 
                     {/* Error display */}
@@ -391,7 +391,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                     {/* Why do you want access textarea */}
                     <div className="flex flex-col gap-1.5">
                       <label htmlFor="reason" className="text-[11px] font-semibold text-[#FFE7D0]/40 tracking-wider uppercase font-sans">
-                        Why do you want access? <span className="text-[#FFE7D0]/25 text-[9px] font-normal lowercase">(Optional)</span>
+                        Why join the waiting list? <span className="text-[#FFE7D0]/25 text-[9px] font-normal lowercase">(Optional)</span>
                       </label>
                       <textarea
                         id="reason"
@@ -422,7 +422,7 @@ export default function RequestAccessModal({ isOpen, onClose }) {
                       ) : (
                         <>
                           <Send className="w-3.5 h-3.5" />
-                          <span>Request Early Access</span>
+                          <span>Join the Waiting List</span>
                         </>
                       )}
                     </button>

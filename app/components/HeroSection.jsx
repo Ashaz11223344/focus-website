@@ -64,7 +64,7 @@ export default function HeroSection({ onOpenModal }) {
                 className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#FC6E20] text-[#1B1B1B] font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_25px_rgba(252,110,32,0.45)] transition-all duration-300 text-sm cursor-pointer select-none"
               >
                 <Sparkles className="w-5 h-5 text-[#1B1B1B]" />
-                <span>Request Early Access</span>
+                <span>Join the Waiting List</span>
               </button>
 
               {/* Explore Button */}
@@ -88,8 +88,8 @@ export default function HeroSection({ onOpenModal }) {
                 <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Trackers</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">Early access</span>
-                <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Get Early access</span>
+                <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">Waiting List</span>
+                <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Join Now</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">100%</span>
