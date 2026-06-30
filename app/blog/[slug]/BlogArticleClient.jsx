@@ -167,15 +167,17 @@ export default function BlogArticleClient({ article, relatedArticles = [] }) {
             Finished Reading?
           </h3>
           <p className="text-xs md:text-sm text-[#FFE7D0]/50 max-w-md mx-auto mb-8 leading-relaxed font-sans">
-            Join our waiting list to secure your sandbox invitation. Start cultivating Stoic consistency in a 100% private, local-first mobile sandbox.
+            Download Focus and start cultivating Stoic consistency in a 100% private, local-first mobile app.
           </p>
-          <button
-            onClick={() => setIsModalOpen(true)}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ashaz.focus"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-sm font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_25px_rgba(252,110,32,0.45)] transition-all duration-300 cursor-pointer shadow-lg"
           >
-            <Sparkles className="w-4.5 h-4.5" />
-            <span>Join the Waiting List</span>
-          </button>
+            <Sparkles className="w-4.5 h-4.5 text-[#1B1B1B]" />
+            <span>Download Focus</span>
+          </a>
         </div>
 
         {/* Related Posts at bottom */}

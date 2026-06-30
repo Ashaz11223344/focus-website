@@ -2,8 +2,8 @@ import React from 'react'
 import DownloadClient from './DownloadClient'
 
 export const metadata = {
-  title: 'Join the Focus App Waiting List — Offline Android Companion',
-  description: 'Join the waiting list for Focus, the 100% offline personal growth app for Android. Secure your private APK build delivered directly to your email.',
+  title: 'Download Focus App — Offline Android Companion',
+  description: 'Download Focus, the 100% offline personal growth app for Android. Access your private offline Stoic journaling and mood tracker.',
   alternates: {
     canonical: 'https://getfocus.online/download',
   },
@@ -21,23 +21,23 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Focus App',
-    title: 'Join the Focus App Waiting List — Offline Android Companion',
-    description: 'Join the waiting list for Focus, the 100% offline personal growth app for Android. Secure your private APK build delivered directly to your email.',
+    title: 'Download Focus App — Offline Android Companion',
+    description: 'Download Focus, the 100% offline personal growth app for Android. Access your private offline Stoic journaling and mood tracker.',
     url: 'https://getfocus.online/download',
     images: [
       {
         url: 'https://getfocus.online/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Join the Focus App Waiting List — Offline Android Companion',
+        alt: 'Download Focus App — Offline Android Companion',
       }
     ],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Join the Focus App Waiting List — Offline Android Companion',
-    description: 'Join the waiting list for Focus, the 100% offline personal growth app for Android. Secure your private APK build delivered directly to your email.',
+    title: 'Download Focus App — Offline Android Companion',
+    description: 'Download Focus, the 100% offline personal growth app for Android. Access your private offline Stoic journaling and mood tracker.',
     images: ['https://getfocus.online/og-image.png'],
   }
 }

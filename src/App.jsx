@@ -36,14 +36,16 @@ export default function App() {
             <a href="#testimonials" className="hover:text-[#FC6E20] transition-colors duration-300">Reviews</a>
           </nav>
 
-          {/* Request Access CTA Button */}
-          <button
-            onClick={() => setIsModalOpen(true)}
+          {/* Download Focus CTA Button */}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ashaz.focus"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-xs font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_20px_rgba(252,110,32,0.4)] transition-all duration-300 cursor-pointer select-none"
           >
             <Sparkles className="w-4 h-4 text-[#1B1B1B]" />
-            <span>Join the Waiting List</span>
-          </button>
+            <span>Download Focus</span>
+          </a>
 
         </div>
       </header>
@@ -100,14 +102,16 @@ export default function App() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col sm:flex-row gap-4 mt-8 w-full sm:w-auto"
               >
-                {/* Request Access Button */}
-                <button
-                  onClick={() => setIsModalOpen(true)}
+                {/* Download Focus Button */}
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.ashaz.focus"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#FC6E20] text-[#1B1B1B] font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_25px_rgba(252,110,32,0.45)] transition-all duration-300 text-sm cursor-pointer select-none"
                 >
                   <Sparkles className="w-5 h-5 text-[#1B1B1B]" />
-                  <span>Join the Waiting List</span>
-                </button>
+                  <span>Download Focus</span>
+                </a>
 
                 {/* Explore Button */}
                 <a
@@ -130,8 +134,8 @@ export default function App() {
                   <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Trackers</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">Waiting List</span>
-                  <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Join Now</span>
+                  <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">Google Play</span>
+                  <span className="text-xs text-[#FFE7D0]/50 mt-1 uppercase tracking-wider font-semibold">Get Now</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xl md:text-2xl font-serif text-[#FC6E20] font-bold">100%</span>
@@ -197,21 +201,23 @@ export default function App() {
           </h2>
 
           <p className="text-base md:text-lg text-[#FFE7D0]/65 font-sans mt-4 max-w-xl leading-relaxed">
-            Join the waiting list for our private sandbox build and take the first step towards a peaceful, consistent daily routine.
+            Download Focus today and take the first step towards a peaceful, consistent daily routine.
           </p>
 
           <div className="mt-10 flex flex-col items-center">
-            {/* Primary Request Access Button */}
-            <button
-              onClick={() => setIsModalOpen(true)}
+            {/* Primary Download Button */}
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ashaz.focus"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 px-10 py-5 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-base font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] hover:shadow-[0_0_35px_rgba(252,110,32,0.55)] transition-all duration-300 shadow-xl cursor-pointer select-none"
             >
               <Sparkles className="w-5.5 h-5.5 text-[#1B1B1B]" />
-              <span>Join the Waiting List</span>
-            </button>
+              <span>Download Focus</span>
+            </a>
 
             <span className="text-xs text-[#FFE7D0]/40 font-sans mt-4 block">
-              ✦ Secure sandbox invitation &bull; 100% private sandbox SQL Client
+              ✦ Available now on Google Play &bull; 100% private sandbox client
             </span>
           </div>
 

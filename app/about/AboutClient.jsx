@@ -165,16 +165,18 @@ export default function AboutClient() {
             Reclaim your focus space
           </h3>
           <p className="text-xs md:text-sm text-[#FFE7D0]/60 max-w-lg mx-auto mb-8 font-sans leading-relaxed">
-            Ready to experience a genuinely private daily routine? Fill out our Sandbox application and try out the verified offline build.
+            Ready to experience a genuinely private daily routine? Download Focus from the Google Play Store and start today.
           </p>
 
-          <button
-            onClick={() => setIsModalOpen(true)}
+          <a
+            href="https://play.google.com/store/apps/details?id=com.ashaz.focus"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#FC6E20] text-[#1B1B1B] text-xs font-sans font-bold tracking-wider uppercase hover:bg-[#FFE7D0] transition-colors duration-300 shadow-md cursor-pointer"
           >
-            <span>Request Access</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+            <span>Download Focus</span>
+            <ArrowRight className="w-4 h-4 text-[#1B1B1B]" />
+          </a>
         </section>
 
       </main>
