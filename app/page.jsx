@@ -37,7 +37,7 @@ export const metadata = {
     "best offline Stoicism diary 2026"
   ],
   alternates: {
-    canonical: 'https://getfocus.online/',
+    canonical: '/',
   },
   robots: {
     index: true,
@@ -55,10 +55,10 @@ export const metadata = {
     siteName: 'Focus App',
     title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
     description: 'Cultivate Stoic consistency in complete privacy. Focus is a 100% offline Android app for daily mood tracking, calligraphic quotes, and private journaling with zero cloud logs.',
-    url: 'https://getfocus.online/',
+    url: '/',
     images: [
       {
-        url: 'https://getfocus.online/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Focus App — Offline Mood Tracker & Stoic Journal',
@@ -70,53 +70,83 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
     description: 'Cultivate Stoic consistency in complete privacy. Focus is a 100% offline Android app for daily mood tracking, calligraphic quotes, and private journaling with zero cloud logs.',
-    images: ['https://getfocus.online/og-image.png'],
+    images: ['/og-image.png'],
   }
 }
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Focus App",
-  "operatingSystem": "Android",
-  "applicationCategory": "Mindfulness, MentalWellnessApplication, ProductivityApplication",
-  "applicationSubCategory": "Mindful Offline Growth & Stoic Reflection",
-  "offers": {
-    "@type": "Offer",
-    "price": "0.00",
-    "priceCurrency": "USD"
+const schemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://getfocus.online/#website",
+    "url": "https://getfocus.online",
+    "name": "Focus App",
+    "description": "Privacy-First Offline Mood Tracker & Stoic Journal",
+    "publisher": {
+      "@id": "https://getfocus.online/#organization"
+    }
   },
-  "description": "Focus is a state-of-the-art, 100% offline and privacy-first personal growth companion app for Android. Track daily moods, write book-grade journals, and cycle calligraphy stoic quotes completely offline.",
-  "url": "https://getfocus.online",
-  "screenshot": "https://getfocus.online/og-image.png",
-  "creator": {
+  {
+    "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://getfocus.online/#organization",
     "name": "Focus App",
     "url": "https://getfocus.online",
-    "email": "support@getfocus.online"
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://getfocus.online/favicon.png"
+    },
+    "sameAs": [
+      "https://x.com/focus_app"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "support@getfocus.online",
+      "contactType": "customer support"
+    }
   },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "People interested in Stoicism, mindfulness, offline journaling, and data privacy"
-  },
-  "featureList": [
-    "Offline Calligraphy Daily Quotes",
-    "Zero Telemetry Mood Tracker",
-    "Book Style Aesthetic Journal",
-    "Silent Habit Streak Tracker",
-    "Gamified Offline Milestones & Achievements",
-    "Quiet Hours Quotes Notification Filters",
-    "Zero Cloud Sync & No Account Requirements",
-    "Sandboxed Local SQLite Database Security"
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://getfocus.online/#software",
+    "name": "Focus App",
+    "operatingSystem": "Android",
+    "applicationCategory": "Mindfulness, MentalWellnessApplication, ProductivityApplication",
+    "applicationSubCategory": "Mindful Offline Growth & Stoic Reflection",
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "USD"
+    },
+    "description": "Focus is a state-of-the-art, 100% offline and privacy-first personal growth companion app for Android. Track daily moods, write book-grade journals, and cycle calligraphy stoic quotes completely offline.",
+    "url": "https://getfocus.online",
+    "screenshot": "https://getfocus.online/og-image.png",
+    "creator": {
+      "@id": "https://getfocus.online/#organization"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "People interested in Stoicism, mindfulness, offline journaling, and data privacy"
+    },
+    "featureList": [
+      "Offline Calligraphy Daily Quotes",
+      "Zero Telemetry Mood Tracker",
+      "Book Style Aesthetic Journal",
+      "Silent Habit Streak Tracker",
+      "Gamified Offline Milestones & Achievements",
+      "Quiet Hours Quotes Notification Filters",
+      "Zero Cloud Sync & No Account Requirements",
+      "Sandboxed Local SQLite Database Security"
+    ]
+  }
+]
 
 export default function Page() {
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
       <HomeClient />
     </>

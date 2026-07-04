@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Download Focus App — Offline Android Companion',
   description: 'Download Focus, the 100% offline personal growth app for Android. Access your private offline Stoic journaling and mood tracker.',
   alternates: {
-    canonical: 'https://getfocus.online/download',
+    canonical: '/download',
   },
   robots: {
     index: true,

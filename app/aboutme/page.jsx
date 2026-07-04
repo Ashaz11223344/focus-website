@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Ashaz Pathan — Founder & Software Architect | Focus App',
   description: 'Step into the premium, 3D interactive workspace of Ashaz Pathan, the creator and software architect of Focus App. Focused on handcrafted, local-first private software.',
   alternates: {
-    canonical: 'https://getfocus.online/aboutme',
+    canonical: '/aboutme',
   },
   robots: {
     index: true,

@@ -37,8 +37,9 @@ export const metadata = {
     "Daylio alternative no account",
     "best offline Stoicism diary 2026"
   ],
+  metadataBase: new URL('https://getfocus.online'),
   alternates: {
-    canonical: 'https://getfocus.online',
+    canonical: '/',
   },
   other: {
     "geo.region": "US;GB;CA;AU;IN;DE",

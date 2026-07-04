@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Privacy Policy & Security — Focus App',
   description: 'Focus is built on a 100% offline database model with zero data tracking. Your journals, daily moods, and configuration settings never leave your device.',
   alternates: {
-    canonical: 'https://getfocus.online/privacy',
+    canonical: '/privacy',
   },
   robots: {
     index: true,

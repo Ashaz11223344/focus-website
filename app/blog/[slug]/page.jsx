@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     alternates: {
-      canonical: `https://getfocus.online/blog/${slug}`,
+      canonical: `/blog/${slug}`,
     },
     robots: {
       index: true,

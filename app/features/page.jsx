@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Focus App Features — Offline Mood Tracker, Stoic Journal & Streaks',
   description: 'Explore all 9 premium features of Focus: offline calligraphy quotes, local-first mood tracker, gamified streaks, and sandboxed reflective journal. No accounts.',
   alternates: {
-    canonical: 'https://getfocus.online/features',
+    canonical: '/features',
   },
   robots: {
     index: true,

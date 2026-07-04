@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Focus Blog — Stoic Philosophy, Offline Productivity & Habits',
   description: 'Explore articles on Stoic philosophy, offline productivity, mindful calligraphy journaling, and zero-telemetry daily mood tracking patterns.',
   alternates: {
-    canonical: 'https://getfocus.online/blog',
+    canonical: '/blog',
   },
   robots: {
     index: true,

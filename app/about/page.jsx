@@ -5,7 +5,7 @@ export const metadata = {
   title: 'About Focus — Privacy-First Offline Stoic Journal & Diary',
   description: 'Discover the philosophy behind Focus. A privacy-first, 100% offline self improvement app built for Stoic reflection, journaling, and mood tracking with zero data logging.',
   alternates: {
-    canonical: 'https://getfocus.online/about',
+    canonical: '/about',
   },
   robots: {
     index: true,
