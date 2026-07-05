@@ -10,12 +10,12 @@ export function middleware(request) {
     return NextResponse.next()
   }
 
-  // Redirect www to non-www
-  if (hostname.startsWith('www.')) {
-    const newHost = hostname.substring(4) // remove 'www.'
-    const newUrl = `https://${newHost}${url.pathname}${url.search}`
-    return NextResponse.redirect(newUrl, 301)
-  }
+  // Redirect www to non-www (Commented out to prevent Vercel DNS redirect loop)
+  // if (hostname.startsWith('www.')) {
+  //   const newHost = hostname.substring(4) // remove 'www.'
+  //   const newUrl = `https://${newHost}${url.pathname}${url.search}`
+  //   return NextResponse.redirect(newUrl, 301)
+  // }
 
   // Redirect http to https (Vercel handles this automatically, but safe for all platforms)
   const proto = request.headers.get('x-forwarded-proto')
