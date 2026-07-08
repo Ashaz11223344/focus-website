@@ -68,9 +68,9 @@ export default function Testimonials() {
               {/* Quote Author */}
               <div className="mt-8 border-t border-[#FFE7D0]/10 pt-4 w-full flex items-center justify-between">
                 <div>
-                  <h4 className="text-sm font-sans font-bold text-[#FC6E20]">
+                  <h3 className="text-sm font-sans font-bold text-[#FC6E20]">
                     {rev.author}
-                  </h4>
+                  </h3>
                   <p className="text-xs text-[#FFE7D0]/50 font-sans mt-0.5">
                     {rev.role}
                   </p>

@@ -37,19 +37,25 @@ export default function HeroSection({ onOpenModal }) {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-5xl md:text-7xl font-serif text-[#FFE7D0] leading-[1.1] tracking-tight"
             >
-              Small steps.<br />
-              <span className="text-[#FC6E20] glow-orange">Big change.</span>
+              Track your mood.<br />
+              <span className="text-[#FC6E20] glow-orange">Build Stoic habits offline.</span>
             </motion.h1>
 
-            {/* Subtext */}
-            <motion.p
+            {/* Subtext & Top Summary */}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#FFE7D0]/70 font-sans text-base md:text-xl leading-relaxed mt-6 max-w-xl"
+              className="text-[#FFE7D0]/85 font-sans text-sm md:text-base leading-relaxed mt-6 max-w-xl border-l-2 border-[#FC6E20]/40 pl-4 py-1 space-y-2"
             >
-              A high-fidelity no account self improvement app and growth companion. Reflect through beautiful calligraphy quotes, journal in complete privacy, and log daily emotions completely offline.
-            </motion.p>
+              <p>
+                <strong>Focus App</strong> is an Android productivity and wellbeing app that combines mood tracking with Stoic journaling, designed to work fully offline. Built for students, professionals, and anyone practicing mindfulness or Stoicism who wants a private, offline journaling habit, it provides a secure environment for daily journaling, mood tracking, and digital wellbeing.
+              </p>
+              <p className="text-[#FFE7D0]/50 text-xs">
+                By keeping 100% of your data on your device, Focus App represents the ultimate privacy-first alternative to cloud-connected diary platforms.
+                <span className="block mt-1.5 font-semibold text-[#FC6E20]/80 uppercase tracking-widest text-[9px]">Last updated: July 8, 2026</span>
+              </p>
+            </motion.div>
 
             {/* Action Buttons */}
             <motion.div

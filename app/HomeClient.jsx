@@ -9,8 +9,10 @@ import HeroSection from './components/HeroSection'
 // Dynamically load heavy components client-side to keep the first-load JS size low
 const FeaturesSection = dynamic(() => import('./components/FeaturesSection'), { ssr: false })
 const WhyFocus = dynamic(() => import('./components/WhyFocus'), { ssr: false })
+const AEOBlock = dynamic(() => import('./components/AEOBlock'), { ssr: false })
 const CarouselSection = dynamic(() => import('./components/CarouselSection'), { ssr: false })
 const Testimonials = dynamic(() => import('./components/Testimonials'), { ssr: false })
+const FAQSection = dynamic(() => import('./components/FAQSection'), { ssr: false })
 const Footer = dynamic(() => import('./components/Footer'), { ssr: false })
 const RequestAccessModal = dynamic(() => import('./components/RequestAccessModal'), { ssr: false })
 
@@ -32,11 +34,17 @@ export default function HomeClient() {
       {/* Why Focus Offline Advantage Cards */}
       <WhyFocus />
 
+      {/* Detailed Stoic Journaling & Offline Architecture Details (AEO Block) */}
+      <AEOBlock />
+
       {/* Centered Cyclic Carousel Showcase */}
       <CarouselSection />
 
       {/* User Reviews */}
       <Testimonials />
+
+      {/* Frequently Asked Questions (FAQ Section) */}
+      <FAQSection />
 
       {/* Bottom Request Access Call-to-Action */}
       <section className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-b border-[#FFE7D0]/5 overflow-hidden">

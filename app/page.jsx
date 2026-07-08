@@ -3,7 +3,7 @@ import HomeClient from './HomeClient'
 
 export const metadata = {
   title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
-  description: 'Cultivate Stoic consistency in complete privacy. Focus is a 100% offline Android app for daily mood tracking, calligraphic quotes, and private journaling with zero cloud logs.',
+  description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.',
   keywords: [
     "Focus App",
     "Mindful Offline Growth",
@@ -54,7 +54,7 @@ export const metadata = {
     type: 'website',
     siteName: 'Focus App',
     title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
-    description: 'Cultivate Stoic consistency in complete privacy. Focus is a 100% offline Android app for daily mood tracking, calligraphic quotes, and private journaling with zero cloud logs.',
+    description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.',
     url: '/',
     images: [
       {
@@ -69,7 +69,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
-    description: 'Cultivate Stoic consistency in complete privacy. Focus is a 100% offline Android app for daily mood tracking, calligraphic quotes, and private journaling with zero cloud logs.',
+    description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.',
     images: ['/og-image.png'],
   }
 }
@@ -137,6 +137,102 @@ const schemas = [
       "Quiet Hours Quotes Notification Filters",
       "Zero Cloud Sync & No Account Requirements",
       "Sandboxed Local SQLite Database Security"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://getfocus.online/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://getfocus.online"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Focus App",
+        "item": "https://getfocus.online"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://getfocus.online/#webpage",
+    "url": "https://getfocus.online",
+    "name": "Focus App — Offline Mood Tracker & Stoic Journal",
+    "description": "Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.",
+    "publisher": {
+      "@id": "https://getfocus.online/#organization"
+    },
+    "author": {
+      "@id": "https://getfocus.online/#organization"
+    },
+    "isPartOf": {
+      "@id": "https://getfocus.online/#website"
+    },
+    "breadcrumb": {
+      "@id": "https://getfocus.online/#breadcrumb"
+    },
+    "datePublished": "2026-01-01T00:00:00+00:00",
+    "dateModified": "2026-07-08T14:42:17+05:30"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://getfocus.online/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Focus App?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus App is an offline-first Android productivity and mental wellbeing application that combines daily mood tracking with structured Stoic journaling. It is designed to help users log their emotions, view beautiful calligraphic Stoic quotes, and build consistent habits in complete privacy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Focus App work without internet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Focus App is built to work 100% offline. It does not require any active internet connection, cellular data, or online sign-in. All databases, typography files, and features are fully self-contained on your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data private with Focus App?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Your personal reflections, journal entries, and emotional logs are stored strictly inside a sandboxed local database on your Android device. Focus App collects zero telemetry, has no cloud servers, requires no user account, and does not share data with any third parties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Stoic journaling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Stoic journaling is a daily reflection practice based on Stoic philosophy, focusing on distinguishing between what you can control and what you cannot control. Focus App integrates this practice by presenting inspiring quotes and structured prompts to help you build emotional clarity and resilience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Focus App free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Focus App is completely free to download and use on Android. There are no subscriptions, in-app purchases, or advertisements, providing a distraction-free environment for your mindfulness journey."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Android versions does Focus App support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus App is optimized for modern Android versions, supporting devices running Android 8.0 (Oreo) and above. It is designed to be lightweight, preserving both storage space and battery life."
+        }
+      }
     ]
   }
 ]

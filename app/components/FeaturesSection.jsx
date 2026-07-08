@@ -305,6 +305,7 @@ export default function FeaturesSection() {
       id="features"
       className="relative w-full h-[480vh] bg-[#1B1B1B] overflow-visible border-b border-[#FFE7D0]/5"
     >
+      <h2 className="sr-only">Designed for mindful presence</h2>
       {/* Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-[#FC6E20]/3 blur-[120px] pointer-events-none z-0"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[45vw] h-[45vw] rounded-full bg-[#FFE7D0]/2 blur-[140px] pointer-events-none z-0"></div>
