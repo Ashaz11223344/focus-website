@@ -20,12 +20,12 @@ export default function Header({ onOpenModal }) {
         </Link>
 
         {/* Navigation Links */}
-        <nav className="hidden md:flex items-center gap-8 text-[13px] tracking-widest font-semibold text-[#FFE7D0]/60 uppercase">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[13px] tracking-widest font-semibold text-[#FFE7D0]/60 uppercase">
           <Link href="/features" className="hover:text-[#FC6E20] transition-colors duration-300">Features</Link>
-          <Link href="/download" className="hover:text-[#FC6E20] transition-colors duration-300">Download</Link>
+          <Link href="/pricing" className="hover:text-[#FC6E20] transition-colors duration-300">Pricing</Link>
+          <Link href="/documentation" className="hover:text-[#FC6E20] transition-colors duration-300">Docs</Link>
           <Link href="/blog" className="hover:text-[#FC6E20] transition-colors duration-300">Blog</Link>
-          <Link href="/#why-focus" className="hover:text-[#FC6E20] transition-colors duration-300">Why Focus</Link>
-          <Link href="/#review" className="hover:text-[#FC6E20] transition-colors duration-300">Reviews</Link>
+          <Link href="/download" className="hover:text-[#FC6E20] transition-colors duration-300">Download</Link>
         </nav>
 
         {/* Download Focus CTA Button */}

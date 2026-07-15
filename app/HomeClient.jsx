@@ -1,20 +1,17 @@
 "use client";
 
 import React, { useState } from 'react'
-import dynamic from 'next/dynamic'
 import { Sparkles } from 'lucide-react'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
-
-// Dynamically load heavy components client-side to keep the first-load JS size low
-const FeaturesSection = dynamic(() => import('./components/FeaturesSection'), { ssr: false })
-const WhyFocus = dynamic(() => import('./components/WhyFocus'), { ssr: false })
-const AEOBlock = dynamic(() => import('./components/AEOBlock'), { ssr: false })
-const CarouselSection = dynamic(() => import('./components/CarouselSection'), { ssr: false })
-const Testimonials = dynamic(() => import('./components/Testimonials'), { ssr: false })
-const FAQSection = dynamic(() => import('./components/FAQSection'), { ssr: false })
-const Footer = dynamic(() => import('./components/Footer'), { ssr: false })
-const RequestAccessModal = dynamic(() => import('./components/RequestAccessModal'), { ssr: false })
+import FeaturesSection from './components/FeaturesSection'
+import WhyFocus from './components/WhyFocus'
+import AEOBlock from './components/AEOBlock'
+import CarouselSection from './components/CarouselSection'
+import Testimonials from './components/Testimonials'
+import FAQSection from './components/FAQSection'
+import Footer from './components/Footer'
+import RequestAccessModal from './components/RequestAccessModal'
 
 export default function HomeClient() {
   const [isModalOpen, setIsModalOpen] = useState(false)

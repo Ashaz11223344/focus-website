@@ -42,6 +42,28 @@ export const metadata = {
   }
 }
 
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://getfocus.online/features#webpage",
+  "url": "https://getfocus.online/features",
+  "name": "Focus App Features — Offline Mood Tracker, Stoic Journal & Streaks",
+  "description": "Explore all 9 premium features of Focus: offline calligraphy quotes, local-first mood tracker, gamified streaks, and sandboxed reflective journal. No accounts.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://getfocus.online/#website",
+    "url": "https://getfocus.online"
+  }
+}
+
 export default function Page() {
-  return <FeaturesClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <FeaturesClient />
+    </>
+  )
 }

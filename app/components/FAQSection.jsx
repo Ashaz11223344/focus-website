@@ -22,8 +22,8 @@ const FAQS = [
     answer: "Stoic journaling is a daily reflection practice based on Stoic philosophy, focusing on distinguishing between what you can control and what you cannot control. Focus App integrates this practice by presenting inspiring quotes and structured prompts to help you build emotional clarity and resilience."
   },
   {
-    question: "Is Focus App free?",
-    answer: "Yes, Focus App is completely free to download and use on Android. There are no subscriptions, in-app purchases, or advertisements, providing a distraction-free environment for your mindfulness journey."
+    question: "How much does Focus App cost?",
+    answer: "Focus App requires a small, one-time purchase of 20 Rupees (₹20). There are no monthly subscriptions, no ads, and no in-app purchases, providing a distraction-free, completely private environment for your mindfulness journey."
   },
   {
     question: "What Android versions does Focus App support?",

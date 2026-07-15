@@ -46,7 +46,7 @@ export default function WhyFocus() {
             Why Focus
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-[#FFE7D0] leading-tight">
-            An application that works solely in your interest
+            What makes Focus App different from typical productivity trackers?
           </h2>
           <p className="text-[#FFE7D0]/60 font-sans mt-4 text-base md:text-lg leading-relaxed max-w-2xl">
             In a world of constant attention harvesting, Focus acts as an offline sanctuary. It asks nothing of you and saves everything local.

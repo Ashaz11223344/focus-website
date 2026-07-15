@@ -101,13 +101,13 @@ export default function AboutClient() {
             </h2>
             <div className="space-y-4 text-[#FFE7D0]/70 font-sans text-sm md:text-base leading-relaxed">
               <p>
-                In 2025, we took a step back and looked at the productivity apps on our smartphones. What we saw was deeply concerning: simple daily tools that required full cloud authentication, rather than functioning as a lightweight local-first mood tracker, connected to heavy telemetry trackers, and pushed notifications to compete for screen time.
+                In 2025, we took a step back and looked at the productivity apps on our smartphones. What we saw was deeply concerning: simple daily tools that required full cloud authentication, rather than functioning as a lightweight <Link href="/features" className="text-[#FC6E20] underline hover:text-[#FFE7D0] transition-colors">local-first mood tracker</Link>, connected to heavy telemetry trackers, and pushed notifications to compete for screen time.
               </p>
               <p>
                 We wanted a companion that respected our silence. We wanted elegant calligraphy and book-grade typesetting that turned everyday reflection into a grounding, artistic experience.
               </p>
               <p>
-                When we couldn't find it, we built it. Focus is structured using modern native system containers that sandboxes your personal space, keeping it strictly on your physical Android device.
+                When we couldn't find it, we built it. Focus is structured using modern native system containers that sandboxes your personal space, keeping it strictly on your physical Android device. Learn more about our values in our <Link href="/privacy" className="text-[#FC6E20] underline hover:text-[#FFE7D0] transition-colors">Privacy Charter</Link> or view our <Link href="/pricing" className="text-[#FC6E20] underline hover:text-[#FFE7D0] transition-colors">pricing model</Link>.
               </p>
             </div>
           </div>

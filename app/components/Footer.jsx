@@ -11,14 +11,18 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Focus Motivation App. All rights reserved.</p>
           <p className="text-[10px] text-[#FFE7D0]/25">Handcrafted premium design for secure offline-first growth.</p>
         </div>
-        <div className="flex flex-wrap justify-center items-center gap-6 font-semibold uppercase text-[10px] tracking-widest text-[#FFE7D0]/50">
+        <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 font-semibold uppercase text-[10px] tracking-widest text-[#FFE7D0]/50">
           <Link href="/about" className="hover:text-[#FC6E20] transition-colors duration-300">About Our Mission</Link>
+          <span className="text-[#FFE7D0]/10">•</span>
+          <Link href="/pricing" className="hover:text-[#FC6E20] transition-colors duration-300">Pricing</Link>
+          <span className="text-[#FFE7D0]/10">•</span>
+          <Link href="/documentation" className="hover:text-[#FC6E20] transition-colors duration-300">Documentation</Link>
+          <span className="text-[#FFE7D0]/10">•</span>
+          <Link href="/contact-support" className="hover:text-[#FC6E20] transition-colors duration-300">Contact Support</Link>
           <span className="text-[#FFE7D0]/10">•</span>
           <Link href="/aboutme" className="hover:text-[#FC6E20] transition-colors duration-300">Developer Profile</Link>
           <span className="text-[#FFE7D0]/10">•</span>
           <Link href="/privacy" className="hover:text-[#FC6E20] transition-colors duration-300">Privacy Policy</Link>
-          <span className="text-[#FFE7D0]/10">•</span>
-          <a href="mailto:support@getfocus.online" className="hover:text-[#FC6E20] transition-colors duration-300">support@getfocus.online</a>
         </div>
       </div>
     </footer>

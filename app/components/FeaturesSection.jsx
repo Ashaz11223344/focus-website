@@ -252,7 +252,7 @@ export default function FeaturesSection() {
         <div className="max-w-xl mx-auto relative z-10 flex flex-col items-center select-none text-center mb-16">
           <span className="text-[12px] font-sans tracking-[0.2em] font-semibold text-[#FC6E20] uppercase">Features Walkthrough</span>
           <h2 className="text-4xl font-serif text-[#FFE7D0] mt-3 leading-tight">
-            Designed for mindful presence
+            What features does Focus App offer for daily mindfulness?
           </h2>
           <p className="text-[#FFE7D0]/60 font-sans mt-3 text-sm leading-relaxed">
             Take a natural tour of the high-fidelity tools built directly inside your growth sanctuary.
@@ -305,7 +305,7 @@ export default function FeaturesSection() {
       id="features"
       className="relative w-full h-[480vh] bg-[#1B1B1B] overflow-visible border-b border-[#FFE7D0]/5"
     >
-      <h2 className="sr-only">Designed for mindful presence</h2>
+      <h2 className="sr-only">What features does Focus App have for offline productivity and wellbeing?</h2>
       {/* Decorative Glows */}
       <div className="absolute top-1/4 left-1/4 w-[40vw] h-[40vw] rounded-full bg-[#FC6E20]/3 blur-[120px] pointer-events-none z-0"></div>
       <div className="absolute bottom-1/4 right-1/4 w-[45vw] h-[45vw] rounded-full bg-[#FFE7D0]/2 blur-[140px] pointer-events-none z-0"></div>

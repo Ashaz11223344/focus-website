@@ -43,6 +43,20 @@ export const metadata = {
   }
 }
 
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://getfocus.online/blog#webpage",
+  "url": "https://getfocus.online/blog",
+  "name": "Focus Blog — Stoic Philosophy, Offline Productivity & Habits",
+  "description": "Explore articles on Stoic philosophy, offline productivity, mindful calligraphy journaling, and zero-telemetry daily mood tracking patterns.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://getfocus.online/#website",
+    "url": "https://getfocus.online"
+  }
+}
+
 export default function BlogPage() {
   const articles = getBlogArticles()
   
@@ -57,5 +71,13 @@ export default function BlogPage() {
     readTime: art.readTime
   }))
 
-  return <BlogIndexClient initialArticles={formattedArticles} />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <BlogIndexClient initialArticles={formattedArticles} />
+    </>
+  )
 }

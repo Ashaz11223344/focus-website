@@ -46,6 +46,28 @@ export const metadata = {
   }
 }
 
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "https://getfocus.online/aboutme#webpage",
+  "url": "https://getfocus.online/aboutme",
+  "name": "Ashaz Pathan — Founder & Software Architect | Focus App",
+  "description": "Step into the premium, 3D interactive workspace of Ashaz Pathan, the creator and software architect of Focus App. Focused on handcrafted, local-first private software.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://getfocus.online/#website",
+    "url": "https://getfocus.online"
+  }
+}
+
 export default function Page() {
-  return <AboutMeClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <AboutMeClient />
+    </>
+  )
 }

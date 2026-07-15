@@ -46,15 +46,39 @@ export default function HeroSection({ onOpenModal }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#FFE7D0]/85 font-sans text-sm md:text-base leading-relaxed mt-6 max-w-xl border-l-2 border-[#FC6E20]/40 pl-4 py-1 space-y-2"
+              className="text-[#FFE7D0]/85 font-sans text-sm md:text-base leading-relaxed mt-6 max-w-xl border-l-2 border-[#FC6E20]/40 pl-4 py-1 space-y-3"
             >
               <p>
                 <strong>Focus App</strong> is an Android productivity and wellbeing app that combines mood tracking with Stoic journaling, designed to work fully offline. Built for students, professionals, and anyone practicing mindfulness or Stoicism who wants a private, offline journaling habit, it provides a secure environment for daily journaling, mood tracking, and digital wellbeing.
               </p>
+
+              {/* Entity Statements */}
+              <p className="text-[#FFE7D0]/75 text-xs sm:text-sm">
+                <strong>We are</strong> Focus App, an offline-first Android productivity and wellbeing app. 
+                <strong>We provide</strong> mood tracking, Stoic journaling, dynamic quotes, and reflective tools — all without internet dependency. 
+                <strong>We specialize in</strong> digital wellbeing for students, professionals, and mindfulness practitioners who value privacy and offline-first design.
+              </p>
+
               <p className="text-[#FFE7D0]/50 text-xs">
                 By keeping 100% of your data on your device, Focus App represents the ultimate privacy-first alternative to cloud-connected diary platforms.
                 <span className="block mt-1.5 font-semibold text-[#FC6E20]/80 uppercase tracking-widest text-[9px]">Last updated: July 8, 2026</span>
               </p>
+            </motion.div>
+
+            {/* Key Takeaways Answer Block (AEO / TL;DR) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="glass-panel p-5 rounded-2xl border border-[#FC6E20]/25 mt-6 max-w-xl text-xs sm:text-sm"
+            >
+              <h4 className="font-serif text-[#FC6E20] font-bold text-sm tracking-wide mb-2 uppercase">Key Takeaways</h4>
+              <ul className="list-disc list-inside space-y-1.5 text-[#FFE7D0]/80 leading-relaxed font-sans">
+                <li><strong>Focus App</strong> is the only fully offline mood tracking and Stoic journaling app for Android.</li>
+                <li><strong>100% private</strong> — no account, no cloud storage, all data stays on your device.</li>
+                <li><strong>Mindfulness-first</strong> — combines emotional logs, Stoic quotes, and reflective diary tools.</li>
+                <li><strong>Only ₹20</strong> — one-time purchase, zero ads, zero subscriptions, designed for digital wellbeing without internet.</li>
+              </ul>
             </motion.div>
 
             {/* Action Buttons */}

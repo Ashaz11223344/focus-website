@@ -115,8 +115,8 @@ const schemas = [
     "applicationSubCategory": "Mindful Offline Growth & Stoic Reflection",
     "offers": {
       "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD"
+      "price": "20.00",
+      "priceCurrency": "INR"
     },
     "description": "Focus is a state-of-the-art, 100% offline and privacy-first personal growth companion app for Android. Track daily moods, write book-grade journals, and cycle calligraphy stoic quotes completely offline.",
     "url": "https://getfocus.online",
@@ -219,10 +219,10 @@ const schemas = [
       },
       {
         "@type": "Question",
-        "name": "Is Focus App free?",
+        "name": "How much does Focus App cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, Focus App is completely free to download and use on Android. There are no subscriptions, in-app purchases, or advertisements, providing a distraction-free environment for your mindfulness journey."
+          "text": "Focus App requires a small one-time purchase of 20 Rupees (₹20). There are no monthly subscriptions, no ads, and no in-app purchases, allowing you to reflect daily in complete peace."
         }
       },
       {

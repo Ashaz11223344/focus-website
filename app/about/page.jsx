@@ -42,6 +42,28 @@ export const metadata = {
   }
 }
 
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://getfocus.online/about#webpage",
+  "url": "https://getfocus.online/about",
+  "name": "About Focus — Privacy-First Offline Stoic Journal & Diary",
+  "description": "Discover the philosophy behind Focus. A privacy-first, 100% offline self improvement app built for Stoic reflection, journaling, and mood tracking with zero data logging.",
+  "isPartOf": {
+    "@type": "WebSite",
+    "@id": "https://getfocus.online/#website",
+    "url": "https://getfocus.online"
+  }
+}
+
 export default function Page() {
-  return <AboutClient />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <AboutClient />
+    </>
+  )
 }

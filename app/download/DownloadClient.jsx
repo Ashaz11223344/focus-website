@@ -10,14 +10,15 @@ import {
   Smartphone,
   ChevronDown
 } from 'lucide-react'
+import Link from 'next/link'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import RequestAccessModal from '../components/RequestAccessModal'
 
 const FAQ_DATA = [
   {
-    question: "Is Focus free to use?",
-    answer: "Absolutely. Focus is 100% free, has no ads, and does not sell your data. We believe self-reflection should be accessible and completely private to everyone."
+    question: "How much does Focus cost?",
+    answer: "Focus requires a simple one-time purchase of 20 Rupees (₹20). There are no monthly subscriptions, no ads, and we collect zero user data, giving you a completely private space."
   },
   {
     question: "Is it available on the Play Store?",
@@ -156,6 +157,12 @@ export default function DownloadClient() {
                   </div>
                 ))}
               </div>
+
+              {/* Contextual Related Links */}
+              <div className="mt-8 pt-6 border-t border-[#FFE7D0]/10 flex flex-col sm:flex-row justify-between gap-4 text-xs font-sans text-[#FFE7D0]/50 select-none">
+                <span>Need setup help? Read our <Link href="/documentation" className="text-[#FC6E20] underline hover:text-[#FFE7D0] transition-colors">Documentation guide</Link>.</span>
+                <span>Want to learn more? Explore all <Link href="/features" className="text-[#FC6E20] underline hover:text-[#FFE7D0] transition-colors">App features</Link>.</span>
+              </div>
             </motion.div>
 
             {/* FAQ Accordion Section */}
@@ -244,7 +251,7 @@ export default function DownloadClient() {
 
                 <div className="flex flex-col gap-2 w-full pt-4 border-t border-[#FFE7D0]/10 text-left">
                   <div className="text-[11px] text-[#FFE7D0]/50 font-sans flex items-center gap-2">
-                    <span className="text-[#FC6E20]">✦</span> 100% Free & No Ads
+                    <span className="text-[#FC6E20]">✦</span> ₹20 One-Time & No Ads
                   </div>
                   <div className="text-[11px] text-[#FFE7D0]/50 font-sans flex items-center gap-2">
                     <span className="text-[#FC6E20]">✦</span> No Registration Required
