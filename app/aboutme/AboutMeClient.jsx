@@ -197,7 +197,7 @@ export default function AboutMeClient() {
             <div className="flex flex-col gap-5">
               <div className="glass-panel p-6 rounded-2xl border border-[#FFE7D0]/5 shadow-md">
                 <Smartphone className="w-6 h-6 text-[#FC6E20] mb-3" />
-                <h4 className="text-base font-serif font-bold text-[#FFE7D0] mb-2">Simple Phone Apps</h4>
+                <h3 className="text-base font-serif font-bold text-[#FFE7D0] mb-2">Simple Phone Apps</h3>
                 <p className="text-xs text-[#FFE7D0]/60 leading-relaxed font-sans">
                   I build simple, fast phone apps. They are designed to save your battery life and work perfectly without needing any internet connection.
                 </p>
@@ -208,7 +208,7 @@ export default function AboutMeClient() {
 
               <div className="glass-panel p-6 rounded-2xl border border-[#FC6E20]/20 shadow-md">
                 <Compass className="w-6 h-6 text-[#FC6E20] mb-3" />
-                <h4 className="text-base font-serif font-bold text-[#FFE7D0] mb-2">Clean Websites</h4>
+                <h3 className="text-base font-serif font-bold text-[#FFE7D0] mb-2">Clean Websites</h3>
                 <p className="text-xs text-[#FFE7D0]/60 leading-relaxed font-sans">
                   I create clean, easy-to-use websites. I love designing smooth layouts that look beautiful on both phones and computers.
                 </p>
@@ -219,7 +219,7 @@ export default function AboutMeClient() {
 
               <div className="glass-panel p-6 rounded-2xl border border-[#FFE7D0]/5 shadow-md">
                 <Palette className="w-6 h-6 text-[#FC6E20] mb-3" />
-                <h4 className="text-base font-serif font-bold text-[#FFE7D0] mb-2">Beautiful Designs</h4>
+                <h3 className="text-base font-serif font-bold text-[#FFE7D0] mb-2">Beautiful Designs</h3>
                 <p className="text-xs text-[#FFE7D0]/60 leading-relaxed font-sans">
                   I love clean designs, elegant layouts, and smooth transitions. I want apps to feel natural—like writing in a real paper notebook.
                 </p>
@@ -254,7 +254,7 @@ export default function AboutMeClient() {
                 <div className="w-6" />
               </div>
               <div className="p-5">
-                <h4 className="text-[#FFE7D0] font-serif font-bold text-sm mb-1">ASHAZ APPS</h4>
+                <h3 className="text-[#FFE7D0] font-serif font-bold text-sm mb-1">ASHAZ APPS</h3>
                 <p className="text-[10px] text-[#FFE7D0]/50 font-sans leading-relaxed">
                   A collection of my phone apps, websites, and clean designs that are easy to use.
                 </p>
@@ -519,7 +519,7 @@ export default function AboutMeClient() {
               >
                 <div>
                   <Smartphone className="w-8 h-8 text-[#FC6E20] mb-6" />
-                  <h4 className="text-lg font-serif font-bold text-[#FFE7D0] mb-3">Simple Phone Apps</h4>
+                  <h3 className="text-lg font-serif font-bold text-[#FFE7D0] mb-3">Simple Phone Apps</h3>
                   <p className="text-xs text-[#FFE7D0]/60 leading-relaxed font-sans">
                     I build simple, fast phone apps. They are designed to save your battery life and work perfectly without needing any internet connection.
                   </p>
@@ -543,7 +543,7 @@ export default function AboutMeClient() {
                     <Compass className="w-8 h-8 text-[#FC6E20]" />
                     <span className="px-2 py-0.5 rounded bg-[#FC6E20]/15 text-[#FC6E20] font-mono text-[8px] uppercase tracking-wider font-bold">CORE SKILL</span>
                   </div>
-                  <h4 className="text-lg font-serif font-bold text-[#FFE7D0] mb-3">Clean Websites</h4>
+                  <h3 className="text-lg font-serif font-bold text-[#FFE7D0] mb-3">Clean Websites</h3>
                   <p className="text-xs text-[#FFE7D0]/60 leading-relaxed font-sans">
                     I create clean, easy-to-use websites. I love designing smooth layouts that look beautiful on both phones and computers.
                   </p>
@@ -565,7 +565,7 @@ export default function AboutMeClient() {
               >
                 <div>
                   <Palette className="w-8 h-8 text-[#FC6E20] mb-6" />
-                  <h4 className="text-lg font-serif font-bold text-[#FFE7D0] mb-3">Beautiful Designs</h4>
+                  <h3 className="text-lg font-serif font-bold text-[#FFE7D0] mb-3">Beautiful Designs</h3>
                   <p className="text-xs text-[#FFE7D0]/60 leading-relaxed font-sans">
                     I love clean designs, elegant layouts, and smooth transitions. I want apps to feel natural—like writing in a real paper notebook.
                   </p>
@@ -637,7 +637,7 @@ export default function AboutMeClient() {
               {/* Mockup Content Page View */}
               <div className="p-4 relative bg-gradient-to-br from-[#1e1e1e] to-[#2a2a2a] min-h-[80px] flex items-center justify-between">
                 <div>
-                  <h4 className="text-[#FFE7D0] font-serif font-bold text-base mb-1">ASHAZ APPS</h4>
+                  <h3 className="text-[#FFE7D0] font-serif font-bold text-base mb-1">ASHAZ APPS</h3>
                   <p className="text-[10px] text-[#FFE7D0]/50 font-sans max-w-xs leading-relaxed">
                     A collection of my phone apps, websites, and clean designs that are easy to use.
                   </p>

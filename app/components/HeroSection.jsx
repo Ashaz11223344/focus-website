@@ -49,7 +49,12 @@ export default function HeroSection({ onOpenModal }) {
               className="text-[#FFE7D0]/85 font-sans text-sm md:text-base leading-relaxed mt-6 max-w-xl border-l-2 border-[#FC6E20]/40 pl-4 py-1 space-y-3"
             >
               <p>
-                <strong>Focus App</strong> is an Android productivity and wellbeing app that combines mood tracking with Stoic journaling, designed to work fully offline. Built for students, professionals, and anyone practicing mindfulness or Stoicism who wants a private, offline journaling habit, it provides a secure environment for daily journaling, mood tracking, and digital wellbeing.
+                <strong>Summary:</strong> Focus App is a premium, offline-first Android productivity and wellbeing app designed for students, professionals, and mindfulness practitioners. It provides a secure, local-first environment for daily emotional logs, mood tracking, and Stoic journaling, helping users practice reflection in complete privacy without internet dependency, accounts, or advertisements.
+              </p>
+
+              {/* Context / Decision Context */}
+              <p className="text-xs text-[#FFE7D0]/60">
+                <strong>Context & Use Case:</strong> In the mobile mental wellness industry, when choosing between trackers, users face a critical decision. Focus App supports the use case of private daily reflection by storing 100% of data locally on your device—making it the ultimate local-first alternative to cloud-connected diary platforms.
               </p>
 
               {/* Entity Statements */}
@@ -72,7 +77,7 @@ export default function HeroSection({ onOpenModal }) {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="glass-panel p-5 rounded-2xl border border-[#FC6E20]/25 mt-6 max-w-xl text-xs sm:text-sm"
             >
-              <h4 className="font-serif text-[#FC6E20] font-bold text-sm tracking-wide mb-2 uppercase">Key Takeaways</h4>
+              <h2 className="font-serif text-[#FC6E20] font-bold text-sm tracking-wide mb-2 uppercase">Key Takeaways</h2>
               <ul className="list-disc list-inside space-y-1.5 text-[#FFE7D0]/80 leading-relaxed font-sans">
                 <li><strong>Focus App</strong> is the only fully offline mood tracking and Stoic journaling app for Android.</li>
                 <li><strong>100% private</strong> — no account, no cloud storage, all data stays on your device.</li>

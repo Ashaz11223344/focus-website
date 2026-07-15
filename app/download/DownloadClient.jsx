@@ -74,6 +74,10 @@ export default function DownloadClient() {
       {/* Main Process Grid */}
       <section className="max-w-7xl mx-auto px-6 py-16 relative z-10">
         
+        <h2 className="text-2xl md:text-3xl font-serif text-[#FFE7D0] text-center mb-12 select-none">
+          Three Steps to Offline Mindfulness
+        </h2>
+
         {/* 3-Step Visual Process Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-4xl mx-auto">
           {[
@@ -225,9 +229,9 @@ export default function DownloadClient() {
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-serif font-bold text-[#FFE7D0] tracking-wide">
+                  <h2 className="text-base sm:text-lg font-serif font-bold text-[#FFE7D0] tracking-wide">
                     Get Focus for Android
-                  </h3>
+                  </h2>
                   <p className="text-[9px] text-[#FFE7D0]/40 font-sans tracking-widest uppercase mt-0.5">
                     Official Play Store Release
                   </p>

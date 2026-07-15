@@ -49,7 +49,9 @@ export default function AboutClient() {
         </section>
 
         {/* Dynamic Core Manifesto Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 md:mb-36">
+        <section className="mb-24 md:mb-36">
+          <h2 className="sr-only">Our Core Manifesto</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
               icon: EyeOff,
@@ -88,6 +90,7 @@ export default function AboutClient() {
               </motion.div>
             )
           })}
+          </div>
         </section>
 
         {/* Detailed Story & Founder Profile */}
@@ -161,9 +164,9 @@ export default function AboutClient() {
           <span className="text-[10px] tracking-[0.25em] font-semibold text-[#FC6E20] uppercase block mb-3 font-sans">
             Ready to Begin?
           </span>
-          <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#FFE7D0] mb-4">
+          <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#FFE7D0] mb-4">
             Reclaim your focus space
-          </h3>
+          </h2>
           <p className="text-xs md:text-sm text-[#FFE7D0]/60 max-w-lg mx-auto mb-8 font-sans leading-relaxed">
             Ready to experience a genuinely private daily routine? Download Focus from the Google Play Store and start today.
           </p>
