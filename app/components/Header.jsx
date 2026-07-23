@@ -23,6 +23,7 @@ export default function Header({ onOpenModal }) {
         <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-[13px] tracking-widest font-semibold text-[#FFE7D0]/60 uppercase">
           <Link href="/features" className="hover:text-[#FC6E20] transition-colors duration-300">Features</Link>
           <Link href="/pricing" className="hover:text-[#FC6E20] transition-colors duration-300">Pricing</Link>
+          <Link href="/faq" className="hover:text-[#FC6E20] transition-colors duration-300">FAQ</Link>
           <Link href="/documentation" className="hover:text-[#FC6E20] transition-colors duration-300">Docs</Link>
           <Link href="/blog" className="hover:text-[#FC6E20] transition-colors duration-300">Blog</Link>
           <Link href="/download" className="hover:text-[#FC6E20] transition-colors duration-300">Download</Link>
