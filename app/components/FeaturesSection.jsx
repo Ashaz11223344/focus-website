@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Sparkles, Heart, Search, Smile, BookOpen, Shield, Lock, Clock } from 'lucide-react'
+import { Sparkles, Search, Heart, History, Shield, Smile, Activity, Award } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import PhoneMockup from './PhoneMockup'
@@ -14,74 +14,66 @@ const FEATURES = [
   {
     title: 'Daily Inspiration',
     subtitle: 'Stunning Calligraphy presentation',
-    description: 'Beautiful calligraphy-style daily quotes combined with book-style typography layout. Tap to copy or share, and refresh instantly to draw new wisdom from your offline database.',
-    image: '/screenshots/home-sceen.jpeg',
+    description: 'Beautiful calligraphy-style daily quotes combined with book-style typography layout. Tap to copy, share, favorite, or refresh instantly from your offline catalog.',
+    image: '/screenshots/home_screen.png',
     icon: Sparkles,
     color: '#FC6E20',
   },
   {
-    title: 'Offline Favorites Vault',
-    subtitle: 'Keep wisdom permanently close',
-    description: 'Save quotes that strike your soul directly into a personal favorites folder. Access them instantaneously anywhere, even deep in the wilderness without cellular signal.',
-    image: '/screenshots/favorites.jpeg',
-    icon: Heart,
-    color: '#FFE7D0',
-  },
-  {
     title: 'Smart Offline Search',
-    subtitle: 'Instant concepts & author filters',
-    description: 'Easily navigate through a massive collection of offline quotes. Filter instantly by topics, authors, or categories to find exact thoughts matching your mindset.',
-    image: '/screenshots/search.jpeg',
+    subtitle: 'Dynamic tags & auto-suggestions',
+    description: 'Search thousands of offline quotes instantly. Enjoy session-aware recommendations under "Suggested for You ✦" and dynamic category filter chips generated at runtime.',
+    image: '/screenshots/search.png',
     icon: Search,
-    color: '#FC6E20',
-  },
-  {
-    title: 'Precise Mood Logging',
-    subtitle: 'Overwriting single-log analytics',
-    description: 'Keep a clean record of your feelings. Our single-log daily mood tracker ensures your progress analytics are never skewed, guaranteeing your emotional history and charts remain 100% accurate.',
-    image: '/screenshots/mood-tracker.jpeg',
-    icon: Smile,
     color: '#FFE7D0',
   },
   {
-    title: 'Mood Card',
-    subtitle: 'Share Your Moods with Friends',
-    description: 'Share your current mood with friends and loved ones. Let them know how you are feeling and brighten their day with your positive vibes.',
-    image: '/screenshots/mood_card.png',
-    icon: Smile,
+    title: 'Offline Favorites Vault',
+    subtitle: 'Batch operations on your wisdom',
+    description: 'Double-tap any quote across screens to activate multi-select mode. Batch copy, share, favorite, or manage quotes with zero latency, entirely offline.',
+    image: '/screenshots/favorites.png',
+    icon: Heart,
+    color: '#FC6E20',
+  },
+  {
+    title: 'Wisdom Reading History',
+    subtitle: 'Searchable historical archive',
+    description: 'Revisit past daily wisdom and explored quotes with an offline reading timeline. Easily search and re-engage with thoughts that guided your past days.',
+    image: '/screenshots/history.png',
+    icon: History,
     color: '#FFE7D0',
   },
   {
-    title: 'Reflective Zen Journal',
-    subtitle: 'Book-grade Literata typography',
-    description: 'An elegant personal diary directly inside your pocket. Put down thoughts, aspirations, and lessons in a highly peaceful writing space using beautiful serif text formatting.',
-    image: '/screenshots/journal.jpeg',
-    icon: BookOpen,
-    color: '#FC6E20',
-  },
-  {
-    title: 'PIN protection',
-    subtitle: 'Privacy first approach',
-    description: 'Add PIN protection to keep your private thoughts and records safe and accessible only to you.',
-    image: '/screenshots/pin_code.png',
-    icon: Lock,
-    color: '#FC6E20',
-  },
-  {
-    title: 'Quiet Control & Privacy',
-    subtitle: '100% Secure offline sandboxing',
-    description: 'We respect your tranquility. Customize Quiet Hours to silence status bar badges during sleep. Because all records stay in a sandboxed SQLite database, your data is yours alone.',
-    image: '/screenshots/notification.png',
+    title: 'Focus Guard & App Blocker',
+    subtitle: 'Reclaim your deep work flow',
+    description: 'Schedule distraction-free windows that automatically enable Do Not Disturb (DND) and intercept addicting third-party apps with a pulsing shield and motivational reflection prompts.',
+    image: '/screenshots/app_blocker.png',
     icon: Shield,
+    color: '#FC6E20',
+  },
+  {
+    title: 'Daily Mood Tracking',
+    subtitle: 'Enforced single-log accuracy',
+    description: 'Keep a clean record of your feelings. Our intelligent overwrite policy guarantees your monthly averages and emotional distribution charts remain 100% truthful.',
+    image: '/screenshots/mood_tracker.png',
+    icon: Smile,
     color: '#FFE7D0',
   },
   {
-    title: 'Custom Quote Timings',
-    subtitle: 'Quotes exactly when you need them',
-    description: 'Set custom, specific times throughout your day to receive your daily quotes. Whether it\'s with your morning coffee, during your lunch break, or right before bed, your wisdom arrives exactly on your schedule.',
-    image: '/screenshots/specific_time.png',
-    icon: Clock,
+    title: 'Mindfulness Analytics & Mood Graph',
+    subtitle: 'Bezier mood curve & weekly report',
+    description: 'Track emotional trends with a custom Canvas-drawn weekly Bezier mood curve with emoji nodes, public journal word clouds, and instant high-res report card export.',
+    image: '/screenshots/mood_graph.png',
+    icon: Activity,
     color: '#FC6E20',
+  },
+  {
+    title: 'Gamified Achievements',
+    subtitle: '11 Aesthetic consistency badges',
+    description: 'Celebrate mindful milestones like Mood Tracker, Focus Ninja, and Mythic Master. Gamify your personal growth journey without predatory addiction loops.',
+    image: '/screenshots/achievements.png',
+    icon: Award,
+    color: '#FFE7D0',
   }
 ]
 

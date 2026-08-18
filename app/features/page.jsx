@@ -2,8 +2,8 @@ import React from 'react'
 import FeaturesClient from './FeaturesClient'
 
 export const metadata = {
-  title: 'Focus App Features — Offline Mood Tracker, Stoic Journal & Streaks',
-  description: 'Explore all 9 premium features of Focus: offline calligraphy quotes, local-first mood tracker, gamified streaks, and sandboxed reflective journal. No accounts.',
+  title: 'Focus App Features — Offline Mood Tracker, Stoic Journal, Focus Guard & Streaks',
+  description: 'Explore all 13 premium features of Focus: calligraphy quotes, Zen PIN journal, Focus Guard app blocker, Canvas weekly mood curve, and sandboxed reflections. No accounts.',
   alternates: {
     canonical: '/features',
   },
@@ -21,8 +21,8 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Focus App',
-    title: 'Focus App Features — Offline Mood Tracker, Stoic Journal & Streaks',
-    description: 'Explore all 9 premium features of Focus: offline calligraphy quotes, local-first mood tracker, gamified streaks, and sandboxed reflective journal. No accounts.',
+    title: 'Focus App Features — Offline Mood Tracker, Stoic Journal, Focus Guard & Streaks',
+    description: 'Explore all 13 premium features of Focus: calligraphy quotes, Zen PIN journal, Focus Guard app blocker, Canvas weekly mood curve, and sandboxed reflections. No accounts.',
     url: 'https://getfocus.online/features',
     images: [
       {
@@ -36,8 +36,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Focus App Features — Offline Mood Tracker, Stoic Journal & Streaks',
-    description: 'Explore all 9 premium features of Focus: offline calligraphy quotes, local-first mood tracker, gamified streaks, and sandboxed reflective journal. No accounts.',
+    title: 'Focus App Features — Offline Mood Tracker, Stoic Journal, Focus Guard & Streaks',
+    description: 'Explore all 13 premium features of Focus: calligraphy quotes, Zen PIN journal, Focus Guard app blocker, Canvas weekly mood curve, and sandboxed reflections. No accounts.',
     images: ['https://getfocus.online/og-image.png'],
   }
 }
@@ -47,8 +47,8 @@ const schema = {
   "@type": "WebPage",
   "@id": "https://getfocus.online/features#webpage",
   "url": "https://getfocus.online/features",
-  "name": "Focus App Features — Offline Mood Tracker, Stoic Journal & Streaks",
-  "description": "Explore all 9 premium features of Focus: offline calligraphy quotes, local-first mood tracker, gamified streaks, and sandboxed reflective journal. No accounts.",
+  "name": "Focus App Features — Offline Mood Tracker, Stoic Journal, Focus Guard & Streaks",
+  "description": "Explore all 13 premium features of Focus: calligraphy quotes, Zen PIN journal, Focus Guard app blocker, Canvas weekly mood curve, and sandboxed reflections. No accounts.",
   "isPartOf": {
     "@type": "WebSite",
     "@id": "https://getfocus.online/#website",

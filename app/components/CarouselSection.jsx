@@ -6,19 +6,14 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import PhoneMockup from './PhoneMockup'
 
 const CAROUSEL_SCREENS = [
-  { image: '/screenshots/home-sceen.jpeg', label: 'Daily New Quotes', desc: 'Daily wisdom quotes' },
-  { image: '/screenshots/favorites.jpeg', label: 'Favorites Vault', desc: 'Permanent offline bookmarks' },
-  { image: '/screenshots/search.jpeg', label: 'Smart Search', desc: 'Instant quote and author filter' },
-  { image: '/screenshots/mood-tracker.jpeg', label: 'Mood Log', desc: 'Secure emotional tracking' },
-  { image: '/screenshots/journal.jpeg', label: 'Personal Journal', desc: 'Reflective serif diary' },
-  { image: '/screenshots/history.jpeg', label: 'Wisdom History', desc: 'Past quotes archives' },
-  { image: '/screenshots/notification.png', label: 'Quiet Control', desc: 'Sleep suppression & settings' },
-  { image: '/screenshots/quote_widget.png', label: 'Quote Widget', desc: 'Add quotes to your home screen' },
-  { image: '/screenshots/journal_widget.png', label: 'Journal Widget', desc: 'Add your thoughts on home screen' },
-  { image: '/screenshots/mood_journey.png', label: 'Mood Journey', desc: 'Track your mood and emotions' },
-  { image: '/screenshots/mood_card.png', label: 'Mood Card', desc: 'Share your mood with friends' },
-  { image: '/screenshots/pin_code.png', label: 'Pin Code', desc: 'Secure your journal with pin code' },
-  { image: '/screenshots/specific_time.png', label: 'Quote Schedule', desc: 'Set custom specific timing slots' }
+  { image: '/screenshots/home_screen.png', label: 'Home Screen', desc: 'Curated daily wisdom & calligraphy typography' },
+  { image: '/screenshots/search.png', label: 'Search', desc: 'Suggestions & runtime dynamic category chips' },
+  { image: '/screenshots/favorites.png', label: 'Favorites', desc: 'Permanent offline bookmarks & multi-select' },
+  { image: '/screenshots/history.png', label: 'History', desc: 'Searchable historical archive of past quotes' },
+  { image: '/screenshots/app_blocker.png', label: 'App Blocker', desc: 'Focus Guard DND silencer & app blocker shield' },
+  { image: '/screenshots/mood_tracker.png', label: 'Mood Tracker', desc: 'Single-log daily emotion recording & Wrapped' },
+  { image: '/screenshots/mood_graph.png', label: 'Mood Graph', desc: 'Canvas Bezier curve & mindful report card' },
+  { image: '/screenshots/achievements.png', label: 'Gamified', desc: '11 Aesthetic consistency badges & milestones' }
 ]
 
 export default function CarouselSection() {

@@ -11,85 +11,135 @@ import {
   BookOpen, 
   Award, 
   Zap, 
-  Bell,
+  Lock,
+  Layers,
+  Activity,
+  Shield,
+  Palette,
   Sparkles
 } from 'lucide-react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import PhoneMockup from '../components/PhoneMockup'
 import RequestAccessModal from '../components/RequestAccessModal'
 
 const FEATURES_DATA = [
   {
     id: 'quotes',
     title: 'Dynamic Quotes Engine',
-    tagline: 'Fuel your focus with curated offline wisdom.',
-    description: 'Our proprietary on-device logic algorithmically cycles through high-impact motivational philosophy. No network connection required, keeping your focus uninterrupted and 100% private.',
-    tags: ['Offline', 'Dynamic', 'Wisdom'],
+    tagline: 'Fuel your focus with curated offline calligraphy wisdom.',
+    description: 'Delivers high-fidelity curated quotes in a stunning calligraphy presentation utilizing the handcrafted Google Font "Playwrite GB S". Swiftly slide, share, copy, or refresh instantly from your offline catalog without active network dependencies.',
+    tags: ['Calligraphy', 'Offline-First', 'Wisdom'],
     icon: Quote,
+    image: '/screenshots/home_screen.png'
   },
   {
     id: 'explore',
     title: 'Categorized Explore Hub',
-    tagline: 'Curated knowledge paths designed for peace of mind.',
-    description: 'Browse neatly segmented categories such as Stoicism, Deep Work, Mindfulness, and Habit Building. Find exactly what resonates with your current state of mind in seconds.',
-    tags: ['Categorized', 'Mindful', 'Offline'],
+    tagline: 'Curated knowledge paths for every state of mind.',
+    description: 'Dive into tailored mental categories matching your current mood: Motivation, Calm, Focus, Hard Work, Love, and Success. Features a responsive wrapping grid optimized for phones, tablets, and foldables.',
+    tags: ['Categorized', 'Mindful', 'Universal-Grid'],
     icon: Compass,
+    image: '/screenshots/categories.png'
   },
   {
     id: 'search',
-    title: 'Advanced Search & Filtering',
-    tagline: 'Retrieve inspiration instantly from our rich content vault.',
-    description: 'Instantly search by author, topic, or keyword. Use granular filters to match your energy level, objective, or time budget. Safe, lightning fast, and entirely local.',
-    tags: ['Advanced', 'Instant', 'Filtering'],
+    title: 'Advanced Search & Dynamic Chips',
+    tagline: 'Session-aware recommendations and runtime tag filters.',
+    description: 'Search through thousands of offline quotes instantly by topic, author, or keyword. Enjoy auto-suggestions under "Suggested for You ✦", session-history deduplication, and dynamic capitalized filter chips extracted from the localized database at runtime.',
+    tags: ['Smart-Search', 'Dynamic-Chips', 'Suggestions'],
     icon: Search,
+    image: '/screenshots/search.png'
   },
   {
     id: 'vault',
     title: 'Offline Favorites Vault',
-    tagline: 'Your personal sanctuary of high-resonance insights.',
-    description: 'Save quotes, prompts, and insights that impact you the most. Your vault is fully encrypted on your device, ensuring your reflections remain yours and yours alone.',
-    tags: ['Private', 'Encrypted', 'Local-Only'],
+    tagline: 'Permanent, fast offline reflection for high-resonance thoughts.',
+    description: 'Bookmark quotes that speak directly to your soul. Your vault is permanently cataloged on your device for lightning-fast retrieval even without cellular signal, with streamlined single-tap actions.',
+    tags: ['Private', 'Bookmarks', 'Local-Only'],
     icon: Heart,
+    image: '/screenshots/favorites.png'
   },
   {
     id: 'mood',
     title: 'Daily Mood Tracking',
-    tagline: 'Connect the dots with a zero telemetry mood tracker.',
-    description: 'A minimal, friction-free interface designed to serve as a zero telemetry mood tracker. Log your emotional state in three taps and spot visual trends without external tracking servers.',
-    tags: ['Self-Reflection', 'Tracking', 'Private'],
+    tagline: 'Truthful monthly emotional analytics with single-log protection.',
+    description: 'Log your emotional state once per day. If you log again on the same day, it intelligently overwrites your previous choice, guaranteeing your monthly averages and trends are 100% accurate and never skewed by accidental double-logs.',
+    tags: ['Single-Log', 'No-Telemetry', 'Accurate-Trends'],
     icon: Smile,
+    image: '/screenshots/mood_tracker.png'
   },
   {
     id: 'journal',
-    title: 'Reflective Journal',
-    tagline: 'Unburden your mind in a beautiful sandbox.',
-    description: 'Process your thoughts with guided, quiet prompts or free-form offline writing. Built on a sandboxed local SQLite database, meaning not a single keystroke ever leaves your device.',
-    tags: ['Secure', 'SQLite', 'No-Cloud'],
+    title: 'Reflective Public Journal',
+    tagline: 'Unburden your mind in a distraction-free serif sandbox.',
+    description: 'An elegant personal diary system integrated directly inside the app. Write daily reflections, goals, or notes with book-grade typography using the sleek "Literata" font family, saved locally in a secure SQLite container.',
+    tags: ['Book-Grade', 'Literata-Font', 'SQLite-Sandbox'],
     icon: BookOpen,
+    image: '/screenshots/journal.png'
   },
   {
     id: 'badge',
-    title: 'Gamified Badge System',
-    tagline: 'Honor your victories with offline habit badges.',
-    description: 'Earn elegant, carefully illustrated offline habit badges for milestone journal entries, consistent tracking, and focus blocks. Designed to motivate without triggering dopamine loops.',
-    tags: ['Gamified', 'Achievements', 'No-Addiction'],
+    title: 'Gamified Milestone System',
+    tagline: 'Honor your victories with 11 aesthetic habit badges.',
+    description: 'Earn and unlock customized achievement badges like Mood Tracker, Journal Keeper, Focus Ninja, and Mythic Master for your consistency. Gamifies your personal growth journey without triggering toxic social media loops.',
+    tags: ['11-Milestones', 'Achievements', 'No-Addiction'],
     icon: Award,
+    image: '/screenshots/achievements.png'
   },
   {
     id: 'streak',
-    title: 'Streak Tracker',
-    tagline: 'Celebrate progress through silent, consistent growth.',
-    description: 'Keep track of your consecutive mindful days. A quiet, visual calendar shows your progress. It acts as a gentle mirror to help you hold yourself accountable without guilt.',
-    tags: ['Streak', 'Consistency', 'Encouragement'],
+    title: 'Self-Disciplines Streak Tracker',
+    tagline: 'Celebrate progress through quiet, unbroken habit momentum.',
+    description: 'Track consecutive days of mindful check-ins with an encouraging daily streak affirmation dashboard ("Intent Affirmed!"). A gentle mirror that keeps you accountable without guilt or spammy push alerts.',
+    tags: ['Streak', 'Consistency', 'Daily-Intent'],
     icon: Zap,
+    image: '/screenshots/intent.png'
   },
   {
-    id: 'notifications',
-    title: 'Intelligent Notifications',
-    tagline: 'Reclaim your focus with local, mindful prompts.',
-    description: 'Enjoy smart, highly customizable prompts delivered completely via local Android triggers. Zero tracking servers, zero background data drain, and 100% control over when you are nudged.',
-    tags: ['Local-Triggers', 'Zero-Drain', 'Custom'],
-    icon: Bell,
+    id: 'zen-lock',
+    title: 'Zen Journal & PIN Protection',
+    tagline: 'Cryptographic SHA-256 privacy and screenshot masking.',
+    description: 'Keep your deepest thoughts private with Zen Journal. Features local PIN setup, encrypted backup passwords, SHA-256 validation, and WindowManager FLAG_SECURE protection to block screenshots and mask app switcher previews.',
+    tags: ['SHA-256-PIN', 'FLAG_SECURE', 'Encrypted-Backup'],
+    icon: Lock,
+    image: '/screenshots/private_journal.png'
+  },
+  {
+    id: 'multi-select',
+    title: 'Double-Tap Multi-Select System',
+    tagline: 'Batch operations on your favorite wisdom entries.',
+    description: 'Double-tap any quote across Home, Favorites, History, Search, or Explore to enter batch selection mode. Smooth contracted scaling (0.97f) and vibrant orange highlight overlays let you batch favorite, share, copy, or delete in bulk.',
+    tags: ['Batch-Actions', 'Double-Tap', 'Smooth-Scaling'],
+    icon: Layers,
+    image: '/screenshots/favorites.png'
+  },
+  {
+    id: 'analytics',
+    title: 'Mindfulness Weekly Analytics',
+    tagline: 'Canvas-drawn Bezier mood curve and report card sharing.',
+    description: 'Visualize your weekly emotional journey with a custom Canvas Bezier curve with emoji nodes and neutral 3.0f fallback scores. Includes public journal word clouds, weekly highlights, and high-resolution bitmap report card export.',
+    tags: ['Bezier-Curve', 'Report-Card', 'Word-Cloud'],
+    icon: Activity,
+    image: '/screenshots/mood_graph.png'
+  },
+  {
+    id: 'focus-guard',
+    title: 'Focus Guard & App Blocker',
+    tagline: 'Automated DND silencer & persistent app blocker shield.',
+    description: 'Program distraction-free windows that automatically engage Do Not Disturb mode. The persistent AppBlockerService polls foreground apps every 500ms and intercepts distracting apps with a pulsing shield overlay, quotes, and 5-minute override timers.',
+    tags: ['App-Blocker', 'DND-Silencer', 'Shield-Overlay'],
+    icon: Shield,
+    image: '/screenshots/app_blocker.png'
+  },
+  {
+    id: 'wallpaper',
+    title: 'Dynamic Wallpaper Generator',
+    tagline: 'Turn your favorite quotes into aesthetic film-grain wallpapers.',
+    description: 'Craft bespoke typography wallpapers using curated HSL color themes (Noir, etc.), custom fonts (Literata, Inter, Lora), text alignment options, and adjustable film grain texture (0% to 8%). Set as Home/Lock screen or export to gallery.',
+    tags: ['Wallpaper-Maker', 'Film-Grain', 'Typography'],
+    icon: Palette,
+    image: '/screenshots/setting_1.png'
   }
 ]
 
@@ -124,7 +174,7 @@ export default function FeaturesClient() {
             transition={{ duration: 0.6 }}
             className="text-[12px] font-sans tracking-[0.3em] font-semibold text-[#FC6E20] uppercase block mb-4 select-none"
           >
-            Core Modules
+            All 13 Core Modules
           </motion.span>
           <motion.h1 
             initial={{ opacity: 0, y: 15 }}
@@ -140,7 +190,7 @@ export default function FeaturesClient() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#FFE7D0]/60 font-sans mt-6 text-sm md:text-base leading-relaxed max-w-xl mx-auto"
           >
-            Focus is engineered from the ground up to operate completely offline. Explore the 9 interconnected local-first modules built to foster mindful consistency.
+            Focus is engineered from the ground up to operate completely offline. Explore all 13 interconnected local-first modules built for deep work, private journaling, and mindful consistency.
           </motion.p>
         </div>
       </section>
@@ -151,26 +201,27 @@ export default function FeaturesClient() {
           
           {/* Sticky Sidebar Navigation (Desktop only) */}
           <aside className="hidden lg:block lg:col-span-1">
-            <div className="sticky top-28 space-y-4 glass-panel rounded-2xl p-6 border border-[#FFE7D0]/5">
+            <div className="sticky top-28 space-y-4 glass-panel rounded-2xl p-6 border border-[#FFE7D0]/5 max-h-[calc(100vh-140px)] overflow-y-auto custom-scrollbar">
               <span className="text-[10px] tracking-[0.2em] font-semibold text-[#FC6E20] uppercase block mb-2 select-none">
-                Navigation
+                Navigation (13 Modules)
               </span>
-              <nav className="flex flex-col gap-2">
-                {FEATURES_DATA.map((feat) => {
+              <nav className="flex flex-col gap-1.5">
+                {FEATURES_DATA.map((feat, idx) => {
                   const Icon = feat.icon
                   const isActive = activeSection === feat.id
                   return (
                     <button
                       key={feat.id}
                       onClick={() => scrollToSection(feat.id)}
-                      className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-left text-xs font-sans tracking-wide transition-all duration-300 ${
+                      className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-xs font-sans tracking-wide transition-all duration-300 ${
                         isActive 
                           ? 'bg-[#FC6E20] text-[#1B1B1B] font-bold shadow-[0_0_15px_rgba(252,110,32,0.2)]' 
                           : 'text-[#FFE7D0]/55 hover:text-[#FC6E20] hover:bg-[#FFE7D0]/5'
                       }`}
                     >
-                      <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#1B1B1B]' : 'text-inherit'}`} />
-                      <span>{feat.title}</span>
+                      <span className="text-[10px] opacity-60 font-mono">0{idx + 1}</span>
+                      <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-[#1B1B1B]' : 'text-inherit'}`} />
+                      <span className="truncate">{feat.title}</span>
                     </button>
                   )
                 })}
@@ -196,22 +247,15 @@ export default function FeaturesClient() {
                 >
                   <div className={`flex flex-col md:flex-row gap-8 items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                     
-                    {/* Visual Card Side */}
+                    {/* Visual Mockup Card Side */}
                     <div className="w-full md:w-1/2 flex items-center justify-center">
-                      <div className="relative w-full max-w-sm aspect-video sm:aspect-square rounded-2xl glass-panel border border-[#FFE7D0]/10 flex flex-col items-center justify-center p-8 hover:border-[#FC6E20]/30 transition-all duration-500 group shadow-[0_15px_35px_rgba(0,0,0,0.6)]">
-                        {/* Glow effect on hover */}
-                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-[#FC6E20]/0 to-[#FC6E20]/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-                        <div className="w-16 h-16 rounded-2xl bg-[#FC6E20]/10 border border-[#FC6E20]/20 flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 group-hover:bg-[#FC6E20] group-hover:text-[#1B1B1B] transition-all duration-300 z-10 text-[#FC6E20]">
-                          <Icon className="w-8 h-8 transition-transform duration-300" />
-                        </div>
-                        <span className="text-[10px] tracking-[0.2em] font-sans font-semibold text-[#FFE7D0]/30 uppercase z-10 group-hover:text-[#FFE7D0]/60 transition-colors duration-300">
-                          Module 0{index + 1}
-                        </span>
-                        <h3 className="text-xl font-serif text-[#FFE7D0] mt-3 font-semibold z-10 select-none">
-                          {feat.title}
-                        </h3>
-                        {/* Subtle aesthetic line */}
-                        <div className="w-8 h-[1px] bg-[#FFE7D0]/10 mt-4 group-hover:w-20 group-hover:bg-[#FC6E20]/50 transition-all duration-500" />
+                      <div className="relative group flex items-center justify-center">
+                        <div className="absolute w-[240px] h-[380px] bg-[#FC6E20]/10 blur-[50px] rounded-[40px] -z-10 group-hover:bg-[#FC6E20]/20 transition-all duration-500 pointer-events-none" />
+                        <PhoneMockup
+                          image={feat.image}
+                          alt={feat.title}
+                          className="w-[240px] sm:w-[270px] shadow-[0_20px_50px_rgba(0,0,0,0.8)] border-[#FFE7D0]/10 group-hover:border-[#FC6E20]/40 transition-all duration-500"
+                        />
                       </div>
                     </div>
 
@@ -228,15 +272,20 @@ export default function FeaturesClient() {
                         ))}
                       </div>
                       
-                      <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#FFE7D0] leading-snug">
-                        {feat.title}
-                      </h2>
+                      <div className="flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-xl bg-[#FC6E20]/10 border border-[#FC6E20]/20 flex items-center justify-center text-[#FC6E20] shrink-0">
+                          <Icon className="w-5 h-5" />
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-serif font-bold text-[#FFE7D0] leading-snug">
+                          {feat.title}
+                        </h2>
+                      </div>
                       
                       <p className="text-[#FC6E20] font-sans font-bold text-sm">
                         {feat.tagline}
                       </p>
                       
-                      <p className="text-[#FFE7D0]/60 font-sans text-sm md:text-base leading-relaxed">
+                      <p className="text-[#FFE7D0]/70 font-sans text-sm md:text-base leading-relaxed">
                         {feat.description}
                       </p>
                     </div>
@@ -266,14 +315,14 @@ export default function FeaturesClient() {
             Looking for a <span className="text-[#FC6E20]">Daylio alternative</span> with no account?<br />
             A <span className="text-[#FC6E20]">Reflectly alternative</span> with no cloud sync?
           </h3>
-          <div className="w-12 h-[1px] bg-[#FFE7D0]/10 my-6 mx-auto group-hover:w-24 group-hover:bg-[#FC6E20]/30 transition-all duration-300" />
+          <div className="w-12 h-[1px] bg-[#FFE7D0]/10 my-6 mx-auto group-hover:w-24 group-hover:bg-[#FC6E20]/30 transition-all duration-500" />
           <p className="text-sm md:text-base text-[#FFE7D0]/70 font-sans max-w-xl mx-auto leading-relaxed">
-            Focus is the only offline-first mood tracker that requires zero registration. Your self-reflection belongs entirely on your device.
+            Focus is the only offline-first mood tracker, Stoic journal, and app blocker that requires zero registration. Your self-reflection belongs entirely on your device.
           </p>
         </motion.div>
       </section>
 
-      {/* Bottom Request Access CTA */}
+      {/* Bottom Download CTA */}
       <section className="relative w-full bg-[#1B1B1B] py-24 md:py-32 border-t border-[#FFE7D0]/5 overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[55vw] h-[55vw] rounded-full bg-[#FC6E20]/4 blur-[130px] pointer-events-none z-0"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center flex flex-col items-center">
@@ -284,7 +333,7 @@ export default function FeaturesClient() {
             Experience complete focus today
           </h2>
           <p className="text-[#FFE7D0]/60 font-sans mt-6 text-sm md:text-base leading-relaxed max-w-xl">
-            Download Focus to experience our offline build. No servers, no tracking, just progress.
+            Download Focus to experience all 13 offline modules. No servers, no tracking, just mindful progress.
           </p>
           <div className="mt-10 flex flex-col items-center select-none">
             <a

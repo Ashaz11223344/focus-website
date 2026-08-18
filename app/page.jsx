@@ -2,8 +2,8 @@ import React from 'react'
 import HomeClient from './HomeClient'
 
 export const metadata = {
-  title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
-  description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.',
+  title: 'Focus App — Offline Mood Tracker, Stoic Journal & Focus Guard | Android',
+  description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker, Zen PIN journal, and Focus Guard app blocker for Android.',
   keywords: [
     "Focus App",
     "Mindful Offline Growth",
@@ -11,6 +11,10 @@ export const metadata = {
     "Zero Telemetry Mood Tracker",
     "Calligraphy Daily Quotes",
     "Book Style Aesthetic Journal",
+    "Zen Journal PIN Lock",
+    "Focus Guard App Blocker",
+    "Mindfulness Analytics Bezier Curve",
+    "Dynamic Wallpaper Generator",
     "Single Log Mood Tracker",
     "Offline Habit Badges",
     "Quiet Hours Quotes Reminder",
@@ -53,8 +57,8 @@ export const metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Focus App',
-    title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
-    description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.',
+    title: 'Focus App — Offline Mood Tracker, Stoic Journal & Focus Guard | Android',
+    description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker, Zen PIN journal, and Focus Guard app blocker for Android.',
     url: '/',
     images: [
       {
@@ -68,8 +72,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Focus App — Offline Mood Tracker & Stoic Journal | Android',
-    description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.',
+    title: 'Focus App — Offline Mood Tracker, Stoic Journal & Focus Guard | Android',
+    description: 'Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker, Zen PIN journal, and Focus Guard app blocker for Android.',
     images: ['/og-image.png'],
   }
 }
@@ -81,7 +85,7 @@ const schemas = [
     "@id": "https://getfocus.online/#website",
     "url": "https://getfocus.online",
     "name": "Focus App",
-    "description": "Privacy-First Offline Mood Tracker & Stoic Journal",
+    "description": "Privacy-First Offline Mood Tracker, Stoic Journal & Focus Guard",
     "publisher": {
       "@id": "https://getfocus.online/#organization"
     }
@@ -112,13 +116,13 @@ const schemas = [
     "name": "Focus App",
     "operatingSystem": "Android",
     "applicationCategory": "Mindfulness, MentalWellnessApplication, ProductivityApplication",
-    "applicationSubCategory": "Mindful Offline Growth & Stoic Reflection",
+    "applicationSubCategory": "Mindful Offline Growth, Stoic Reflection & Focus Guard",
     "offers": {
       "@type": "Offer",
       "price": "20.00",
       "priceCurrency": "INR"
     },
-    "description": "Focus is a state-of-the-art, 100% offline and privacy-first personal growth companion app for Android. Track daily moods, write book-grade journals, and cycle calligraphy stoic quotes completely offline.",
+    "description": "Focus is a state-of-the-art, 100% offline and privacy-first personal growth companion app for Android. Track daily moods, write book-grade journals with Zen PIN security, generate dynamic wallpapers, and block distracting apps completely offline.",
     "url": "https://getfocus.online",
     "screenshot": "https://getfocus.online/og-image.png",
     "creator": {
@@ -126,17 +130,22 @@ const schemas = [
     },
     "audience": {
       "@type": "Audience",
-      "audienceType": "People interested in Stoicism, mindfulness, offline journaling, and data privacy"
+      "audienceType": "People interested in Stoicism, mindfulness, offline journaling, app blocking, and data privacy"
     },
     "featureList": [
       "Offline Calligraphy Daily Quotes",
-      "Zero Telemetry Mood Tracker",
-      "Book Style Aesthetic Journal",
-      "Silent Habit Streak Tracker",
-      "Gamified Offline Milestones & Achievements",
+      "Zero Telemetry Mood Tracker (Enforced Single-Log)",
+      "Book Style Aesthetic Journal (Public & Private)",
+      "Zen Journal SHA-256 PIN Protection & FLAG_SECURE",
+      "Focus Guard System & Persistent App Blocker",
+      "Automated Do Not Disturb (DND) Silencer",
+      "Mindfulness Analytics & Canvas Bezier Mood Curve",
+      "Double-Tap Multi-Select System",
+      "Dynamic Wallpaper Generator with Film Grain",
+      "Smart Search with Auto-Suggestions & Dynamic Category Chips",
+      "Gamified Offline Milestones & 11 Achievement Badges",
       "Quiet Hours Quotes Notification Filters",
-      "Zero Cloud Sync & No Account Requirements",
-      "Sandboxed Local SQLite Database Security"
+      "Zero Cloud Sync & Sandboxed Local SQLite Database"
     ]
   },
   {
@@ -163,8 +172,8 @@ const schemas = [
     "@type": "WebPage",
     "@id": "https://getfocus.online/#webpage",
     "url": "https://getfocus.online",
-    "name": "Focus App — Offline Mood Tracker & Stoic Journal",
-    "description": "Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker and Stoic journal for Android to log emotions and reflect daily.",
+    "name": "Focus App — Offline Mood Tracker, Stoic Journal & Focus Guard",
+    "description": "Cultivate Stoic consistency in complete privacy. Focus App is a 100% offline mood tracker, Zen PIN journal, and Focus Guard app blocker for Android.",
     "publisher": {
       "@id": "https://getfocus.online/#organization"
     },
@@ -178,7 +187,7 @@ const schemas = [
       "@id": "https://getfocus.online/#breadcrumb"
     },
     "datePublished": "2026-01-01T00:00:00+00:00",
-    "dateModified": "2026-07-08T14:42:17+05:30"
+    "dateModified": "2026-08-18T16:50:00+05:30"
   },
   {
     "@context": "https://schema.org",
@@ -190,7 +199,15 @@ const schemas = [
         "name": "What is Focus App?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Focus App is an offline-first Android productivity and mental wellbeing application that combines daily mood tracking with structured Stoic journaling. It is designed to help users log their emotions, view beautiful calligraphic Stoic quotes, and build consistent habits in complete privacy."
+          "text": "Focus App is an offline-first Android productivity and mental wellbeing application that combines daily mood tracking with structured Stoic journaling and Focus Guard app blocker. It is designed to help users log their emotions, view beautiful calligraphic Stoic quotes, and build consistent habits in complete privacy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Focus Guard and how does it block apps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus Guard is an on-device digital boundary system. It schedules automatic Do Not Disturb (DND) quiet hours and polls foreground tasks via AppBlockerService to intercept distracting apps with a pulsing shield and motivational quote overlay."
         }
       },
       {
@@ -206,7 +223,7 @@ const schemas = [
         "name": "Is my data private with Focus App?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. Your personal reflections, journal entries, and emotional logs are stored strictly inside a sandboxed local database on your Android device. Focus App collects zero telemetry, has no cloud servers, requires no user account, and does not share data with any third parties."
+          "text": "Absolutely. Your personal reflections, journal entries, and emotional logs are stored strictly inside a sandboxed local database on your Android device. Focus App collects zero telemetry, has no cloud servers, requires no user account, and Zen Journal entries are protected by SHA-256 PIN encryption."
         }
       },
       {

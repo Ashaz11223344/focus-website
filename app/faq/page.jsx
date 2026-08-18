@@ -66,7 +66,39 @@ const schemas = [
         "name": "What is Focus App?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Focus App is a premium, 100% offline personal growth companion for Android. It combines a zero-telemetry daily mood tracker with a structured Stoic journal and beautifully typeset daily calligraphy quotes. It is built to help you cultivate mindfulness and consistency in complete privacy."
+          "text": "Focus App is a premium, 100% offline personal growth companion for Android. It combines a zero-telemetry daily mood tracker with a structured Stoic journal, Focus Guard deep work app blocker, and beautifully typeset daily calligraphy quotes. It is built to help you cultivate mindfulness and consistency in complete privacy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Focus Guard and how does the app blocker work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focus Guard is an on-device digital boundary system. It allows you to schedule automatic Do Not Disturb (DND) quiet hours and select distracting third-party apps to block during work sessions. When an app is opened, Focus Guard intercepts it with a pulsing shield overlay, motivational quote, and a 5-minute override option. It runs purely on-device via Android UsageStatsManager."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How secure is the Zen Journal PIN protection?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zen Journal provides cryptographic privacy for intimate reflections. It validates PIN codes using standard SHA-256 hashing without storing plain passwords on disk, supports encrypted backup passwords, and applies Android WindowManager FLAG_SECURE to prevent screenshot capture and app-switcher preview leaks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Dynamic Wallpaper Generator work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can long-press any quote card across the app to open the Wallpaper Generator. It offers curated HSL color themes (such as Noir), customizable typography (Literata, Inter, Lora), text alignment, film grain overlays (0% to 8%), and quick one-tap actions to set your wallpaper directly on Home Screen or Lock Screen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the Weekly Mood Bezier Curve work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Mindfulness Analytics screen graphs your week's emotional progression using a custom Canvas Bezier curve with emoji nodes. If you journal on a day without logging a mood, it uses a neutral 3.0 score to ensure continuous visual tracking. It also provides public journal word clouds and instant high-res report card export."
         }
       },
       {
@@ -79,7 +111,7 @@ const schemas = [
       },
       {
         "@type": "Question",
-        "name": "Which is the best focus app?",
+        "name": "Which is the best focus app for privacy?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "If you value privacy, simplicity, and aesthetics, Focus App is the best choice. Unlike other productivity apps that require cloud sign-ins and upload your private thoughts, Focus operates 100% offline and keeps all your data sandboxed locally in a secure SQLite database."
@@ -90,7 +122,7 @@ const schemas = [
         "name": "How to use Focus App?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Focus App fits seamlessly into your daily routine: Log your mood once a day, reflect on a Stoic journaling prompt, view inspiring calligraphic daily quotes, and build habits with offline streak badges."
+          "text": "Focus App fits seamlessly into your daily routine: First, log your mood once a day using our minimalist interface. Second, reflect on a Stoic journaling prompt in public or PIN-secured Zen mode. Third, read daily calligraphy quotes. Fourth, engage Focus Guard to silence distractions during deep work."
         }
       },
       {
@@ -107,14 +139,6 @@ const schemas = [
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Focus App stands out as a premium quotes app by combining daily wisdom cards with interactive reflection. Instead of random quotes, it cycles through curated calligraphic cards of Stoic thinkers (Marcus Aurelius, Seneca, Epictetus) to help you build daily resilience."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is daily focus and how does the app help?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Daily focus is the practice of setting a single, mindful priority for your day. Focus App facilitates this by providing quiet daily journaling prompts that encourage you to reflect on what is within your control, with zero social media distraction."
         }
       },
       {

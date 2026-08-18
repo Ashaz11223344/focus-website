@@ -79,10 +79,11 @@ export default function HeroSection({ onOpenModal }) {
             >
               <h2 className="font-serif text-[#FC6E20] font-bold text-sm tracking-wide mb-2 uppercase">Key Takeaways</h2>
               <ul className="list-disc list-inside space-y-1.5 text-[#FFE7D0]/80 leading-relaxed font-sans">
-                <li><strong>Focus App</strong> is the only fully offline mood tracking and Stoic journaling app for Android.</li>
-                <li><strong>100% private</strong> — no account, no cloud storage, all data stays on your device.</li>
-                <li><strong>Mindfulness-first</strong> — combines emotional logs, Stoic quotes, and reflective diary tools.</li>
-                <li><strong>Only ₹20</strong> — one-time purchase, zero ads, zero subscriptions, designed for digital wellbeing without internet.</li>
+                <li><strong>Focus App</strong> is the ultimate offline mood tracker, Stoic journal & Focus Guard for Android.</li>
+                <li><strong>100% private & secure</strong> — no account, no cloud, PIN-locked Zen Journal with SHA-256 encryption.</li>
+                <li><strong>Focus Guard & App Blocker</strong> — scheduled DND silencer and distracting app interceptor.</li>
+                <li><strong>Weekly Analytics & Bezier Curve</strong> — Canvas-rendered weekly mood charts & word cloud insights.</li>
+                <li><strong>Only ₹20</strong> — one-time purchase, zero ads, zero subscriptions, lifetime offline sanctuary.</li>
               </ul>
             </motion.div>
 
@@ -151,7 +152,7 @@ export default function HeroSection({ onOpenModal }) {
               className="relative shrink-0 flex items-center justify-center"
             >
               <PhoneMockup
-                image="/screenshots/home-sceen.jpeg"
+                image="/screenshots/home_screen.png"
                 alt="Focus App Daily Quote Screen"
                 className="w-[280px] md:w-[310px] shadow-[0_30px_60px_rgba(0,0,0,0.8)] border-[#FFE7D0]/10"
               />

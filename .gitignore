@@ -37,5 +37,7 @@ __pycache__/
 
 # Local releases & screenshots
 release_apks/
-screenshots/
+/screenshots/
+/new_screens_screenshots/
+!public/screenshots/
 

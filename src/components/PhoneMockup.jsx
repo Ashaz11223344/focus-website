@@ -41,10 +41,7 @@ export default function PhoneMockup({ image, alt = 'Focus App Screen', className
         </div>
 
 
-        {/* Home Indicator Bar Overlay (Absolute, Transparent Background) */}
-        <div className="hidden md:flex absolute bottom-0 inset-x-0 h-7 items-center justify-center z-30 select-none bg-gradient-to-t from-black/35 to-transparent">
-          <div className="w-24 h-1 bg-[#FFE7D0]/30 rounded-full"></div>
-        </div>
+
 
       </div>
     </div>
