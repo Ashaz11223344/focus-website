@@ -8,7 +8,7 @@ const CAROUSEL_SCREENS = [
   { image: '/screenshots/search.png', label: 'Search', desc: 'Suggestions & runtime dynamic category chips' },
   { image: '/screenshots/favorites.png', label: 'Favorites', desc: 'Permanent offline bookmarks & multi-select' },
   { image: '/screenshots/history.png', label: 'History', desc: 'Searchable historical archive of past quotes' },
-  { image: '/screenshots/app_blocker.png', label: 'App Blocker', desc: 'Focus Guard DND silencer & app blocker shield' },
+  { image: '/screenshots/app_blocker.png', label: 'App Blocker', desc: 'Focus Guard app blocker shield' },
   { image: '/screenshots/mood_tracker.png', label: 'Mood Tracker', desc: 'Single-log daily emotion recording & Wrapped' },
   { image: '/screenshots/mood_graph.png', label: 'Mood Graph', desc: 'Canvas Bezier curve & mindful report card' },
   { image: '/screenshots/achievements.png', label: 'Gamified', desc: '11 Aesthetic consistency badges & milestones' }
